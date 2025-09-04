@@ -5,150 +5,152 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Metallica Theme Page</title>
   <style>
-    body {
+    /* עיצוב כללי */
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-      background: linear-gradient(135deg, #1e3c72, #2a5298, #ff512f, #dd2476);
-      background-size: 400% 400%;
-      animation: gradientMove 15s ease infinite;
-      color: white;
+      padding: 0;
     }
 
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
     }
 
     .container {
-      text-align: center;
-      margin-top: 40px;
-      width: 90%;
-      max-width: 400px;
+      max-width: 500px;
+      margin: 0 auto;
     }
 
+    /* תמונת לוגו */
     .avatar img {
-      width: 140px;
-      height: 140px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      border: 3px solid white;
+      border: 3px solid #fff;
       object-fit: cover;
+      margin: 20px 0;
     }
 
+    /* כותרת */
     h1 {
-      margin: 15px 0 5px;
-      font-size: 26px;
+      font-size: 24px;
+      margin-bottom: 8px;
     }
 
     p {
       font-size: 14px;
       margin-bottom: 20px;
+      color: #ccc;
     }
 
+    /* כפתורים Links / Shop */
     .tabs {
       display: flex;
       justify-content: center;
-      gap: 10px;
       margin-bottom: 20px;
     }
 
     .tab {
       flex: 1;
-      padding: 10px;
-      background: rgba(0, 0, 0, 0.4);
-      border-radius: 20px;
+      padding: 12px;
+      margin: 0 5px;
+      border-radius: 25px;
+      background: #222;
+      color: #fff;
+      font-weight: bold;
       cursor: pointer;
+      border: none;
+    }
+
+    .tab.active {
+      background: #444;
+    }
+
+    /* לינקים */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .link-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #1a1a1a;
+      padding: 18px;
+      border-radius: 15px;
+      font-size: 16px;
       font-weight: bold;
       transition: background 0.3s;
     }
 
-    .tab.active {
-      background: rgba(255, 255, 255, 0.2);
+    .link-item:hover {
+      background: #333;
     }
 
-    .links, .shop {
-      display: none;
-    }
-
-    .links.active, .shop.active {
-      display: block;
-    }
-
-    .link {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 10px;
-      padding: 15px;
-      margin: 12px 0;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 15px;
-      font-weight: bold;
-      font-size: 16px;
-      transition: transform 0.2s;
-    }
-
-    .link:hover {
-      transform: scale(1.05);
-    }
-
+    /* צבעים עיגול */
     .circle {
-      width: 18px;
-      height: 18px;
+      width: 25px;
+      height: 25px;
       border-radius: 50%;
+      margin-right: 12px;
     }
 
-    .blue { background: #2196f3; }
-    .red { background: #f44336; }
-    .green { background: #4caf50; }
-    .purple { background: #9c27b0; }
+    .blue { background: #3498db; }
+    .red { background: #e74c3c; }
+    .green { background: #2ecc71; }
+    .purple { background: #9b59b6; }
 
+    /* טקסט Coming Soon */
     .coming-soon {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #aaa;
       font-style: italic;
-      margin-top: 20px;
-      color: #f0f0f0;
+    }
+
+    /* רספונסיביות */
+    @media (max-width: 600px) {
+      .link-item {
+        font-size: 14px;
+        padding: 14px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- לוגו -->
     <div class="avatar">
-      <img src="assets/img/metallica-logo.jpg" alt="Metallica Logo">
+      <img src="assets/img/מטאליקה-2-Nothing-Else-Matter.jpg" alt="Metallica Logo">
     </div>
+
+    <!-- שם המשתמש -->
     <h1>@metallicains</h1>
     <p>Fuel your metal spirit with Metallica merch! 🤘 #Metallica #ShopNow</p>
 
+    <!-- טאבים -->
     <div class="tabs">
-      <div class="tab active" onclick="showSection('links')">Links</div>
-      <div class="tab" onclick="showSection('shop')">Shop</div>
+      <button class="tab active">Links</button>
+      <button class="tab">Shop</button>
     </div>
 
-    <div id="links" class="links active">
-      <div class="link"><div class="circle blue"></div> MTL Tumblers</div>
-      <div class="link"><div class="circle red"></div> Classic T-Shirts</div>
-      <div class="link"><div class="circle green"></div> Hawaiian Shirts</div>
-      <div class="link"><div class="circle purple"></div> Tour Posters</div>
-      <p class="coming-soon">More links coming soon…</p>
+    <!-- לינקים -->
+    <div class="links">
+      <div class="link-item"><div class="circle blue"></div>MTL Tumblers</div>
+      <div class="link-item"><div class="circle red"></div>Classic T-Shirts</div>
+      <div class="link-item"><div class="circle green"></div>Hawaiian Shirts</div>
+      <div class="link-item"><div class="circle purple"></div>Tour Posters</div>
     </div>
 
-    <div id="shop" class="shop">
-      <p class="coming-soon">🛒 The Metallica Shop is coming soon... Stay tuned!</p>
-    </div>
+    <!-- טקסט Coming Soon -->
+    <div class="coming-soon">More links coming soon...</div>
   </div>
-
-  <script>
-    function showSection(section) {
-      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-      document.querySelectorAll('.links, .shop').forEach(sec => sec.classList.remove('active'));
-
-      document.querySelector(`.${section === 'links' ? 'tab:first-child' : 'tab:last-child'}`).classList.add('active');
-      document.getElementById(section).classList.add('active');
-    }
-  </script>
 </body>
 </html>
 
