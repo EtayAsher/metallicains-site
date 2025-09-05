@@ -1,142 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Metallicult</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #1a1a1a, #3a3a3a);
-      color: white;
-      text-align: center;
+    :root{
+      --bg:#0d0f12;
+      --text:#f5f7fb;
+      --muted:#bfc6d2;
+      --chip:#2a2d31;
+      --row:#15181c;
+      --row-hover:#1b1f24;
+      --stroke:rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;background:var(--bg);color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Helvetica Neue",sans-serif
     }
 
-    .container {
-      max-width: 500px;
-      margin: auto;
-      padding: 20px;
+    .wrap{max-width:780px;margin:30px auto 80px;padding:0 18px;text-align:center}
+
+    /* Avatar */
+    .avatar{
+      width:160px;height:160px;border-radius:50%;overflow:hidden;margin:4px auto 14px;
+      border:3px solid #fff1;box-shadow:0 8px 28px rgba(0,0,0,.55);background:#000;
+      display:flex;align-items:center;justify-content:center
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .handle{font-weight:800;font-size:32px;margin:6px 0 4px}
+    .bio{color:var(--muted);font-weight:600}
+
+    /* Tabs */
+    .tabs{display:flex;gap:14px;justify-content:center;margin:22px auto}
+    .tab{
+      min-width:210px;padding:14px 22px;border-radius:999px;border:1px solid var(--stroke);
+      background:var(--chip);color:var(--text);font-weight:800;cursor:pointer;transition:.18s
+    }
+    .tab.active{box-shadow:inset 0 0 0 2px #ffffff24, 0 0 0 6px #ffffff12}
+
+    /* Sections */
+    [data-sec]{display:none}
+    [data-sec].active{display:block}
+
+    /* Link rows */
+    .list{max-width:680px;margin:0 auto}
+    .row{
+      display:flex;align-items:center;gap:14px;justify-content:flex-start;
+      background:var(--row);border:1px solid var(--stroke);border-radius:18px;
+      padding:18px 22px;margin:14px 0;text-decoration:none;color:var(--text);font-weight:800;
+      transition:.18s transform,.18s background
+    }
+    .row:hover{transform:translateY(-2px);background:var(--row-hover)}
+    .dot{width:22px;height:22px;border-radius:50%;flex:0 0 auto}
+    .dot.blue{background:#3aa3ff}
+    .dot.red{background:#ff544d}
+    .dot.green{background:#2ed06e}
+    .dot.purple{background:#a768ff}
+
+    .coming{margin:18px 0 6px;color:#aeb6c3;font-style:italic}
+
+    /* Shop placeholder */
+    .shopbox{
+      max-width:680px;margin:0 auto;background:var(--row);border:1px dashed var(--stroke);
+      border-radius:18px;padding:28px;color:#cfd6e2;font-weight:700
     }
 
-    .avatar img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 3px solid white;
-      object-fit: cover;
-    }
-
-    h1 {
-      margin: 15px 0 5px;
-      font-size: 28px;
-    }
-
-    p {
-      font-size: 14px;
-      color: #ddd;
-      margin-bottom: 25px;
-    }
-
-    .tabs {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    .tab {
-      flex: 1;
-      padding: 12px;
-      cursor: pointer;
-      background: #333;
-      border-radius: 20px;
-      margin: 0 5px;
-      transition: background 0.3s;
-    }
-
-    .tab.active {
-      background: #555;
-    }
-
-    .links, .shop {
-      display: none;
-    }
-
-    .active-section {
-      display: block;
-    }
-
-    .link-card {
-      display: flex;
-      align-items: center;
-      justify-content: left;
-      padding: 15px;
-      margin: 12px 0;
-      background: #222;
-      border-radius: 15px;
-      transition: transform 0.2s, background 0.2s;
-    }
-
-    .link-card:hover {
-      transform: scale(1.05);
-      background: #333;
-    }
-
-    .circle {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      margin-right: 12px;
-    }
-
-    .blue { background: #3498db; }
-    .red { background: #e74c3c; }
-    .green { background: #2ecc71; }
-    .purple { background: #9b59b6; }
-
-    footer {
-      margin-top: 20px;
-      font-size: 12px;
-      color: #bbb;
+    @media (max-width:560px){
+      .handle{font-size:26px}
+      .tab{min-width:0;flex:1}
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <main class="wrap">
+    <!-- Avatar -->
     <div class="avatar">
-      <img src="assets/img/metallica-logo.jpg" alt="Metallica Logo">
-    </div>
-    <h1>@metallicult</h1>
-    <p>Fuel your metal spirit with Metallica merch! 🤘 #Metallica #ShopNow</p>
-
-    <div class="tabs">
-      <div class="tab active" onclick="showSection('links')">Links</div>
-      <div class="tab" onclick="showSection('shop')">Shop</div>
+      <img id="avatar" alt="Metallica">
     </div>
 
-    <div id="links" class="links active-section">
-      <div class="link-card"><div class="circle blue"></div> MTL Tumblers</div>
-      <div class="link-card"><div class="circle red"></div> Classic T-Shirts</div>
-      <div class="link-card"><div class="circle green"></div> Hawaiian Shirts</div>
-      <div class="link-card"><div class="circle purple"></div> Tour Posters</div>
-      <footer>More links coming soon...</footer>
+    <div class="handle">@metallicult</div>
+    <div class="bio">Fuel your metal spirit with Metallica merch! 🤘 <span style="opacity:.9">#Metallica #ShopNow</span></div>
+
+    <!-- Tabs -->
+    <div class="tabs" role="tablist" aria-label="Sections">
+      <button class="tab active" role="tab" aria-selected="true" data-target="links">Links</button>
+      <button class="tab" role="tab" aria-selected="false" data-target="shop">Shop</button>
     </div>
 
-    <div id="shop" class="shop">
-      <p>🛒 The shop is under construction. Stay tuned for official Metallica merch!</p>
-    </div>
-  </div>
+    <!-- Links -->
+    <section id="links" data-sec class="active" aria-label="Links">
+      <div class="list">
+        <a class="row" href="#" onclick="return false;">
+          <span class="dot blue"></span> MTL Tumblers
+        </a>
+        <a class="row" href="#" onclick="return false;">
+          <span class="dot red"></span> Classic T-Shirts
+        </a>
+        <a class="row" href="#" onclick="return false;">
+          <span class="dot green"></span> Hawaiian Shirts
+        </a>
+        <a class="row" href="#" onclick="return false;">
+          <span class="dot purple"></span> Tour Posters
+        </a>
+      </div>
+      <div class="coming">More links coming soon…</div>
+    </section>
+
+    <!-- Shop -->
+    <section id="shop" data-sec aria-label="Shop">
+      <div class="shopbox">🛒 Shop is coming soon… Stay tuned!</div>
+    </section>
+  </main>
 
   <script>
-    function showSection(section) {
-      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-      document.querySelectorAll('.links, .shop').forEach(sec => sec.classList.remove('active-section'));
+    /* Tabs toggle */
+    const tabs = document.querySelectorAll('.tab');
+    const secs = document.querySelectorAll('[data-sec]');
+    tabs.forEach(t => {
+      t.addEventListener('click', () => {
+        tabs.forEach(x => { x.classList.remove('active'); x.setAttribute('aria-selected','false'); });
+        t.classList.add('active'); t.setAttribute('aria-selected','true');
+        const target = t.dataset.target;
+        secs.forEach(s => s.classList.toggle('active', s.id === target));
+        window.scrollTo({top:0, behavior:'auto'});
+      });
+    });
 
-      document.querySelector('.' + section).classList.add('active-section');
-      event.target.classList.add('active');
-    }
+    /* Avatar loader – מנסה כמה שמות קובץ אפשריים עד שמוצא */
+    (function(){
+      const candidates = [
+        'assets/img/metallica-logo.jpg',                         // אם שינית לשם פשוט באנגלית
+        'assets/img/2-מטאליקה-Nothing-Else-Matter.jpg',          // השם שהיית קיים אצלך
+        'assets/img/מטאליקה-2-Nothing-Else-Matter.jpg'
+      ];
+      const img = document.getElementById('avatar');
+      let i = 0;
+      function tryNext(){
+        if(i >= candidates.length){ img.alt = 'Metallica'; return; }
+        const src = candidates[i++];
+        const test = new Image();
+        test.onload = () => { img.src = src; };
+        test.onerror = tryNext;
+        test.src = src;
+      }
+      tryNext();
+    })();
   </script>
 </body>
 </html>
+
 
