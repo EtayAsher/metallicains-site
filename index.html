@@ -7,26 +7,54 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0d0f12;
-      --text:#f5f7fb;
-      --muted:#bfc6d2;
-      --chip:#2a2d31;
-      --row:#15181c;
-      --row-hover:#1b1f24;
+      --text:#e9eef7;
+      --muted:#b9c6d9;
+      --chip:#1c2330f2;
+      --row:#121823f2;
+      --row-hover:#151d2bf2;
       --stroke:rgba(255,255,255,.08);
+      --blue:#4aa3ff;
+      --violet:#7f7cff;
+      --cyan:#00d4ff;
     }
     *{box-sizing:border-box}
+    html,body{height:100%}
     body{
-      margin:0;background:var(--bg);color:var(--text);
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Helvetica Neue",sans-serif
+      margin:0;color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Helvetica Neue",sans-serif;
+      /* רקע כחול-שחור דינמי */
+      background:
+        radial-gradient(1200px 800px at 80% -20%, #0b3a5d44, transparent 60%),
+        radial-gradient(1000px 700px at -20% 120%, #001a2a66, transparent 60%),
+        linear-gradient(135deg, #0a0f17 0%, #0b1421 45%, #0a111c 100%);
     }
 
-    .wrap{max-width:780px;margin:30px auto 80px;padding:0 18px;text-align:center}
+    /* ====== FRAME (מסגרת נוצצת) ====== */
+    .frame{
+      max-width:880px;margin:48px auto;padding:22px;
+      position:relative;border-radius:28px;
+      /* גרדיאנט למסגרת */
+      background:
+        linear-gradient(135deg, #112034, #0b1626) padding-box,
+        linear-gradient(135deg, #0af, #7f7cff, #00d4ff) border-box;
+      border:2px solid transparent;
+      box-shadow:
+        0 20px 60px rgba(0,0,0,.55),
+        inset 0 0 40px rgba(0, 160, 255, .06);
+    }
+    .panel{
+      border-radius:22px;
+      background:linear-gradient(180deg, #0e1624cc, #0c1422cc);
+      border:1px solid #ffffff12;
+      backdrop-filter: blur(6px);
+      padding:28px 18px 36px;
+      text-align:center;
+    }
 
     /* Avatar */
     .avatar{
-      width:160px;height:160px;border-radius:50%;overflow:hidden;margin:4px auto 14px;
-      border:3px solid #fff1;box-shadow:0 8px 28px rgba(0,0,0,.55);background:#000;
+      width:150px;height:150px;border-radius:50%;overflow:hidden;margin:4px auto 14px;
+      border:3px solid #ffffff33;box-shadow:0 8px 28px rgba(0,0,0,.55);background:#000;
       display:flex;align-items:center;justify-content:center
     }
     .avatar img{width:100%;height:100%;object-fit:cover;display:block}
@@ -40,81 +68,93 @@
       min-width:210px;padding:14px 22px;border-radius:999px;border:1px solid var(--stroke);
       background:var(--chip);color:var(--text);font-weight:800;cursor:pointer;transition:.18s
     }
-    .tab.active{box-shadow:inset 0 0 0 2px #ffffff24, 0 0 0 6px #ffffff12}
+    .tab.active{
+      box-shadow:inset 0 0 0 2px #ffffff2a, 0 0 0 6px #5bb1ff25;
+      background:linear-gradient(180deg,#1e2a3c,#1a2333)
+    }
 
     /* Sections */
     [data-sec]{display:none}
     [data-sec].active{display:block}
 
     /* Link rows */
-    .list{max-width:680px;margin:0 auto}
+    .list{max-width:720px;margin:0 auto}
     .row{
       display:flex;align-items:center;gap:14px;justify-content:flex-start;
-      background:var(--row);border:1px solid var(--stroke);border-radius:18px;
+      background:var(--row);border:1px solid var(--stroke);border-radius:20px;
       padding:18px 22px;margin:14px 0;text-decoration:none;color:var(--text);font-weight:800;
-      transition:.18s transform,.18s background
+      transition:.18s transform,.18s background,.18s box-shadow
     }
-    .row:hover{transform:translateY(-2px);background:var(--row-hover)}
+    .row:hover{
+      transform:translateY(-2px);
+      background:var(--row-hover);
+      box-shadow:0 8px 24px rgba(0,0,0,.35), 0 0 0 1px #5bb1ff26 inset
+    }
     .dot{width:22px;height:22px;border-radius:50%;flex:0 0 auto}
     .dot.blue{background:#3aa3ff}
     .dot.red{background:#ff544d}
     .dot.green{background:#2ed06e}
     .dot.purple{background:#a768ff}
 
-    .coming{margin:18px 0 6px;color:#aeb6c3;font-style:italic}
+    .coming{margin:18px 0 6px;color:#a9bad1;font-style:italic}
 
     /* Shop placeholder */
     .shopbox{
-      max-width:680px;margin:0 auto;background:var(--row);border:1px dashed var(--stroke);
-      border-radius:18px;padding:28px;color:#cfd6e2;font-weight:700
+      max-width:720px;margin:0 auto;background:var(--row);
+      border:1px dashed #ffffff20;border-radius:20px;padding:28px;color:#cfe1ff;font-weight:700
     }
 
     @media (max-width:560px){
       .handle{font-size:26px}
       .tab{min-width:0;flex:1}
+      .frame{margin:20px 10px;padding:14px}
+      .panel{padding:22px 14px 28px}
     }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <!-- Avatar -->
-    <div class="avatar">
-      <img id="avatar" alt="Metallica">
-    </div>
-
-    <div class="handle">@metallicult</div>
-    <div class="bio">Fuel your metal spirit with Metallica merch! 🤘 <span style="opacity:.9">#Metallica #ShopNow</span></div>
-
-    <!-- Tabs -->
-    <div class="tabs" role="tablist" aria-label="Sections">
-      <button class="tab active" role="tab" aria-selected="true" data-target="links">Links</button>
-      <button class="tab" role="tab" aria-selected="false" data-target="shop">Shop</button>
-    </div>
-
-    <!-- Links -->
-    <section id="links" data-sec class="active" aria-label="Links">
-      <div class="list">
-        <a class="row" href="#" onclick="return false;">
-          <span class="dot blue"></span> MTL Tumblers
-        </a>
-        <a class="row" href="#" onclick="return false;">
-          <span class="dot red"></span> Classic T-Shirts
-        </a>
-        <a class="row" href="#" onclick="return false;">
-          <span class="dot green"></span> Hawaiian Shirts
-        </a>
-        <a class="row" href="#" onclick="return false;">
-          <span class="dot purple"></span> Tour Posters
-        </a>
+  <div class="frame">
+    <main class="panel">
+      <!-- Avatar -->
+      <div class="avatar">
+        <img id="avatar" alt="Metallica">
       </div>
-      <div class="coming">More links coming soon…</div>
-    </section>
 
-    <!-- Shop -->
-    <section id="shop" data-sec aria-label="Shop">
-      <div class="shopbox">🛒 Shop is coming soon… Stay tuned!</div>
-    </section>
-  </main>
+      <!-- תשאיר את השם/תיאור שלך כמו עכשיו, רק עם העיצוב החדש -->
+      <div class="handle">@metallicult</div>
+      <div class="bio">Fuel your metal spirit with Metallica merch! 🤘 <span style="opacity:.9">#Metallica #ShopNow</span></div>
+
+      <!-- Tabs -->
+      <div class="tabs" role="tablist" aria-label="Sections">
+        <button class="tab active" role="tab" aria-selected="true" data-target="links">Links</button>
+        <button class="tab" role="tab" aria-selected="false" data-target="shop">Shop</button>
+      </div>
+
+      <!-- Links -->
+      <section id="links" data-sec class="active" aria-label="Links">
+        <div class="list">
+          <a class="row" href="#" onclick="return false;">
+            <span class="dot blue"></span> MTL Tumblers
+          </a>
+          <a class="row" href="#" onclick="return false;">
+            <span class="dot red"></span> Classic T-Shirts
+          </a>
+          <a class="row" href="#" onclick="return false;">
+            <span class="dot green"></span> Hawaiian Shirts
+          </a>
+          <a class="row" href="#" onclick="return false;">
+            <span class="dot purple"></span> Tour Posters
+          </a>
+        </div>
+        <div class="coming">More links coming soon…</div>
+      </section>
+
+      <!-- Shop -->
+      <section id="shop" data-sec aria-label="Shop">
+        <div class="shopbox">🛒 Shop is coming soon… Stay tuned!</div>
+      </section>
+    </main>
+  </div>
 
   <script>
     /* Tabs toggle */
@@ -133,8 +173,8 @@
     /* Avatar loader – מנסה כמה שמות קובץ אפשריים עד שמוצא */
     (function(){
       const candidates = [
-        'assets/img/metallica-logo.jpg',                         // אם שינית לשם פשוט באנגלית
-        'assets/img/2-מטאליקה-Nothing-Else-Matter.jpg',          // השם שהיית קיים אצלך
+        'assets/img/metallica-logo.jpg',                         // אם תיצור קובץ באנגלית
+        'assets/img/2-מטאליקה-Nothing-Else-Matter.jpg',
         'assets/img/מטאליקה-2-Nothing-Else-Matter.jpg'
       ];
       const img = document.getElementById('avatar');
