@@ -6,121 +6,102 @@
   <title>Metallicult</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
+    /* ===== Base ===== */
     :root{
-      --text:#e9eef7;
-      --muted:#b9c6d9;
-      --chip:#1c2330f2;
-      --row:#121823f2;
-      --row-hover:#151d2bf2;
-      --stroke:rgba(255,255,255,.08);
-      --blue:#4aa3ff;
-      --violet:#7f7cff;
-      --cyan:#00d4ff;
+      --bg:#0b1117;
+      --panel-grad-start:#4a5868;
+      --panel-grad-end:#2c3946;
+      --text:#f5f7fb;
+      --muted:#c6cfdb;
+      --stroke:rgba(255,255,255,.18);
+      --stroke-soft:rgba(255,255,255,.12);
+      --chip:#0f151c;
+      --chip-pressed:#141b24;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
-      margin:0;color:var(--text);
+      margin:0; background:var(--bg); color:var(--text);
       font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,"Helvetica Neue",sans-serif;
-      /* רקע כחול-שחור דינמי */
-      background:
-        radial-gradient(1200px 800px at 80% -20%, #0b3a5d44, transparent 60%),
-        radial-gradient(1000px 700px at -20% 120%, #001a2a66, transparent 60%),
-        linear-gradient(135deg, #0a0f17 0%, #0b1421 45%, #0a111c 100%);
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
 
-    /* ====== FRAME (מסגרת נוצצת) ====== */
-    .frame{
-      max-width:880px;margin:48px auto;padding:22px;
-      position:relative;border-radius:28px;
-      /* גרדיאנט למסגרת */
-      background:
-        linear-gradient(135deg, #112034, #0b1626) padding-box,
-        linear-gradient(135deg, #0af, #7f7cff, #00d4ff) border-box;
-      border:2px solid transparent;
-      box-shadow:
-        0 20px 60px rgba(0,0,0,.55),
-        inset 0 0 40px rgba(0, 160, 255, .06);
-    }
+    /* ===== Panel (like screenshot) ===== */
+    .wrap{max-width:880px; margin:32px auto 56px; padding:0 14px}
     .panel{
-      border-radius:22px;
-      background:linear-gradient(180deg, #0e1624cc, #0c1422cc);
-      border:1px solid #ffffff12;
-      backdrop-filter: blur(6px);
-      padding:28px 18px 36px;
+      background:linear-gradient(180deg,var(--panel-grad-start),var(--panel-grad-end));
+      border:1px solid var(--stroke);
+      border-radius:28px;
+      box-shadow:0 22px 60px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.06);
+      padding:44px 20px 36px;
       text-align:center;
     }
 
-    /* Avatar */
+    /* avatar */
     .avatar{
-      width:150px;height:150px;border-radius:50%;overflow:hidden;margin:4px auto 14px;
-      border:3px solid #ffffff33;box-shadow:0 8px 28px rgba(0,0,0,.55);background:#000;
-      display:flex;align-items:center;justify-content:center
+      width:136px;height:136px;border-radius:50%;overflow:hidden;margin:8px auto 14px;
+      border:3px solid rgba(255,255,255,.35);
+      box-shadow:0 10px 28px rgba(0,0,0,.55);
+      background:#000; display:flex;align-items:center;justify-content:center;
     }
     .avatar img{width:100%;height:100%;object-fit:cover;display:block}
 
     .handle{font-weight:800;font-size:32px;margin:6px 0 4px}
-    .bio{color:var(--muted);font-weight:600}
+    .bio{color:var(--muted);font-weight:600;max-width:620px;margin:0 auto 18px}
 
-    /* Tabs */
-    .tabs{display:flex;gap:14px;justify-content:center;margin:22px auto}
+    /* Tabs pills */
+    .tabs{display:flex;gap:12px;justify-content:center;margin:14px auto 24px}
     .tab{
-      min-width:210px;padding:14px 22px;border-radius:999px;border:1px solid var(--stroke);
-      background:var(--chip);color:var(--text);font-weight:800;cursor:pointer;transition:.18s
+      min-width:190px; padding:12px 20px; border-radius:999px;
+      border:1px solid var(--stroke-soft); background:var(--chip);
+      color:var(--text); font-weight:800; cursor:pointer; transition:.18s;
     }
     .tab.active{
-      box-shadow:inset 0 0 0 2px #ffffff2a, 0 0 0 6px #5bb1ff25;
-      background:linear-gradient(180deg,#1e2a3c,#1a2333)
+      background:#fff; color:#0b1117;
+      box-shadow:0 0 0 1px rgba(255,255,255,.25) inset, 0 2px 12px rgba(0,0,0,.25);
     }
+    .tab:not(.active):hover{background:var(--chip-pressed)}
 
-    /* Sections */
+    /* sections */
     [data-sec]{display:none}
     [data-sec].active{display:block}
 
-    /* Link rows */
-    .list{max-width:720px;margin:0 auto}
+    /* list rows – pill outline like screenshot */
+    .list{max-width:760px;margin:0 auto}
     .row{
       display:flex;align-items:center;gap:14px;justify-content:flex-start;
-      background:var(--row);border:1px solid var(--stroke);border-radius:20px;
-      padding:18px 22px;margin:14px 0;text-decoration:none;color:var(--text);font-weight:800;
-      transition:.18s transform,.18s background,.18s box-shadow
+      background:transparent; border:1.2px solid var(--stroke);
+      border-radius:999px; padding:18px 22px; margin:14px 0; color:var(--text);
+      font-weight:800; text-decoration:none; transition:.18s;
     }
-    .row:hover{
-      transform:translateY(-2px);
-      background:var(--row-hover);
-      box-shadow:0 8px 24px rgba(0,0,0,.35), 0 0 0 1px #5bb1ff26 inset
-    }
-    .dot{width:22px;height:22px;border-radius:50%;flex:0 0 auto}
-    .dot.blue{background:#3aa3ff}
-    .dot.red{background:#ff544d}
-    .dot.green{background:#2ed06e}
-    .dot.purple{background:#a768ff}
+    .row:hover{background:rgba(255,255,255,.06)}
+    .dot{width:30px;height:30px;border-radius:50%;flex:0 0 auto;border:1px solid var(--stroke);box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+    .blue{background:#3aa3ff} .red{background:#ff544d} .green{background:#2ed06e} .purple{background:#a768ff}
 
-    .coming{margin:18px 0 6px;color:#a9bad1;font-style:italic}
+    .coming{margin:18px 0 6px;color:#d4dbea;font-style:italic}
 
-    /* Shop placeholder */
+    /* shop placeholder */
     .shopbox{
-      max-width:720px;margin:0 auto;background:var(--row);
-      border:1px dashed #ffffff20;border-radius:20px;padding:28px;color:#cfe1ff;font-weight:700
+      max-width:760px;margin:0 auto;border:1px dashed var(--stroke);
+      border-radius:18px;padding:24px;color:#e4ecff;background:rgba(255,255,255,.04);font-weight:700
     }
 
     @media (max-width:560px){
       .handle{font-size:26px}
       .tab{min-width:0;flex:1}
-      .frame{margin:20px 10px;padding:14px}
-      .panel{padding:22px 14px 28px}
+      .panel{padding:34px 14px 26px}
+      .row{padding:16px 18px}
     }
   </style>
 </head>
 <body>
-  <div class="frame">
-    <main class="panel">
+  <div class="wrap">
+    <section class="panel" aria-label="Profile & Links">
       <!-- Avatar -->
       <div class="avatar">
         <img id="avatar" alt="Metallica">
       </div>
 
-      <!-- תשאיר את השם/תיאור שלך כמו עכשיו, רק עם העיצוב החדש -->
+      <!-- Handle + bio -->
       <div class="handle">@metallicult</div>
       <div class="bio">Fuel your metal spirit with Metallica merch! 🤘 <span style="opacity:.9">#Metallica #ShopNow</span></div>
 
@@ -131,7 +112,7 @@
       </div>
 
       <!-- Links -->
-      <section id="links" data-sec class="active" aria-label="Links">
+      <div id="links" data-sec class="active" aria-label="Links">
         <div class="list">
           <a class="row" href="#" onclick="return false;">
             <span class="dot blue"></span> MTL Tumblers
@@ -147,13 +128,13 @@
           </a>
         </div>
         <div class="coming">More links coming soon…</div>
-      </section>
+      </div>
 
       <!-- Shop -->
-      <section id="shop" data-sec aria-label="Shop">
+      <div id="shop" data-sec aria-label="Shop">
         <div class="shopbox">🛒 Shop is coming soon… Stay tuned!</div>
-      </section>
-    </main>
+      </div>
+    </section>
   </div>
 
   <script>
@@ -164,16 +145,15 @@
       t.addEventListener('click', () => {
         tabs.forEach(x => { x.classList.remove('active'); x.setAttribute('aria-selected','false'); });
         t.classList.add('active'); t.setAttribute('aria-selected','true');
-        const target = t.dataset.target;
-        secs.forEach(s => s.classList.toggle('active', s.id === target));
+        secs.forEach(s => s.classList.toggle('active', s.id === t.dataset.target));
         window.scrollTo({top:0, behavior:'auto'});
       });
     });
 
-    /* Avatar loader – מנסה כמה שמות קובץ אפשריים עד שמוצא */
+    /* Avatar loader – ינסה כמה שמות קובץ עד שימצא */
     (function(){
       const candidates = [
-        'assets/img/metallica-logo.jpg',                         // אם תיצור קובץ באנגלית
+        'assets/img/metallica-logo.jpg',
         'assets/img/2-מטאליקה-Nothing-Else-Matter.jpg',
         'assets/img/מטאליקה-2-Nothing-Else-Matter.jpg'
       ];
