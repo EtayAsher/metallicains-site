@@ -3,263 +3,170 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>MetalliCult — Metallica Links & Shop</title>
-  <meta name="description" content="MetalliCult — קהילת מעריצי מטאליקה: לינקים ומוצרים נבחרים למעריצי רוק ומטאל." />
-  <meta name="keywords" content="Metallica, MetalliCult, rock merch, heavy metal, t-shirts, posters, vinyl, מטאליקה" />
+  <title>MetalliCult — Links & Shop</title>
+  <meta name="description" content="MetalliCult — a clean, premium hub for Metallica & rock lovers. Curated links, styles and stories inspired by the music we love." />
+  <meta name="keywords" content="MetalliCult, Metallica, rock, heavy metal, merch, shirts, posters, vinyl" />
   <link rel="canonical" href="https://etayasher.github.io/metallicains-site/" />
 
   <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="MetalliCult — Metallica Links & Shop" />
-  <meta property="og:description" content="לינקים שווים ומוצרים נבחרים לקהילת MetalliCult." />
+  <meta property="og:title" content="MetalliCult — Links & Shop" />
+  <meta property="og:description" content="A premium, fan-made hub for Metallica & rock. Curated links, styles and stories." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://etayasher.github.io/metallicains-site/" />
   <meta property="og:image" content="https://etayasher.github.io/metallicains-site/assets/img/מטאליקה-2-Nothing-Else-Matter.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- (רשות) פאביקון אם תעלה assets/img/favicon.png -->
-  <!-- <link rel="icon" type="image/png" href="assets/img/favicon.png" /> -->
-
-  <!-- Structured Data -->
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"WebSite",
     "name":"MetalliCult",
     "url":"https://etayasher.github.io/metallicains-site/",
-    "sameAs":["https://instagram.com/metallicains"],
-    "description":"קהילת מעריצי מטאליקה: לינקים, המלצות ומוצרים נבחרים."
+    "sameAs":["https://instagram.com/metallicult"]
   }
   </script>
 
   <style>
     :root{
-      --bg:#0e1116;
-      --bg2:#0a0d12;
-      --panel:#121824;
-      --panel-2:#1a2332;
-      --text:#e9eefc;
-      --muted:#9fb2d0;
-      --ring:#6aa2ff;
-      --btn:#212c40;
-      --btnActive:#0f1521;
-      --pill:#0f141e;
-      --border:rgba(255,255,255,.12);
-      --shadow:rgba(0,10,30,.6);
-      --white: #fff;
+      --bg:#0b0f19; --panel:#111827; --panel2:#0f1624;
+      --text:#e8eefc; --muted:#9fb2d0; --ring:#6aa2ff; --border:rgba(255,255,255,.12);
+      --chip:#1a2236; --chipActive:#2b3d60;
+      --blue:#3ea2ff; --red:#ff6961; --green:#5de38f; --purple:#b487ff;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
-      margin:0;
-      font-family: Inter, system-ui, Segoe UI, Arial, sans-serif;
-      color:var(--text);
-      background: radial-gradient(1200px 1200px at 50% -20%, #1f3c6b 0%, #101626 45%, #0b0f19 70%, #06080d 100%), #06080d;
-      display:flex;align-items:center;justify-content:center;
+      margin:0; font-family:Inter,system-ui,Segoe UI,Arial,sans-serif; color:var(--text);
+      background:
+        radial-gradient(1200px 1200px at 50% -18%, #274a83 0%, #141b2b 48%, #0b0f19 78%, #070a11 100%),
+        #070a11;
     }
+    .wrap{max-width:820px;margin:26px auto 60px;padding:0 18px}
     .frame{
-      width:min(880px, 92vw);
-      margin:4vh auto;
-      padding:48px 22px 28px;
-      border-radius:24px;
-      background: linear-gradient(180deg, #1c2535 0%, #0f1523 100%);
-      box-shadow:
-        0 18px 45px -10px var(--shadow),
-        inset 0 1px 0 rgba(255,255,255,.08),
-        inset 0 -1px 0 rgba(0,0,0,.5);
-      border:1px solid rgba(255,255,255,.08);
+      background:linear-gradient(180deg,#1b2334 0%,#101626 100%);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:30px; padding:28px 22px 30px;
+      box-shadow:0 20px 60px -12px rgba(0,10,30,.55), inset 0 1px 0 rgba(255,255,255,.06);
     }
-    .topbar{
-      text-align:center;
-      margin-bottom:16px;
-      font-size:14px;
-    }
+    .topbar{display:flex;justify-content:flex-end;margin-bottom:8px}
     .topbar a{
-      color:#9bc5ff;text-decoration:none;
+      color:#9bc5ff;text-decoration:none;font-size:14px;
+      background:rgba(255,255,255,.06); padding:8px 12px;border-radius:999px;border:1px solid var(--border)
     }
-
-    .avatar{
-      width:120px;height:120px;margin:0 auto 14px;
-      border-radius:999px;overflow:hidden;
-      border:4px solid rgba(255,255,255,.06);
-      box-shadow:0 8px 28px rgba(0,0,0,.55), 0 0 0 6px rgba(106,162,255,.06);
-    }
+    .hero{display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:4px}
+    .avatar{width:132px;height:132px;border-radius:999px;overflow:hidden;border:4px solid rgba(255,255,255,.12);box-shadow:0 8px 18px rgba(0,0,0,.35)}
     .avatar img{width:100%;height:100%;object-fit:cover}
-
-    h1{
-      font-size:34px;letter-spacing:.5px;margin:10px 0 6px;text-align:center
-    }
-    .tagline{
-      text-align:center;color:var(--muted);font-size:15px;margin-bottom:18px
-    }
-
+    h1{margin:14px 0 0;font-size:38px;letter-spacing:.4px}
+    .tagline{margin:10px 0 22px;color:var(--muted);font-size:15px}
     .tabs{
-      display:flex;gap:12px;justify-content:center;margin:10px 0 26px
+      display:inline-flex;gap:6px;background:var(--chip);border:1px solid var(--border);
+      border-radius:999px;padding:6px;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)
     }
     .tab{
-      appearance:none;border:0;cursor:pointer;
-      padding:12px 26px;border-radius:999px;font-weight:600;
-      color:var(--text);background:var(--btn);
-      border:1px solid var(--border);
-      box-shadow:inset 0 -2px 0 rgba(0,0,0,.25), 0 6px 16px rgba(0,0,0,.25);
-      transition:.2s;
+      cursor:pointer;border:0;background:transparent;color:var(--text);
+      border-radius:999px;padding:10px 22px;font-weight:600
     }
-    .tab:hover{transform:translateY(-1px)}
-    .tab.active{
-      background:var(--btnActive);
-      border-color:rgba(106,162,255,.35);
-      box-shadow:0 0 0 2px rgba(106,162,255,.25), inset 0 -2px 0 rgba(0,0,0,.25);
-    }
-
-    .list{display:grid;gap:14px;margin:0 auto;max-width:760px}
+    .tab.active{background:var(--chipActive);box-shadow:0 0 0 1px rgba(255,255,255,.06), inset 0 1px 0 rgba(255,255,255,.07)}
+    .list{margin:26px auto 8px;padding:0;list-style:none;max-width:760px}
     .item{
       display:flex;align-items:center;gap:14px;
-      background:var(--pill);
-      padding:18px 20px;border-radius:18px;
-      border:1px solid rgba(255,255,255,.10);
-      box-shadow:0 10px 24px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.04);
+      background:var(--panel); border:1px solid var(--border);
+      border-radius:22px; padding:18px 20px; margin:12px 0;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.06)
     }
-    .dot{
-      flex:0 0 14px;height:14px;border-radius:999px;
-      box-shadow:0 0 0 6px rgba(255,255,255,.03), 0 3px 10px rgba(0,0,0,.35)
-    }
-    .blue{background:#3ea2ff}.red{background:#ff5a5a}.green{background:#3ddc7a}.purple{background:#b487ff}
-    .item a{
-      color:var(--text);text-decoration:none;font-weight:600;letter-spacing:.2px;
-    }
-    .coming{
-      text-align:center;color:var(--muted);margin:22px 0 0;font-size:14px
-    }
-
-    /* Modal */
-    .modal{
-      position:fixed;inset:0;background:rgba(0,0,0,.55);
-      display:none;align-items:center;justify-content:center;padding:16px;z-index:50
-    }
-    .modal.show{display:flex}
-    .modal-card{
-      width:min(520px,90vw);background:#0f1523;border-radius:18px;padding:26px 22px;
-      border:1px solid rgba(255,255,255,.12);color:var(--text);
-      box-shadow:0 30px 60px rgba(0,0,0,.6)
-    }
-    .modal-card h3{margin:0 0 10px}
-    .modal-card p{margin:0 0 14px;color:var(--muted)}
-    .close{
-      display:inline-flex;align-items:center;gap:8px;cursor:pointer;border:0;
-      background:var(--btn);color:var(--text);padding:10px 16px;border-radius:10px;
-      border:1px solid var(--border);
-    }
-
-    @media (max-width:520px){
-      h1{font-size:28px}
-      .avatar{width:96px;height:96px}
-      .tab{padding:10px 18px}
-      .item{padding:16px}
+    .dot{width:14px;height:14px;border-radius:999px}
+    .blue{background:var(--blue)} .red{background:var(--red)} .green{background:var(--green)} .purple{background:var(--purple)}
+    .item a{color:var(--text);text-decoration:none;font-weight:600;flex:1}
+    .muted{color:var(--muted);font-size:14px;margin:14px 0 0}
+    .hidden{display:none}
+    @media (max-width:560px){
+      h1{font-size:30px}
+      .avatar{width:108px;height:108px}
     }
   </style>
 </head>
 <body>
-  <main class="frame">
-    <div class="topbar">
-      <a href="about.html">About</a>
-    </div>
-
-    <!-- Profile -->
-    <div class="avatar">
-      <!-- זוהי התמונה שכבר העלית ל-assets/img -->
-      <img src="assets/img/מטאליקה-2-Nothing-Else-Matter.jpg" alt="Metallica">
-    </div>
-
-    <h1>@metallicult</h1>
-    <p class="tagline">
-      Fuel your metal spirit with Metallica merch! 🤘
-      <span style="color:#9bc5ff">#Metallica #ShopNow</span>
-    </p>
-
-    <!-- Tabs -->
-    <div class="tabs">
-      <button class="tab active" id="tabLinks">Links</button>
-      <button class="tab" id="tabShop">Shop</button>
-    </div>
-
-    <!-- Links list -->
-    <section id="linksSection" class="list" aria-live="polite">
-      <div class="item">
-        <span class="dot blue"></span>
-        <a href="#" aria-label="MTL Tumblers">MTL Tumblers</a>
+  <div class="wrap">
+    <div class="frame">
+      <div class="topbar">
+        <a href="about.html">About Us</a>
       </div>
 
-      <div class="item">
-        <span class="dot red"></span>
-        <a href="#" aria-label="Classic T-Shirts">Classic T-Shirts</a>
+      <div class="hero">
+        <div class="avatar">
+          <img src="assets/img/מטאליקה-2-Nothing-Else-Matter.jpg" alt="MetalliCult">
+        </div>
+        <h1>@metallicult</h1>
+        <div class="tagline">Fuel your metal spirit with Metallica vibes. 🤘 #Metallica #ShopNow</div>
+
+        <div class="tabs" role="tablist" aria-label="Sections">
+          <button class="tab active" role="tab" aria-selected="true" aria-controls="links" id="tab-links">Links</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="shop" id="tab-shop">Shop</button>
+        </div>
       </div>
 
-      <div class="item">
-        <span class="dot green"></span>
-        <a href="#" aria-label="Hawaiian Shirts">Hawaiian Shirts</a>
-      </div>
+      <!-- LINKS -->
+      <ul class="list" id="links" role="tabpanel" aria-labelledby="tab-links">
+        <li class="item">
+          <span class="dot blue"></span>
+          <a href="#" target="_blank" rel="noopener">MTL Tumblers</a>
+        </li>
+        <li class="item">
+          <span class="dot red"></span>
+          <a href="#" target="_blank" rel="noopener">Classic T-Shirts</a>
+        </li>
+        <li class="item">
+          <span class="dot green"></span>
+          <a href="#" target="_blank" rel="noopener">Hawaiian Shirts</a>
+        </li>
+        <li class="item">
+          <span class="dot purple"></span>
+          <a href="#" target="_blank" rel="noopener">Tour Posters</a>
+        </li>
+      </ul>
 
-      <div class="item">
-        <span class="dot purple"></span>
-        <a href="#" aria-label="Tour Posters">Tour Posters</a>
-      </div>
+      <!-- SHOP (coming soon) -->
+      <ul class="list hidden" id="shop" role="tabpanel" aria-labelledby="tab-shop">
+        <li class="item">
+          <span class="dot blue"></span>
+          <a href="javascript:void(0)">Coming soon — premium tees & posters</a>
+        </li>
+        <li class="item">
+          <span class="dot green"></span>
+          <a href="javascript:void(0)">Curated drops will appear here</a>
+        </li>
+      </ul>
 
-      <p class="coming">More links coming soon…</p>
-    </section>
-
-    <!-- Shop placeholder -->
-    <section id="shopSection" class="list" style="display:none">
-      <div class="item">
-        <span class="dot blue"></span>
-        <a href="#" id="openShop">Shop will open here soon — stay tuned!</a>
-      </div>
-    </section>
-  </main>
-
-  <!-- Modal -->
-  <div class="modal" id="shopModal" role="dialog" aria-modal="true" aria-labelledby="shopTitle">
-    <div class="modal-card">
-      <h3 id="shopTitle">Shop – Coming soon</h3>
-      <p>אנחנו מוסיפים עכשיו קישורים של שותפים (Affiliate) ומוצרים שווים של מטאליקה. ברגע שזה מוכן – הכפתור יעבוד כאן.</p>
-      <button class="close" id="closeShop">Close</button>
+      <p class="muted" id="more-note">More links coming soon…</p>
     </div>
   </div>
 
   <script>
-    const tabLinks = document.getElementById('tabLinks');
-    const tabShop  = document.getElementById('tabShop');
-    const linksSec = document.getElementById('linksSection');
-    const shopSec  = document.getElementById('shopSection');
+    // Simple tabs
+    const tabLinks = document.getElementById('tab-links');
+    const tabShop  = document.getElementById('tab-shop');
+    const panelLinks = document.getElementById('links');
+    const panelShop  = document.getElementById('shop');
+    const note = document.getElementById('more-note');
 
-    function setTab(which){
-      if(which==='links'){
-        linksSec.style.display='grid';
-        shopSec.style.display='none';
-        tabLinks.classList.add('active');
-        tabShop.classList.remove('active');
+    function activate(which){
+      if(which === 'links'){
+        tabLinks.classList.add('active'); tabLinks.setAttribute('aria-selected','true');
+        tabShop.classList.remove('active'); tabShop.setAttribute('aria-selected','false');
+        panelLinks.classList.remove('hidden'); panelShop.classList.add('hidden');
+        note.textContent = 'More links coming soon…';
       }else{
-        linksSec.style.display='none';
-        shopSec.style.display='grid';
-        tabShop.classList.add('active');
-        tabLinks.classList.remove('active');
+        tabShop.classList.add('active'); tabShop.setAttribute('aria-selected','true');
+        tabLinks.classList.remove('active'); tabLinks.setAttribute('aria-selected','false');
+        panelShop.classList.remove('hidden'); panelLinks.classList.add('hidden');
+        note.textContent = 'Store section is warming up…';
       }
     }
-    tabLinks.addEventListener('click',()=>setTab('links'));
-    tabShop .addEventListener('click',()=>setTab('shop'));
-
-    // Modal for Shop
-    const shopModal = document.getElementById('shopModal');
-    document.getElementById('openShop').addEventListener('click', (e)=>{
-      e.preventDefault();
-      shopModal.classList.add('show');
-    });
-    document.getElementById('closeShop').addEventListener('click', ()=>{
-      shopModal.classList.remove('show');
-    });
-    shopModal.addEventListener('click', (e)=>{
-      if(e.target===shopModal) shopModal.classList.remove('show');
-    });
+    tabLinks.addEventListener('click', ()=>activate('links'));
+    tabShop.addEventListener('click',  ()=>activate('shop'));
   </script>
 </body>
 </html>
+
 
