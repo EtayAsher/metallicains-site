@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://etayasher.github.io/metallicains-site/sitemap.xml
