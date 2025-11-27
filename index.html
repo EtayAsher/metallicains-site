@@ -1,172 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MetalliCult — Links & Shop</title>
-  <meta name="description" content="MetalliCult — a clean, premium hub for Metallica & rock lovers. Curated links, styles and stories inspired by the music we love." />
-  <meta name="keywords" content="MetalliCult, Metallica, rock, heavy metal, merch, shirts, posters, vinyl" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metallica Merch Hub | MetalliCult</title>
+  <meta name="description" content="Premium fan-made Metallica merch hub with curated apparel, collectibles, and news. Mobile-ready and affiliate compliant." />
+  <meta name="keywords" content="Metallica Official Merch, Metallica Fan Hub, Rock Merchandise" />
   <link rel="canonical" href="https://etayasher.github.io/metallicains-site/" />
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="MetalliCult — Links & Shop" />
-  <meta property="og:description" content="A premium, fan-made hub for Metallica & rock. Curated links, styles and stories." />
+  <meta property="og:title" content="Metallica Merch Hub | MetalliCult" />
+  <meta property="og:description" content="Curated Metallica-inspired apparel, collectibles, and fan news in a fast, mobile-friendly hub." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://etayasher.github.io/metallicains-site/" />
   <meta property="og:image" content="https://etayasher.github.io/metallicains-site/assets/img/מטאליקה-2-Nothing-Else-Matter.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"MetalliCult",
-    "url":"https://etayasher.github.io/metallicains-site/",
-    "sameAs":["https://instagram.com/metallicult"]
-  }
-  </script>
-
   <style>
-    :root{
-      --bg:#0b0f19; --panel:#111827; --panel2:#0f1624;
-      --text:#e8eefc; --muted:#9fb2d0; --ring:#6aa2ff; --border:rgba(255,255,255,.12);
-      --chip:#1a2236; --chipActive:#2b3d60;
-      --blue:#3ea2ff; --red:#ff6961; --green:#5de38f; --purple:#b487ff;
+    :root {
+      --black: #000000;
+      --dark: #1a1a1a;
+      --steel: #2b2f3a;
+      --silver: #c9d1d9;
+      --accent: #e53935;
+      --highlight: #f2b705;
+      --muted: #9ca3af;
+      --border: rgba(255,255,255,0.08);
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family:Inter,system-ui,Segoe UI,Arial,sans-serif; color:var(--text);
-      background:
-        radial-gradient(1200px 1200px at 50% -18%, #274a83 0%, #141b2b 48%, #0b0f19 78%, #070a11 100%),
-        #070a11;
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      color: var(--silver);
+      background: radial-gradient(circle at 20% 20%, #222 0%, #0c0c0f 40%, #050507 90%);
+      min-height: 100vh;
     }
-    .wrap{max-width:820px;margin:26px auto 60px;padding:0 18px}
-    .frame{
-      background:linear-gradient(180deg,#1b2334 0%,#101626 100%);
-      border:1px solid rgba(255,255,255,.10);
-      border-radius:30px; padding:28px 22px 30px;
-      box-shadow:0 20px 60px -12px rgba(0,10,30,.55), inset 0 1px 0 rgba(255,255,255,.06);
+    a { color: inherit; text-decoration: none; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(0,0,0,0.9);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(6px);
     }
-    .topbar{display:flex;justify-content:flex-end;margin-bottom:8px}
-    .topbar a{
-      color:#9bc5ff;text-decoration:none;font-size:14px;
-      background:rgba(255,255,255,.06); padding:8px 12px;border-radius:999px;border:1px solid var(--border)
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
     }
-    .hero{display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:4px}
-    .avatar{width:132px;height:132px;border-radius:999px;overflow:hidden;border:4px solid rgba(255,255,255,.12);box-shadow:0 8px 18px rgba(0,0,0,.35)}
-    .avatar img{width:100%;height:100%;object-fit:cover}
-    h1{margin:14px 0 0;font-size:38px;letter-spacing:.4px}
-    .tagline{margin:10px 0 22px;color:var(--muted);font-size:15px}
-    .tabs{
-      display:inline-flex;gap:6px;background:var(--chip);border:1px solid var(--border);
-      border-radius:999px;padding:6px;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)
+    .brand { font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 18px; align-items: center; }
+    nav a { color: var(--silver); font-weight: 600; padding: 8px 10px; border-radius: 10px; }
+    nav a:hover, nav a:focus-visible { background: var(--steel); color: white; }
+    .nav-actions { display: flex; gap: 10px; align-items: center; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, #2c2c2c, #121212);
+      color: white;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .tab{
-      cursor:pointer;border:0;background:transparent;color:var(--text);
-      border-radius:999px;padding:10px 22px;font-weight:600
+    .btn-accent { background: linear-gradient(135deg, var(--accent), #7f0c0c); border-color: rgba(255,255,255,0.15); }
+    .btn:hover, .btn:focus-visible { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,0.45); }
+
+    .hamburger { display: none; cursor: pointer; padding: 10px; border-radius: 10px; border: 1px solid var(--border); }
+    .hamburger span { display: block; width: 20px; height: 2px; background: var(--silver); margin: 4px 0; }
+    .mobile-menu { display: none; flex-direction: column; gap: 10px; padding: 0 18px 16px; }
+    .mobile-menu a { padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; background: #0d0d0f; }
+
+    main { max-width: 1100px; margin: 0 auto; padding: 24px 18px 80px; }
+    .hero {
+      display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px; align-items: center;
+      background: linear-gradient(135deg, rgba(26,26,26,0.9), rgba(10,10,10,0.95));
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 26px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.55);
     }
-    .tab.active{background:var(--chipActive);box-shadow:0 0 0 1px rgba(255,255,255,.06), inset 0 1px 0 rgba(255,255,255,.07)}
-    .list{margin:26px auto 8px;padding:0;list-style:none;max-width:760px}
-    .item{
-      display:flex;align-items:center;gap:14px;
-      background:var(--panel); border:1px solid var(--border);
-      border-radius:22px; padding:18px 20px; margin:12px 0;
-      box-shadow:inset 0 1px 0 rgba(255,255,255,.06)
+    .hero h1 { margin: 0 0 10px; font-size: 32px; letter-spacing: 0.2px; }
+    .hero p { margin: 0 0 16px; color: var(--muted); line-height: 1.6; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge { background: #111; padding: 8px 12px; border-radius: 12px; border: 1px solid var(--border); font-size: 13px; color: var(--highlight); }
+    .hero-img { width: 100%; border-radius: 18px; overflow: hidden; border: 1px solid var(--border); }
+    .hero-img img { width: 100%; display: block; height: auto; }
+
+    .section { margin-top: 42px; }
+    .section h2 { margin: 0 0 12px; font-size: 26px; }
+    .section p { margin: 0 0 18px; color: var(--muted); }
+
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card { border: 1px solid var(--border); background: #0c0c0f; border-radius: 18px; padding: 18px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+    .card h3 { margin: 0; font-size: 20px; }
+    .card p { margin: 0; color: var(--muted); line-height: 1.5; }
+
+    .pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; background: #161616; border-radius: 999px; border: 1px solid var(--border); color: var(--highlight); font-size: 13px; }
+
+    .list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    .list li { display: flex; align-items: center; gap: 10px; color: var(--silver); }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+
+    footer { border-top: 1px solid var(--border); background: #050505; margin-top: 60px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; padding: 18px; display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); align-items: center; color: var(--muted); font-size: 14px; }
+    .footer-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .footer-links a { color: var(--silver); }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
     }
-    .dot{width:14px;height:14px;border-radius:999px}
-    .blue{background:var(--blue)} .red{background:var(--red)} .green{background:var(--green)} .purple{background:var(--purple)}
-    .item a{color:var(--text);text-decoration:none;font-weight:600;flex:1}
-    .muted{color:var(--muted);font-size:14px;margin:14px 0 0}
-    .hidden{display:none}
-    @media (max-width:560px){
-      h1{font-size:30px}
-      .avatar{width:108px;height:108px}
+    @media (max-width: 680px) {
+      nav ul { display: none; }
+      .hamburger { display: block; }
+      .mobile-menu.show { display: flex; }
+      .hero h1 { font-size: 26px; }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="frame">
-      <div class="topbar">
-        <a href="about.html">About Us</a>
+  <header>
+    <div class="nav">
+      <div class="brand">MetalliCult</div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn" href="blog.html">News</a>
+        <a class="btn btn-accent" href="#shop">Shop Picks</a>
+        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-
-      <div class="hero">
-        <div class="avatar">
-          <img src="assets/img/מטאליקה-2-Nothing-Else-Matter.jpg" alt="MetalliCult">
-        </div>
-        <h1>@metallicult</h1>
-        <div class="tagline">Fuel your metal spirit with Metallica vibes. 🤘 #Metallica #ShopNow</div>
-
-        <div class="tabs" role="tablist" aria-label="Sections">
-          <button class="tab active" role="tab" aria-selected="true" aria-controls="links" id="tab-links">Links</button>
-          <button class="tab" role="tab" aria-selected="false" aria-controls="shop" id="tab-shop">Shop</button>
-        </div>
-      </div>
-
-      <!-- LINKS -->
-      <ul class="list" id="links" role="tabpanel" aria-labelledby="tab-links">
-        <li class="item">
-          <span class="dot blue"></span>
-          <a href="#" target="_blank" rel="noopener">MTL Tumblers</a>
-        </li>
-        <li class="item">
-          <span class="dot red"></span>
-          <a href="#" target="_blank" rel="noopener">Classic T-Shirts</a>
-        </li>
-        <li class="item">
-          <span class="dot green"></span>
-          <a href="#" target="_blank" rel="noopener">Hawaiian Shirts</a>
-        </li>
-        <li class="item">
-          <span class="dot purple"></span>
-          <a href="#" target="_blank" rel="noopener">Tour Posters</a>
-        </li>
-      </ul>
-
-      <!-- SHOP (coming soon) -->
-      <ul class="list hidden" id="shop" role="tabpanel" aria-labelledby="tab-shop">
-        <li class="item">
-          <span class="dot blue"></span>
-          <a href="javascript:void(0)">Coming soon — premium tees & posters</a>
-        </li>
-        <li class="item">
-          <span class="dot green"></span>
-          <a href="javascript:void(0)">Curated drops will appear here</a>
-        </li>
-      </ul>
-
-      <p class="muted" id="more-note">More links coming soon…</p>
     </div>
-  </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="#shop">Shop</a>
+      <a href="blog.html">Blog</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="pill">Independent fan hub • Affiliate-supported</div>
+        <h1>Curated Metallica Merch for True Fans</h1>
+        <p>We hand-pick Metallica-inspired apparel, collectibles, and everyday gear from trusted retailers. Fast, mobile-first, and fully transparent about how we support the site.</p>
+        <div class="badges">
+          <span class="badge">No official affiliation</span>
+          <span class="badge">Affiliate disclosure inside</span>
+          <span class="badge">Secure & mobile friendly</span>
+        </div>
+        <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-accent" href="#shop">View top picks</a>
+          <a class="btn" href="about.html">Why trust us</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="assets/img/מטאליקה-2-Nothing-Else-Matter.jpg" alt="Metallica stage photo">
+      </div>
+    </section>
+
+    <section class="section" id="shop">
+      <h2>Shop the Metallica Essentials</h2>
+      <p>Carefully selected items that match the energy of the band. These are affiliate links — we may earn commissions at no extra cost to you.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>MTL Tumblers</h3>
+          <p>Double-wall stainless tumblers with bold artwork to keep drinks stage-ready.</p>
+          <a class="btn btn-accent" href="https://example.com/tumblers" target="_blank" rel="noopener">Shop Tumblers</a>
+        </article>
+        <article class="card">
+          <h3>Classic T-Shirts</h3>
+          <p>Official-style tees with iconic album graphics and tour-inspired prints.</p>
+          <a class="btn btn-accent" href="https://example.com/tshirts" target="_blank" rel="noopener">Shop T-Shirts</a>
+        </article>
+        <article class="card">
+          <h3>Hawaiian Shirts</h3>
+          <p>Summer drops with loud patterns that nod to the Metallica legacy.</p>
+          <a class="btn btn-accent" href="https://example.com/hawaiian" target="_blank" rel="noopener">Shop Hawaiian Shirts</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Why Fans Choose MetalliCult</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="pill">Compliance Ready</div>
+          <h3>Affiliate network standards</h3>
+          <p>Full legal coverage (Privacy, Terms, Disclosure) and transparent messaging tailored for networks like FlexOffers, Impact, and CJ.</p>
+        </div>
+        <div class="card">
+          <div class="pill">Curation</div>
+          <h3>Expert picks</h3>
+          <p>Reviewed for quality, design alignment, shipping reliability, and fan feedback before being featured.</p>
+        </div>
+        <div class="card">
+          <div class="pill">Performance</div>
+          <h3>Mobile-first UX</h3>
+          <p>Lightweight HTML, responsive layout, and clear calls-to-action that keep the experience fast on any device.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Latest from the Blog</h2>
+      <p>News, reviews, and buying guides to keep your collection fresh.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>2024 Tour Merch Checklist</h3>
+          <p>What to grab before the show: tees, posters, and accessories fans actually use.</p>
+          <a class="btn" href="blog.html#tour-merch">Read the guide</a>
+        </article>
+        <article class="card">
+          <h3>Care Tips for Band Tees</h3>
+          <p>Keep prints sharp and cotton soft with our quick maintenance rundown.</p>
+          <a class="btn" href="blog.html#tee-care">See the tips</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Stay Transparent</h2>
+      <p>MetalliCult is independently run by fans. We earn commissions from qualifying purchases through affiliate links — this supports site upkeep and new content without raising prices for you.</p>
+      <ul class="list">
+        <li><span class="dot"></span>Clear FTC affiliate disclosure on every page.</li>
+        <li><span class="dot"></span>Privacy-first approach with GDPR & CCPA rights explained.</li>
+        <li><span class="dot"></span>No claim of endorsement or partnership with Metallica.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© 2024 MetalliCult. Fan-made hub. Not affiliated with Metallica.</div>
+      <div class="footer-links" aria-label="Legal and info links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="disclosure.html">Affiliate Disclosure</a>
+      </div>
+    </div>
+  </footer>
 
   <script>
-    // Simple tabs
-    const tabLinks = document.getElementById('tab-links');
-    const tabShop  = document.getElementById('tab-shop');
-    const panelLinks = document.getElementById('links');
-    const panelShop  = document.getElementById('shop');
-    const note = document.getElementById('more-note');
-
-    function activate(which){
-      if(which === 'links'){
-        tabLinks.classList.add('active'); tabLinks.setAttribute('aria-selected','true');
-        tabShop.classList.remove('active'); tabShop.setAttribute('aria-selected','false');
-        panelLinks.classList.remove('hidden'); panelShop.classList.add('hidden');
-        note.textContent = 'More links coming soon…';
-      }else{
-        tabShop.classList.add('active'); tabShop.setAttribute('aria-selected','true');
-        tabLinks.classList.remove('active'); tabLinks.setAttribute('aria-selected','false');
-        panelShop.classList.remove('hidden'); panelLinks.classList.add('hidden');
-        note.textContent = 'Store section is warming up…';
-      }
-    }
-    tabLinks.addEventListener('click', ()=>activate('links'));
-    tabShop.addEventListener('click',  ()=>activate('shop'));
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('show');
+    });
   </script>
 </body>
 </html>
-
-
