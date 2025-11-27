@@ -1,131 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>About MetalliCult — Fans of Metallica & Rock</title>
-  <meta name="description" content="MetalliCult is a fan-driven hub for Metallica & rock lovers. We curate great finds, style, and stories inspired by the music we love." />
-  <meta name="keywords" content="MetalliCult, Metallica, rock, heavy metal, band merch, t-shirts, posters, vinyl" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About MetalliCult | Fan-Made Metallica Hub</title>
+  <meta name="description" content="Meet the MetalliCult team: lifelong Metallica fans curating trustworthy merch picks, news, and guides with full transparency." />
+  <meta name="keywords" content="Metallica Official Merch, Metallica Fan Hub, Rock Merchandise" />
   <link rel="canonical" href="https://etayasher.github.io/metallicains-site/about.html" />
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="About MetalliCult — Fans of Metallica & Rock" />
-  <meta property="og:description" content="A fan community celebrating Metallica & rock culture with curated finds, style and stories." />
+  <meta property="og:title" content="About MetalliCult | Fan-Made Metallica Hub" />
+  <meta property="og:description" content="Learn how our fan team curates Metallica-inspired gear with compliance, transparency, and quality in mind." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://etayasher.github.io/metallicains-site/about.html" />
   <meta property="og:image" content="https://etayasher.github.io/metallicains-site/assets/img/מטאליקה-2-Nothing-Else-Matter.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "MetalliCult — About",
-    "url": "https://etayasher.github.io/metallicains-site/about.html",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "MetalliCult",
-      "url": "https://etayasher.github.io/metallicains-site/"
-    },
-    "description": "MetalliCult is a fan-driven hub for Metallica & rock lovers. We curate great finds, style, and stories inspired by the music we love.",
-    "sameAs": ["https://instagram.com/metallicult"]
-  }
-  </script>
-
   <style>
-    :root{
-      --bg:#0e1116; --panel:#121824; --panel2:#182133;
-      --text:#e9eefc; --muted:#9fb2d0; --ring:#6aa2ff; --border:rgba(255,255,255,.12);
-      --shadow:rgba(0,10,30,.55);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family:Inter,system-ui,Segoe UI,Arial,sans-serif; color:var(--text);
-      background: radial-gradient(1200px 1200px at 50% -20%, #1f3c6b 0%, #101626 48%, #0b0f19 78%, #070a11 100%), #070a11;
-    }
-    .wrap{max-width:980px;margin:28px auto 60px;padding:0 18px}
-    .back{display:inline-flex;gap:8px;align-items:center;color:#9bc5ff;text-decoration:none;font-size:14px}
-    .card{
-      margin-top:14px;background:linear-gradient(180deg,#1c2535 0%,#0f1523 100%);
-      border:1px solid rgba(255,255,255,.10); border-radius:22px; padding:26px;
-      box-shadow:0 18px 45px -10px var(--shadow), inset 0 1px 0 rgba(255,255,255,.08);
-    }
-    .head{display:flex;gap:16px;align-items:center;margin-bottom:6px}
-    .avatar{width:64px;height:64px;border-radius:999px;overflow:hidden;border:3px solid rgba(255,255,255,.08)}
-    .avatar img{width:100%;height:100%;object-fit:cover}
-    h1{margin:0 0 4px;font-size:34px}
-    .handle{display:inline-flex;gap:10px;align-items:center;color:var(--muted);font-size:14px}
-    .lead{margin:16px 0 18px;color:var(--text);line-height:1.7}
-    strong{color:#cfe1ff}
+    :root { --black:#050505; --dark:#0c0c0f; --panel:#111117; --text:#f6f6f2; --muted:#cfcabd; --accent:#f5c542; --accent-strong:#e2af2c; --border:rgba(245,197,66,0.35); }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Inter","Segoe UI",Arial,sans-serif; color:var(--text); background: radial-gradient(circle at 12% 8%, rgba(245,197,66,0.08) 0%, transparent 32%), linear-gradient(155deg, #0a0a0d 0%, #040405 60%, #000 100%); }
+    a { color: inherit; text-decoration: none; }
+    header { position: sticky; top:0; z-index:20; background: rgba(0,0,0,0.94); border-bottom:1px solid var(--border); backdrop-filter: blur(8px); }
+    .nav { max-width: 1000px; margin:0 auto; padding:16px 18px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    nav ul { list-style:none; margin:0; padding:0; display:flex; gap:16px; }
+    nav a { padding:8px 10px; border-radius:12px; font-weight:600; color:var(--text); border:1px solid transparent; transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease; }
+    nav a:hover, nav a:focus-visible { background: rgba(245,197,66,0.12); color:var(--accent); border-color:var(--border); }
+    .brand { font-weight:800; text-transform:uppercase; letter-spacing:0.6px; color:var(--accent); }
+    .hamburger { display:none; cursor:pointer; padding:10px; border:1px solid var(--border); border-radius:10px; background:rgba(0,0,0,0.6); }
+    .hamburger span { display:block; width:20px; height:2px; background:var(--text); margin:4px 0; }
+    .mobile-menu { display:none; flex-direction:column; gap:10px; padding:0 18px 16px; }
+    .mobile-menu a { padding:10px 12px; border:1px solid var(--border); border-radius:10px; background:#08080b; color:var(--text); }
 
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:6px}
-    .box{background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:18px}
-    .box h3{margin:0 0 10px}
-    .list{margin:0;padding:0;list-style:none}
-    .list li{display:flex;align-items:center;gap:10px;margin:8px 0;color:var(--text)}
-    .dot{width:10px;height:10px;border-radius:999px}
-    .blue{background:#3ea2ff} .pink{background:#ff77b4} .green{background:#5de38f} .purple{background:#b487ff}
-
-    .foot{margin:18px 0 10px;color:var(--muted);font-size:13px}
-    .foot a{color:#9bc5ff;text-decoration:none}
-    @media (max-width:760px){.grid{grid-template-columns:1fr}}
+    main { max-width: 1000px; margin:0 auto; padding:26px 18px 80px; }
+    h1 { margin:0 0 8px; font-size:32px; color:var(--text); }
+    .lead { color:var(--muted); line-height:1.7; margin:0 0 12px; }
+    .card { border:1px solid var(--border); background:var(--panel); border-radius:18px; padding:20px; margin-top:20px; box-shadow:0 14px 32px rgba(0,0,0,0.6); }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; margin-top:16px; }
+    .pill { display:inline-flex; gap:8px; align-items:center; background:rgba(245,197,66,0.1); padding:8px 12px; border-radius:999px; border:1px solid var(--border); color:var(--accent); font-size:13px; letter-spacing:0.2px; }
+    .list { list-style:none; padding:0; margin:0; display:grid; gap:8px; color:var(--text); }
+    .dot { width:10px; height:10px; border-radius:50%; background:var(--accent-strong); box-shadow:0 0 8px rgba(245,197,66,0.4); }
+    footer { border-top:1px solid var(--border); background:#030303; margin-top:60px; }
+    .footer-inner { max-width:1000px; margin:0 auto; padding:18px; display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); align-items:center; color:var(--muted); font-size:14px; }
+    .footer-links { display:flex; gap:12px; flex-wrap:wrap; }
+    @media (max-width:680px) { nav ul { display:none; } .hamburger { display:block; } .mobile-menu.show { display:flex; } h1{font-size:26px;} }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <a class="back" href="index.html">← Back to Home</a>
+  <header>
+    <div class="nav">
+      <div class="brand">MetalliCult</div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#shop">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#shop">Shop</a>
+      <a href="blog.html">Blog</a>
+    </div>
+  </header>
 
-    <section class="card">
-      <div class="head">
-        <div class="avatar">
-          <img src="assets/img/מטאליקה-2-Nothing-Else-Matter.jpg" alt="MetalliCult">
-        </div>
-        <div>
-          <h1>About MetalliCult</h1>
-          <div class="handle">@metallicult • Fans of Metallica & Rock</div>
-        </div>
+  <main>
+    <h1>About MetalliCult</h1>
+    <p class="lead">MetalliCult is an independent, fan-built destination for Metallica devotees. We curate merchandise, write practical guides, and share news that helps fans gear up with confidence. This site is not affiliated with or endorsed by Metallica or their partners.</p>
+
+    <div class="card">
+      <div class="pill">Expertise • Authority • Trust</div>
+      <p class="lead"><strong>Our roots</strong> — We are lifelong fans who have followed the band across decades and formats. From bootlegs to box sets, we know what stands up to real-world use and what belongs in a collector’s stash.</p>
+      <p class="lead"><strong>Our process</strong> — Every item featured is reviewed for design accuracy, material quality, shipping reliability, and retailer reputation. We choose partners that meet global standards and give buyers clear return options.</p>
+      <p class="lead"><strong>Our promise</strong> — Transparency first. We publish affiliate disclosures, respect privacy rights (GDPR + CCPA), and avoid any language suggesting official endorsement. If something is out of stock or doesn’t meet expectations, we pull it from recommendations.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="pill">What we curate</div>
+        <ul class="list">
+          <li><span class="dot"></span>Iconic tees, hoodies, and stage-ready layers</li>
+          <li><span class="dot"></span>Drinkware built for tour life</li>
+          <li><span class="dot"></span>Posters, patches, and collectibles worthy of a home studio</li>
+          <li><span class="dot"></span>Maintenance tips to keep prints vibrant</li>
+        </ul>
       </div>
-
-      <p class="lead">
-        <strong>Who we are</strong> — MetalliCult is a fan-driven community built by people who live and breathe rock.
-        We celebrate the sound, style and energy around Metallica and the culture that grew with it.
-      </p>
-
-      <p class="lead">
-        <strong>What we do</strong> — we spotlight quality gear, timeless styles and standout finds inspired by the music we love.
-        Everything you see here is hand-picked because it looks great, feels right and fits the vibe of true rock fans.
-      </p>
-
-      <p class="lead">
-        <strong>What you’ll find</strong> — apparel, posters, collectibles and stories from the road.
-        We keep the page fresh with new drops and refined picks that keep the spirit loud.
-      </p>
-
-      <div class="grid">
-        <div class="box">
-          <h3>What we love</h3>
-          <ul class="list">
-            <li><span class="dot blue"></span>Vinyls & rare posters</li>
-            <li><span class="dot pink"></span>Vintage tees & premium fits</li>
-            <li><span class="dot green"></span>Stage energy & tour vibes</li>
-            <li><span class="dot purple"></span>Design that screams rock</li>
-          </ul>
-        </div>
-
-        <div class="box">
-          <h3>Get in touch</h3>
-          <ul class="list">
-            <li><span class="dot blue"></span>Instagram: <a href="https://instagram.com/metallicult" target="_blank" rel="noopener">@metallicult</a></li>
-            <li><span class="dot green"></span>Email: <a href="mailto:metallicult.team@gmail.com">metallicult.team@gmail.com</a></li>
-          </ul>
-        </div>
+      <div class="card">
+        <div class="pill">How we stay compliant</div>
+        <ul class="list">
+          <li><span class="dot"></span>FTC-ready affiliate disclosure on every page</li>
+          <li><span class="dot"></span>GDPR/CCPA rights explained with opt-out guidance</li>
+          <li><span class="dot"></span>Clear separation from any official Metallica branding</li>
+        </ul>
       </div>
+      <div class="card">
+        <div class="pill">Connect with us</div>
+        <ul class="list">
+          <li><span class="dot"></span>Email: <a href="mailto:metallicult.team@gmail.com">metallicult.team@gmail.com</a></li>
+          <li><span class="dot"></span>Instagram: <a href="https://instagram.com/metallicult" target="_blank" rel="noopener">@metallicult</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
 
-      <p class="foot">© MetalliCult • Fan-made project. This site is not affiliated with or endorsed by Metallica.</p>
-    </section>
-  </div>
+  <footer>
+    <div class="footer-inner">
+      <div>© 2024 MetalliCult. Fan-made hub. Not affiliated with Metallica.</div>
+      <div class="footer-links" aria-label="Legal and info links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="disclosure.html">Affiliate Disclosure</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>
