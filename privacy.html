@@ -14,29 +14,31 @@
   <meta property="og:image" content="https://etayasher.github.io/metallicains-site/assets/img/מטאליקה-2-Nothing-Else-Matter.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <style>
-    :root { --silver:#c9d1d9; --muted:#9ca3af; --border:rgba(255,255,255,0.08); --accent:#e53935; }
+    :root { --black:#000000; --dark:#0a0a0a; --panel:#111111; --border:rgba(255,255,255,0.12); --yellow:#f5d100; --yellow-light:#ffe55c; --yellow-dark:#bfa000; --text-light:#f6f6f6; --text-muted:#b3b3b3; }
     * { box-sizing:border-box; }
-    body { margin:0; font-family:"Inter","Segoe UI",Arial,sans-serif; color:var(--silver); background:#050506; }
+    body { margin:0; font-family:"Inter","Segoe UI",Arial,sans-serif; color:var(--text-light); background: radial-gradient(circle at 12% 12%, #111 0%, #040404 65%, #000 90%); }
     a { color:inherit; }
-    header { position: sticky; top:0; z-index:20; background: rgba(0,0,0,0.92); border-bottom:1px solid var(--border); backdrop-filter: blur(6px); }
-    .nav { max-width: 1000px; margin:0 auto; padding:16px 18px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    header { position: sticky; top:0; z-index:20; background: var(--black); border-bottom:1px solid var(--border); backdrop-filter: blur(8px); }
+    .nav { max-width: 1000px; margin:0 auto; padding:18px 20px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
     nav ul { list-style:none; margin:0; padding:0; display:flex; gap:16px; }
-    nav a { padding:8px 10px; border-radius:10px; font-weight:600; }
-    nav a:hover, nav a:focus-visible { background: rgba(255,255,255,0.06); }
+    nav a { padding:10px 12px; border-radius:12px; font-weight:600; color:var(--text-light); }
+    nav a:hover, nav a:focus-visible { color:var(--yellow); }
     .brand { font-weight:800; text-transform:uppercase; }
-    .hamburger { display:none; cursor:pointer; padding:10px; border:1px solid var(--border); border-radius:10px; }
-    .hamburger span { display:block; width:20px; height:2px; background:var(--silver); margin:4px 0; }
+    .hamburger { display:none; cursor:pointer; padding:10px; border:1px solid var(--border); border-radius:12px; background:var(--panel); }
+    .hamburger span { display:block; width:20px; height:2px; background:var(--text-light); margin:4px 0; }
     .mobile-menu { display:none; flex-direction:column; gap:10px; padding:0 18px 16px; }
-    .mobile-menu a { padding:10px 12px; border:1px solid var(--border); border-radius:10px; background:#0d0d0f; }
-    main { max-width: 1000px; margin:0 auto; padding:26px 18px 80px; }
-    h1 { margin:0 0 12px; font-size:30px; }
-    h2 { margin:24px 0 10px; }
-    p { color:var(--muted); line-height:1.7; margin:0 0 12px; }
-    ul { color:var(--muted); padding-left:18px; }
-    .card { border:1px solid var(--border); background:#0c0c0f; border-radius:18px; padding:20px; box-shadow:0 14px 30px rgba(0,0,0,0.45); }
-    footer { border-top:1px solid var(--border); background:#050505; margin-top:60px; }
-    .footer-inner { max-width:1000px; margin:0 auto; padding:18px; display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); align-items:center; color:var(--muted); font-size:14px; }
+    .mobile-menu a { padding:12px 14px; border:1px solid var(--border); border-radius:12px; background:var(--panel); color:var(--text-light); }
+    main { max-width: 1000px; margin:0 auto; padding:28px 20px 90px; }
+    h1 { margin:0 0 12px; font-size:30px; color:var(--yellow); }
+    h2 { margin:24px 0 10px; color:var(--text-light); }
+    p { color:var(--text-muted); line-height:1.7; margin:0 0 12px; }
+    ul { color:var(--text-muted); padding-left:18px; line-height:1.7; }
+    .card { border:1px solid var(--border); background:var(--panel); border-radius:20px; padding:22px; box-shadow:0 12px 32px rgba(0,0,0,0.35); }
+    footer { border-top:1px solid var(--border); background:var(--black); margin-top:60px; }
+    .footer-inner { max-width:1000px; margin:0 auto; padding:20px; display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); align-items:center; color:var(--text-muted); font-size:14px; }
     .footer-links { display:flex; gap:12px; flex-wrap:wrap; }
+    .footer-links a { color:var(--text-light); }
+    .footer-links a:hover { color:var(--yellow); }
     @media (max-width:680px) { nav ul { display:none; } .hamburger { display:block; } .mobile-menu.show { display:flex; } h1{font-size:26px;} }
   </style>
 </head>
@@ -48,7 +50,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="index.html#shop">Shop</a></li>
+          <li><a href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop</a></li>
           <li><a href="blog.html">Blog</a></li>
         </ul>
       </nav>
@@ -57,7 +59,7 @@
     <div class="mobile-menu" id="mobile-menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="index.html#shop">Shop</a>
+      <a href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop</a>
       <a href="blog.html">Blog</a>
     </div>
   </header>
@@ -66,20 +68,22 @@
     <div class="card">
       <h1>Privacy Policy</h1>
       <p>Effective date: 30 May 2024</p>
-      <p>MetalliCult (“we”, “us”, “our”) operates this independent, fan-made website. We respect your privacy and process personal data in line with the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).</p>
+      <p>MetalliCult ("we", "us", "our") is an independent, fan-made website. We respect your privacy and process personal data in line with the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). This notice explains what we collect, why we collect it, and how you can exercise your rights.</p>
 
       <h2>Information we collect</h2>
       <ul>
-        <li>Device and usage data: pages visited, approximate location (city/region), browser type, and referring URLs captured through privacy-focused analytics.</li>
-        <li>Contact information: email address if you contact us directly.</li>
-        <li>Affiliate interaction data: outbound clicks on affiliate links may be tracked by our partners to attribute commissions.</li>
+        <li><strong>Device and usage data:</strong> pages visited, approximate location (city/region), browser type, and referring URLs captured through privacy-focused analytics.</li>
+        <li><strong>Contact information:</strong> email address if you contact us directly.</li>
+        <li><strong>Affiliate interaction data:</strong> outbound clicks on affiliate links may be tracked by our partners to attribute commissions.</li>
+        <li><strong>Server logs:</strong> basic technical logs used to keep the site secure and investigate abuse.</li>
       </ul>
 
       <h2>How we use data</h2>
       <ul>
-        <li>Operate and improve the site’s performance and content.</li>
+        <li>Operate, maintain, and improve site performance and content.</li>
         <li>Respond to inquiries and support requests.</li>
         <li>Comply with legal obligations and affiliate program requirements.</li>
+        <li>Protect against fraud, abuse, or security threats.</li>
       </ul>
 
       <h2>Legal bases (GDPR)</h2>
@@ -90,20 +94,21 @@
       </ul>
 
       <h2>CCPA notice</h2>
-      <p>We do not sell personal information. California residents may request access to, deletion of, or details about data shared for business purposes.</p>
+      <p>We do not sell personal information. California residents may request access to, deletion of, or details about data shared for business purposes. We respond within statutory timelines and will verify identity before fulfilling a request.</p>
 
       <h2>Data sharing</h2>
       <ul>
         <li>Affiliate networks and merchants: to track referrals and verify commissions.</li>
         <li>Analytics providers: for aggregated, non-identifying usage reports.</li>
         <li>Service providers: email or hosting partners who support site functionality under confidentiality obligations.</li>
+        <li>Legal compliance: when required by law, subpoena, or to enforce our Terms of Service.</li>
       </ul>
 
       <h2>Cookies & tracking</h2>
-      <p>We aim to keep tracking minimal. If analytics or affiliate programs set cookies, they are used to understand site performance and attribute purchases. You can adjust browser settings to block or delete cookies.</p>
+      <p>We aim to keep tracking minimal. If analytics or affiliate programs set cookies, they are used to understand site performance and attribute purchases. You can adjust browser settings to block or delete cookies, and most browsers offer Do Not Track or Global Privacy Control signals which we honor where legally required.</p>
 
       <h2>Data retention</h2>
-      <p>We retain personal data only as long as necessary for the purposes described or to comply with legal and accounting requirements.</p>
+      <p>We retain personal data only as long as necessary for the purposes described or to comply with legal and accounting requirements. When data is no longer needed, we delete or anonymize it.</p>
 
       <h2>Your rights</h2>
       <ul>
@@ -114,7 +119,7 @@
       </ul>
 
       <h2>International transfers</h2>
-      <p>When data is transferred outside your region, we rely on appropriate safeguards such as Standard Contractual Clauses or equivalent protections.</p>
+      <p>When data is transferred outside your region, we rely on appropriate safeguards such as Standard Contractual Clauses or equivalent protections to keep your information secure.</p>
 
       <h2>Security</h2>
       <p>We use HTTPS and commercially reasonable technical and organizational measures to protect data. No method is 100% secure; please contact us if you identify a vulnerability.</p>
@@ -132,15 +137,15 @@
 
   <footer>
     <div class="footer-inner">
-      <div>© 2024 MetalliCult. Fan-made hub. Not affiliated with Metallica.</div>
       <div class="footer-links" aria-label="Legal and info links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="blog.html">Blog</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
         <a href="disclosure.html">Affiliate Disclosure</a>
       </div>
+      <div>© 2024 MetalliCult. Fan-made hub. Not affiliated with Metallica.</div>
     </div>
   </footer>
 

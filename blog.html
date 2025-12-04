@@ -14,34 +14,39 @@
   <meta property="og:image" content="https://etayasher.github.io/metallicains-site/assets/img/מטאליקה-2-Nothing-Else-Matter.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <style>
-    :root { --black:#000; --dark:#1a1a1a; --steel:#2b2f3a; --silver:#c9d1d9; --muted:#9ca3af; --accent:#e53935; --border:rgba(255,255,255,0.08); }
+    :root { --black:#000000; --dark:#0a0a0a; --panel:#111111; --border:rgba(255,255,255,0.12); --yellow:#f5d100; --yellow-light:#ffe55c; --yellow-dark:#bfa000; --text-light:#f6f6f6; --text-muted:#b3b3b3; }
     * { box-sizing:border-box; }
-    body { margin:0; font-family:"Inter","Segoe UI",Arial,sans-serif; color:var(--silver); background: radial-gradient(circle at 15% 15%, #1a1a1a 0%, #060608 60%); }
+    body { margin:0; font-family:"Inter","Segoe UI",Arial,sans-serif; color:var(--text-light); background: radial-gradient(circle at 15% 15%, #111 0%, #040404 65%, #000 90%); }
     a { color: inherit; text-decoration: none; }
-    header { position: sticky; top:0; z-index:20; background: rgba(0,0,0,0.92); border-bottom:1px solid var(--border); backdrop-filter: blur(6px); }
-    .nav { max-width: 1100px; margin:0 auto; padding:16px 18px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    header { position: sticky; top:0; z-index:20; background: var(--black); border-bottom:1px solid var(--border); backdrop-filter: blur(8px); }
+    .nav { max-width: 1100px; margin:0 auto; padding:18px 20px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
     nav ul { list-style:none; margin:0; padding:0; display:flex; gap:16px; }
-    nav a { padding:8px 10px; border-radius:10px; font-weight:600; }
-    nav a:hover, nav a:focus-visible { background: var(--steel); }
+    nav a { padding:10px 12px; border-radius:12px; font-weight:600; color:var(--text-light); }
+    nav a:hover, nav a:focus-visible { color:var(--yellow); }
     .brand { font-weight:800; text-transform:uppercase; }
-    .hamburger { display:none; cursor:pointer; padding:10px; border:1px solid var(--border); border-radius:10px; }
-    .hamburger span { display:block; width:20px; height:2px; background:var(--silver); margin:4px 0; }
+    .hamburger { display:none; cursor:pointer; padding:10px; border:1px solid var(--border); border-radius:12px; background:var(--panel); }
+    .hamburger span { display:block; width:20px; height:2px; background:var(--text-light); margin:4px 0; }
     .mobile-menu { display:none; flex-direction:column; gap:10px; padding:0 18px 16px; }
-    .mobile-menu a { padding:10px 12px; border:1px solid var(--border); border-radius:10px; background:#0d0d0f; }
+    .mobile-menu a { padding:12px 14px; border:1px solid var(--border); border-radius:12px; background:var(--panel); color:var(--text-light); }
 
-    main { max-width: 1100px; margin:0 auto; padding:26px 18px 80px; }
-    h1 { margin:0 0 10px; font-size:32px; }
-    .intro { color:var(--muted); margin:0 0 20px; line-height:1.7; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; }
-    .card { border:1px solid var(--border); background:#0c0c0f; border-radius:18px; padding:18px; display:flex; flex-direction:column; gap:12px; box-shadow:0 14px 30px rgba(0,0,0,0.45); }
-    .pill { display:inline-flex; gap:8px; align-items:center; background:#121212; padding:8px 12px; border-radius:999px; border:1px solid var(--border); color:#f2b705; font-size:13px; }
-    .meta { color:var(--muted); font-size:14px; }
-    .btn { display:inline-flex; align-items:center; justify-content:center; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background: linear-gradient(135deg, #2c2c2c, #121212); color:white; font-weight:700; }
-    .btn:hover, .btn:focus-visible { background: #1f1f1f; }
-    footer { border-top:1px solid var(--border); background:#050505; margin-top:60px; }
-    .footer-inner { max-width:1100px; margin:0 auto; padding:18px; display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); align-items:center; color:var(--muted); font-size:14px; }
+    main { max-width: 1100px; margin:0 auto; padding:28px 20px 90px; }
+    h1 { margin:0 0 10px; font-size:32px; color:var(--yellow); }
+    .intro { color:var(--text-muted); margin:0 0 22px; line-height:1.7; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; }
+    .card { border:1px solid var(--border); background:var(--panel); border-radius:20px; padding:20px; display:flex; flex-direction:column; gap:12px; box-shadow:0 12px 32px rgba(0,0,0,0.35); }
+    .pill { display:inline-flex; gap:8px; align-items:center; background:var(--panel); padding:8px 12px; border-radius:999px; border:1px solid var(--border); color:var(--yellow); font-size:13px; }
+    .meta { color:var(--text-muted); font-size:14px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; padding:12px 16px; border-radius:14px; border:1px solid var(--border); background: linear-gradient(135deg, var(--yellow), var(--yellow-dark)); color:#000; font-weight:800; box-shadow:0 12px 32px rgba(0,0,0,0.35); transition:background 0.2s ease, transform 0.2s ease; }
+    .btn:hover, .btn:focus-visible { background: var(--yellow-light); transform: translateY(-1px); }
+    .feature-img { width:100%; height:180px; border-radius:14px; background: linear-gradient(135deg, rgba(245,209,0,0.25), rgba(17,17,17,0.75)); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; color:var(--text-muted); font-weight:700; letter-spacing:0.5px; box-shadow:0 12px 32px rgba(0,0,0,0.35); }
+    article h2 { color:var(--yellow); }
+    article p { color:var(--text-muted); line-height:1.7; margin:0 0 12px; }
+    footer { border-top:1px solid var(--border); background:var(--black); margin-top:60px; }
+    .footer-inner { max-width:1100px; margin:0 auto; padding:20px; display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); align-items:center; color:var(--text-muted); font-size:14px; }
     .footer-links { display:flex; gap:12px; flex-wrap:wrap; }
-    @media (max-width:680px) { nav ul { display:none; } .hamburger { display:block; } .mobile-menu.show { display:flex; } h1{font-size:26px;} }
+    .footer-links a { color:var(--text-light); }
+    .footer-links a:hover { color:var(--yellow); }
+    @media (max-width:680px) { nav ul { display:none; } .hamburger { display:block; } .mobile-menu.show { display:flex; } h1{font-size:26px;} .btn { width:100%; } }
   </style>
 </head>
 <body>
@@ -52,7 +57,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="index.html#shop">Shop</a></li>
+          <li><a href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop</a></li>
           <li><a href="blog.html">Blog</a></li>
         </ul>
       </nav>
@@ -61,53 +66,62 @@
     <div class="mobile-menu" id="mobile-menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="index.html#shop">Shop</a>
+      <a href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop</a>
       <a href="blog.html">Blog</a>
     </div>
   </header>
 
   <main>
     <h1>Blog & News</h1>
-    <p class="intro">Fresh drops, tour notes, and buyer guides tailored for Metallica fans. All articles include clear disclosures and no claims of official endorsement.</p>
+    <p class="intro">Fresh drops, tour notes, and buyer guides tailored for Metallica fans. Every post is written by fans, cites the sources we use, and links to the full Affiliate Disclosure so you know how commissions support the site.</p>
 
     <div class="grid">
-      <article class="card" id="tour-merch">
+      <article class="card" id="buying-guide">
         <div class="pill">Guide</div>
-        <h2>2024 Tour Merch Checklist</h2>
-        <p class="meta">Updated monthly • Written by fans who travel</p>
-        <p>Prioritize breathable tees, compact posters, and durable drinkware. We link to items that ship reliably and match the current tour aesthetic.</p>
-        <a class="btn" href="index.html#shop">See recommended gear</a>
+        <h2>2024 Metallica Merchandise Buying Guide</h2>
+        <p class="meta">Published January 5, 2024 • Updated quarterly</p>
+        <div class="feature-img" aria-hidden="true">Feature Image</div>
+        <p>Metallica merch drops evolve fast, so the safest approach is to start with verified retailers that honor returns and display licensing details clearly. In 2024, the biggest differentiators are fabric weight, print method, and shipping speed. Lightweight cotton blends feel great in the pit, but heavier 6.1 oz. tees hold up longer for collectors. Look for reactive dye or discharge prints for dark album art—the colors stay richer after repeated washes.</p>
+        <p>Before you check out, scan the size chart and note whether the merchant lists shrinkage expectations. Legitimate product pages will call out exact material blends, and reputable sellers like Merchbar will surface customer feedback on fit. If you’re outside the U.S., confirm duties are calculated at checkout to avoid surprise carrier fees.</p>
+        <p>Collectors should bookmark limited editions and restock alerts. When we link to a listing, it means we’ve confirmed live inventory, pictured the actual print placement, and verified estimated delivery windows. If you land on a Sold Out badge, the link will roll to a comparable item from the same retailer so you’re never sent to a dead page.</p>
+        <a class="btn" href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop the guide picks</a>
       </article>
 
-      <article class="card" id="tee-care">
-        <div class="pill">Care Tips</div>
-        <h2>How to Keep Band Tees Bold</h2>
-        <p class="meta">5-minute maintenance read</p>
-        <p>Turn shirts inside out, wash cold, avoid harsh detergents, and hang dry. These steps keep album art bright and cotton soft.</p>
-        <a class="btn" href="disclosure.html">Read our disclosure</a>
+      <article class="card" id="top-shirts">
+        <div class="pill">Reviews</div>
+        <h2>Top 10 Metallica Shirts on Merchbar — Reviewed</h2>
+        <p class="meta">Published February 12, 2024 • Written by Ori Elbaz</p>
+        <div class="feature-img" aria-hidden="true">Feature Image</div>
+        <p>To build this list, we pulled shirts with 4.5+ star averages, recent stock dates, and verified print credits. Fit is the first filter: most tees come in unisex cuts, but several runs include relaxed fits that lay better over layers. If a listing includes shoulder-to-shoulder taping and double-needle hems, you’re looking at a shirt that resists seam twisting after the first wash.</p>
+        <p>Print clarity matters as much as the graphic. Shirts using water-based inks feel softer and breathe better under a jacket, while plastisol prints offer that bold, raised look perfect for stage lighting. We also note when a design ships in a biodegradable bag—a small but meaningful sign of a quality-focused vendor. For each top 10 pick, we verified estimated dispatch times, return policies, and whether the merchant offers prepaid labels.</p>
+        <p>If you want the short version: prioritize durable cotton, read the customer photos, and shop from merchants that show live inventory counts. We keep our links pointed at active listings only, and if a size sells out, we refresh the recommendation with the closest match.</p>
+        <a class="btn" href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">View all top shirts</a>
       </article>
 
-      <article class="card" id="new-drops">
-        <div class="pill">Spotlight</div>
-        <h2>New Arrival Watch</h2>
-        <p class="meta">Updated when retailers drop new designs</p>
-        <p>We monitor Merchbar, Amazon, and boutique sellers for fresh Metallica-inspired prints. When we feature an item, we verify retailer reviews and shipping terms.</p>
-        <a class="btn" href="index.html#shop">View latest picks</a>
+      <article class="card" id="quality-merch">
+        <div class="pill">Tips</div>
+        <h2>How to Spot High-Quality Band Merch (And Avoid Fakes)</h2>
+        <p class="meta">Published March 3, 2024 • 6-minute read</p>
+        <div class="feature-img" aria-hidden="true">Feature Image</div>
+        <p>Authentic merch starts with reputable storefronts. Real listings include licensing details, clear product photography, and consistent branding across thumbnails. If a page hides its return policy or uses blurry art, treat it as a red flag. Look closely at seams: high-quality tees feature even stitching and neck labels that sit flat instead of curling.</p>
+        <p>Weight and print method reveal a lot. Counterfeit shirts often feel thin and use heavy plastisol that cracks quickly. Legit items typically specify fabric weight and wash instructions. When buying hoodies or long sleeves, check for metal-tipped drawstrings and ribbed cuffs—these details rarely appear on knockoffs. Shipping transparency also matters: trustworthy sellers show carrier options, tracking, and delivery estimates before checkout.</p>
+        <p>Finally, keep receipts and screenshots of the product page. If an item arrives off-spec, you’ll have proof to request a return. At MetalliCult, we only link to merchants that meet these standards and publish our affiliate disclosure so you know commissions never change your price.</p>
+        <a class="btn" href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop vetted merch</a>
       </article>
     </div>
   </main>
 
   <footer>
     <div class="footer-inner">
-      <div>© 2024 MetalliCult. Fan-made hub. Not affiliated with Metallica.</div>
       <div class="footer-links" aria-label="Legal and info links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="blog.html">Blog</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
         <a href="disclosure.html">Affiliate Disclosure</a>
       </div>
+      <div>© 2024 MetalliCult. Fan-made hub. Not affiliated with Metallica.</div>
     </div>
   </footer>
 

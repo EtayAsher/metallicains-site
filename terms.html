@@ -14,29 +14,31 @@
   <meta property="og:image" content="https://etayasher.github.io/metallicains-site/assets/img/מטאליקה-2-Nothing-Else-Matter.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <style>
-    :root { --silver:#c9d1d9; --muted:#9ca3af; --border:rgba(255,255,255,0.08); --accent:#e53935; }
+    :root { --black:#000000; --dark:#0a0a0a; --panel:#111111; --border:rgba(255,255,255,0.12); --yellow:#f5d100; --yellow-light:#ffe55c; --yellow-dark:#bfa000; --text-light:#f6f6f6; --text-muted:#b3b3b3; }
     * { box-sizing:border-box; }
-    body { margin:0; font-family:"Inter","Segoe UI",Arial,sans-serif; color:var(--silver); background:#050506; }
+    body { margin:0; font-family:"Inter","Segoe UI",Arial,sans-serif; color:var(--text-light); background: radial-gradient(circle at 12% 12%, #111 0%, #040404 65%, #000 90%); }
     a { color:inherit; }
-    header { position: sticky; top:0; z-index:20; background: rgba(0,0,0,0.92); border-bottom:1px solid var(--border); backdrop-filter: blur(6px); }
-    .nav { max-width: 1000px; margin:0 auto; padding:16px 18px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    header { position: sticky; top:0; z-index:20; background: var(--black); border-bottom:1px solid var(--border); backdrop-filter: blur(8px); }
+    .nav { max-width: 1000px; margin:0 auto; padding:18px 20px; display:flex; align-items:center; justify-content:space-between; gap:18px; }
     nav ul { list-style:none; margin:0; padding:0; display:flex; gap:16px; }
-    nav a { padding:8px 10px; border-radius:10px; font-weight:600; }
-    nav a:hover, nav a:focus-visible { background: rgba(255,255,255,0.06); }
+    nav a { padding:10px 12px; border-radius:12px; font-weight:600; color:var(--text-light); }
+    nav a:hover, nav a:focus-visible { color:var(--yellow); }
     .brand { font-weight:800; text-transform:uppercase; }
-    .hamburger { display:none; cursor:pointer; padding:10px; border:1px solid var(--border); border-radius:10px; }
-    .hamburger span { display:block; width:20px; height:2px; background:var(--silver); margin:4px 0; }
+    .hamburger { display:none; cursor:pointer; padding:10px; border:1px solid var(--border); border-radius:12px; background:var(--panel); }
+    .hamburger span { display:block; width:20px; height:2px; background:var(--text-light); margin:4px 0; }
     .mobile-menu { display:none; flex-direction:column; gap:10px; padding:0 18px 16px; }
-    .mobile-menu a { padding:10px 12px; border:1px solid var(--border); border-radius:10px; background:#0d0d0f; }
-    main { max-width: 1000px; margin:0 auto; padding:26px 18px 80px; }
-    h1 { margin:0 0 12px; font-size:30px; }
-    h2 { margin:24px 0 10px; }
-    p { color:var(--muted); line-height:1.7; margin:0 0 12px; }
-    ul { color:var(--muted); padding-left:18px; }
-    .card { border:1px solid var(--border); background:#0c0c0f; border-radius:18px; padding:20px; box-shadow:0 14px 30px rgba(0,0,0,0.45); }
-    footer { border-top:1px solid var(--border); background:#050505; margin-top:60px; }
-    .footer-inner { max-width:1000px; margin:0 auto; padding:18px; display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); align-items:center; color:var(--muted); font-size:14px; }
+    .mobile-menu a { padding:12px 14px; border:1px solid var(--border); border-radius:12px; background:var(--panel); color:var(--text-light); }
+    main { max-width: 1000px; margin:0 auto; padding:28px 20px 90px; }
+    h1 { margin:0 0 12px; font-size:30px; color:var(--yellow); }
+    h2 { margin:24px 0 10px; color:var(--text-light); }
+    p { color:var(--text-muted); line-height:1.7; margin:0 0 12px; }
+    ul { color:var(--text-muted); padding-left:18px; line-height:1.7; }
+    .card { border:1px solid var(--border); background:var(--panel); border-radius:20px; padding:22px; box-shadow:0 12px 32px rgba(0,0,0,0.35); }
+    footer { border-top:1px solid var(--border); background:var(--black); margin-top:60px; }
+    .footer-inner { max-width:1000px; margin:0 auto; padding:20px; display:grid; gap:10px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); align-items:center; color:var(--text-muted); font-size:14px; }
     .footer-links { display:flex; gap:12px; flex-wrap:wrap; }
+    .footer-links a { color:var(--text-light); }
+    .footer-links a:hover { color:var(--yellow); }
     @media (max-width:680px) { nav ul { display:none; } .hamburger { display:block; } .mobile-menu.show { display:flex; } h1{font-size:26px;} }
   </style>
 </head>
@@ -48,7 +50,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="index.html#shop">Shop</a></li>
+          <li><a href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop</a></li>
           <li><a href="blog.html">Blog</a></li>
         </ul>
       </nav>
@@ -57,7 +59,7 @@
     <div class="mobile-menu" id="mobile-menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="index.html#shop">Shop</a>
+      <a href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop</a>
       <a href="blog.html">Blog</a>
     </div>
   </header>
@@ -69,32 +71,33 @@
       <p>Welcome to MetalliCult. By accessing or using this website, you agree to these Terms of Service and our Privacy Policy. If you do not agree, please refrain from using the site.</p>
 
       <h2>Who we are</h2>
-      <p>MetalliCult is an independent fan-run site that curates Metallica-inspired merchandise and content. We are not affiliated with or endorsed by Metallica.</p>
+      <p>MetalliCult is an independent fan-run site that curates Metallica-inspired merchandise and content. We are not affiliated with or endorsed by Metallica. All references to the band are for descriptive purposes only.</p>
 
       <h2>Use of the site</h2>
       <ul>
-        <li>Use this site for lawful purposes only.</li>
+        <li>Use this site for lawful purposes only and comply with applicable local laws.</li>
         <li>Do not attempt to disrupt, hack, or overload the service.</li>
         <li>Do not impersonate others or misrepresent your affiliation.</li>
+        <li>Do not scrape, reproduce, or redistribute content without permission.</li>
       </ul>
 
       <h2>Affiliate relationships</h2>
-      <p>Some links on this site are affiliate links. We may earn commissions from qualifying purchases at no additional cost to you. Our opinions remain our own and are not directed by any merchant or brand.</p>
+      <p>Some links on this site are affiliate links. We may earn commissions from qualifying purchases at no additional cost to you. Our opinions remain our own and are not directed by any merchant or brand. Full details are provided in our Affiliate Disclosure.</p>
 
       <h2>Content accuracy</h2>
-      <p>We aim to keep information current, but availability, pricing, and product details can change without notice. Always review the merchant’s page before purchasing.</p>
+      <p>We aim to keep information current, but availability, pricing, and product details can change without notice. Always review the merchant’s page before purchasing. We do not guarantee that third-party information is complete, reliable, or up to date.</p>
 
       <h2>Intellectual property</h2>
       <p>All original text and design elements on this site are owned by MetalliCult. Third-party trademarks and images remain the property of their respective owners and are used for identification only.</p>
 
       <h2>Links to other sites</h2>
-      <p>We link to third-party websites for products or information. We are not responsible for their content, policies, or practices. Please review their terms and privacy notices.</p>
+      <p>We link to third-party websites for products or information. We are not responsible for their content, policies, or practices. Please review their terms and privacy notices before engaging.</p>
 
       <h2>Disclaimer of warranties</h2>
-      <p>The site is provided “as is” without warranties of any kind, express or implied. We do not guarantee uninterrupted access or error-free content.</p>
+      <p>The site is provided “as is” without warranties of any kind, express or implied. We do not guarantee uninterrupted access, error-free content, or that defects will be corrected. Your use of the site is at your own risk.</p>
 
       <h2>Limitation of liability</h2>
-      <p>To the maximum extent permitted by law, MetalliCult shall not be liable for indirect, incidental, special, or consequential damages arising from your use of the site or reliance on its content.</p>
+      <p>To the maximum extent permitted by law, MetalliCult shall not be liable for indirect, incidental, special, or consequential damages arising from your use of the site or reliance on its content. Our total liability will not exceed USD $50 or the amount you paid us, whichever is greater.</p>
 
       <h2>Indemnification</h2>
       <p>You agree to indemnify and hold harmless MetalliCult from any claims or damages arising from your breach of these Terms or misuse of the site.</p>
@@ -112,15 +115,15 @@
 
   <footer>
     <div class="footer-inner">
-      <div>© 2024 MetalliCult. Fan-made hub. Not affiliated with Metallica.</div>
       <div class="footer-links" aria-label="Legal and info links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="blog.html">Blog</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
         <a href="disclosure.html">Affiliate Disclosure</a>
       </div>
+      <div>© 2024 MetalliCult. Fan-made hub. Not affiliated with Metallica.</div>
     </div>
   </footer>
 

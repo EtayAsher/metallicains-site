@@ -18,20 +18,21 @@
   <style>
     :root {
       --black: #000000;
-      --dark: #1a1a1a;
-      --steel: #2b2f3a;
-      --silver: #c9d1d9;
-      --accent: #e53935;
-      --highlight: #f2b705;
-      --muted: #9ca3af;
-      --border: rgba(255,255,255,0.08);
+      --dark: #0a0a0a;
+      --panel: #111111;
+      --border: rgba(255,255,255,0.12);
+      --yellow: #f5d100;
+      --yellow-light: #ffe55c;
+      --yellow-dark: #bfa000;
+      --text-light: #f6f6f6;
+      --text-muted: #b3b3b3;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: "Inter", "Segoe UI", Arial, sans-serif;
-      color: var(--silver);
-      background: radial-gradient(circle at 20% 20%, #222 0%, #0c0c0f 40%, #050507 90%);
+      color: var(--text-light);
+      background: radial-gradient(circle at 20% 20%, #111 0%, #050505 55%, #000 90%);
       min-height: 100vh;
     }
     a { color: inherit; text-decoration: none; }
@@ -39,14 +40,14 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(0,0,0,0.9);
+      background: var(--black);
       border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(6px);
+      backdrop-filter: blur(8px);
     }
     .nav {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 16px 18px;
+      padding: 18px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -54,66 +55,68 @@
     }
     .brand { font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; }
     nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 18px; align-items: center; }
-    nav a { color: var(--silver); font-weight: 600; padding: 8px 10px; border-radius: 10px; }
-    nav a:hover, nav a:focus-visible { background: var(--steel); color: white; }
+    nav a { color: var(--text-light); font-weight: 600; padding: 10px 12px; border-radius: 12px; }
+    nav a:hover, nav a:focus-visible { color: var(--yellow); }
     .nav-actions { display: flex; gap: 10px; align-items: center; }
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 10px 16px;
-      border-radius: 12px;
+      padding: 12px 18px;
+      border-radius: 14px;
       border: 1px solid var(--border);
-      background: linear-gradient(135deg, #2c2c2c, #121212);
-      color: white;
-      font-weight: 700;
+      background: linear-gradient(135deg, var(--yellow), var(--yellow-dark));
+      color: #000;
+      font-weight: 800;
       letter-spacing: 0.2px;
       cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.35);
     }
-    .btn-accent { background: linear-gradient(135deg, var(--accent), #7f0c0c); border-color: rgba(255,255,255,0.15); }
-    .btn:hover, .btn:focus-visible { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,0.45); }
+    .btn-accent { background: var(--yellow); }
+    .btn:hover, .btn:focus-visible { transform: translateY(-1px); background: var(--yellow-light); box-shadow: 0 12px 32px rgba(0,0,0,0.35); }
 
-    .hamburger { display: none; cursor: pointer; padding: 10px; border-radius: 10px; border: 1px solid var(--border); }
-    .hamburger span { display: block; width: 20px; height: 2px; background: var(--silver); margin: 4px 0; }
+    .hamburger { display: none; cursor: pointer; padding: 10px; border-radius: 12px; border: 1px solid var(--border); background: var(--panel); }
+    .hamburger span { display: block; width: 20px; height: 2px; background: var(--text-light); margin: 4px 0; }
     .mobile-menu { display: none; flex-direction: column; gap: 10px; padding: 0 18px 16px; }
-    .mobile-menu a { padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; background: #0d0d0f; }
+    .mobile-menu a { padding: 12px 14px; border: 1px solid var(--border); border-radius: 12px; background: var(--panel); color: var(--text-light); }
 
-    main { max-width: 1100px; margin: 0 auto; padding: 24px 18px 80px; }
+    main { max-width: 1100px; margin: 0 auto; padding: 28px 20px 90px; }
     .hero {
-      display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px; align-items: center;
-      background: linear-gradient(135deg, rgba(26,26,26,0.9), rgba(10,10,10,0.95));
+      display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: center;
+      background: linear-gradient(135deg, rgba(10,10,10,0.96), rgba(0,0,0,0.9));
       border: 1px solid var(--border);
-      border-radius: 26px;
-      padding: 26px;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+      border-radius: 28px;
+      padding: 30px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.35);
     }
-    .hero h1 { margin: 0 0 10px; font-size: 32px; letter-spacing: 0.2px; }
-    .hero p { margin: 0 0 16px; color: var(--muted); line-height: 1.6; }
-    .badges { display: flex; flex-wrap: wrap; gap: 8px; }
-    .badge { background: #111; padding: 8px 12px; border-radius: 12px; border: 1px solid var(--border); font-size: 13px; color: var(--highlight); }
-    .hero-img { width: 100%; border-radius: 18px; overflow: hidden; border: 1px solid var(--border); }
+    .hero h1 { margin: 0 0 12px; font-size: 32px; letter-spacing: 0.2px; color: var(--yellow); }
+    .hero p { margin: 0 0 18px; color: var(--text-muted); line-height: 1.65; }
+    .badges { display: flex; flex-wrap: wrap; gap: 10px; }
+    .badge { background: var(--panel); padding: 8px 12px; border-radius: 14px; border: 1px solid var(--border); font-size: 13px; color: var(--yellow); }
+    .hero-img { width: 100%; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 12px 32px rgba(0,0,0,0.35); }
     .hero-img img { width: 100%; display: block; height: auto; }
 
-    .section { margin-top: 42px; }
-    .section h2 { margin: 0 0 12px; font-size: 26px; }
-    .section p { margin: 0 0 18px; color: var(--muted); }
+    .section { margin-top: 46px; }
+    .section h2 { margin: 0 0 12px; font-size: 26px; color: var(--yellow); }
+    .section p { margin: 0 0 18px; color: var(--text-muted); }
 
-    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-    .card { border: 1px solid var(--border); background: #0c0c0f; border-radius: 18px; padding: 18px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
-    .card h3 { margin: 0; font-size: 20px; }
-    .card p { margin: 0; color: var(--muted); line-height: 1.5; }
+    .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card { border: 1px solid var(--border); background: var(--panel); border-radius: 20px; padding: 20px; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 12px 32px rgba(0,0,0,0.35); }
+    .card h3 { margin: 0; font-size: 20px; color: var(--yellow); }
+    .card p { margin: 0; color: var(--text-muted); line-height: 1.55; }
 
-    .pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 10px; background: #161616; border-radius: 999px; border: 1px solid var(--border); color: var(--highlight); font-size: 13px; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; background: var(--panel); border-radius: 999px; border: 1px solid var(--border); color: var(--yellow); font-size: 13px; }
 
     .list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
-    .list li { display: flex; align-items: center; gap: 10px; color: var(--silver); }
-    .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+    .list li { display: flex; align-items: center; gap: 10px; color: var(--text-light); }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--yellow); }
 
-    footer { border-top: 1px solid var(--border); background: #050505; margin-top: 60px; }
-    .footer-inner { max-width: 1100px; margin: 0 auto; padding: 18px; display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); align-items: center; color: var(--muted); font-size: 14px; }
+    footer { border-top: 1px solid var(--border); background: var(--black); margin-top: 60px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; padding: 20px; display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); align-items: center; color: var(--text-muted); font-size: 14px; }
     .footer-links { display: flex; gap: 12px; flex-wrap: wrap; }
-    .footer-links a { color: var(--silver); }
+    .footer-links a { color: var(--text-light); }
+    .footer-links a:hover { color: var(--yellow); }
 
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; }
@@ -123,6 +126,8 @@
       .hamburger { display: block; }
       .mobile-menu.show { display: flex; }
       .hero h1 { font-size: 26px; }
+      .hero { padding: 24px; }
+      .btn { width: 100%; justify-content: center; }
     }
   </style>
 </head>
@@ -134,13 +139,13 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="#shop">Shop</a></li>
+          <li><a href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop</a></li>
           <li><a href="blog.html">Blog</a></li>
         </ul>
       </nav>
       <div class="nav-actions">
         <a class="btn" href="blog.html">News</a>
-        <a class="btn btn-accent" href="#shop">Shop Picks</a>
+        <a class="btn btn-accent" href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop Picks</a>
         <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -149,7 +154,7 @@
     <div class="mobile-menu" id="mobile-menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="#shop">Shop</a>
+      <a href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop</a>
       <a href="blog.html">Blog</a>
     </div>
   </header>
@@ -166,7 +171,7 @@
           <span class="badge">Secure & mobile friendly</span>
         </div>
         <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn btn-accent" href="#shop">View top picks</a>
+          <a class="btn btn-accent" href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">View top picks</a>
           <a class="btn" href="about.html">Why trust us</a>
         </div>
       </div>
@@ -182,17 +187,17 @@
         <article class="card">
           <h3>MTL Tumblers</h3>
           <p>Double-wall stainless tumblers with bold artwork to keep drinks stage-ready.</p>
-          <a class="btn btn-accent" href="https://example.com/tumblers" target="_blank" rel="noopener">Shop Tumblers</a>
+          <a class="btn btn-accent" href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop Tumblers</a>
         </article>
         <article class="card">
           <h3>Classic T-Shirts</h3>
           <p>Official-style tees with iconic album graphics and tour-inspired prints.</p>
-          <a class="btn btn-accent" href="https://example.com/tshirts" target="_blank" rel="noopener">Shop T-Shirts</a>
+          <a class="btn btn-accent" href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop T-Shirts</a>
         </article>
         <article class="card">
           <h3>Hawaiian Shirts</h3>
           <p>Summer drops with loud patterns that nod to the Metallica legacy.</p>
-          <a class="btn btn-accent" href="https://example.com/hawaiian" target="_blank" rel="noopener">Shop Hawaiian Shirts</a>
+          <a class="btn btn-accent" href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop Hawaiian Shirts</a>
         </article>
       </div>
     </section>
@@ -223,14 +228,14 @@
       <p>News, reviews, and buying guides to keep your collection fresh.</p>
       <div class="grid">
         <article class="card">
-          <h3>2024 Tour Merch Checklist</h3>
-          <p>What to grab before the show: tees, posters, and accessories fans actually use.</p>
-          <a class="btn" href="blog.html#tour-merch">Read the guide</a>
+          <h3>2024 Metallica Merchandise Buying Guide</h3>
+          <p>What matters most when you’re comparing tees, outerwear, and collectible drops for this year.</p>
+          <a class="btn" href="blog.html#buying-guide">Read the guide</a>
         </article>
         <article class="card">
-          <h3>Care Tips for Band Tees</h3>
-          <p>Keep prints sharp and cotton soft with our quick maintenance rundown.</p>
-          <a class="btn" href="blog.html#tee-care">See the tips</a>
+          <h3>Top 10 Metallica Shirts on Merchbar — Reviewed</h3>
+          <p>Our fan-favorite shortlist that balances print quality, fit, and value.</p>
+          <a class="btn" href="blog.html#top-shirts">See the picks</a>
         </article>
       </div>
     </section>
@@ -248,15 +253,15 @@
 
   <footer>
     <div class="footer-inner">
-      <div>© 2024 MetalliCult. Fan-made hub. Not affiliated with Metallica.</div>
       <div class="footer-links" aria-label="Legal and info links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="blog.html">Blog</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
         <a href="disclosure.html">Affiliate Disclosure</a>
       </div>
+      <div>© 2024 MetalliCult. Fan-made hub. Not affiliated with Metallica.</div>
     </div>
   </footer>
 
