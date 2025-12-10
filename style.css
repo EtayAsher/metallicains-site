@@ -71,7 +71,7 @@ nav a {
   position: relative;
   font-weight: 600;
   padding: 8px 2px;
-  color: var(--text);
+  color: var(--yellow);
 }
 
 nav a::after {
@@ -162,6 +162,14 @@ main {
   max-width: 1100px;
   margin: 0 auto;
   padding: 24px 18px 80px;
+}
+
+h1 {
+  color: var(--text);
+}
+
+h2 {
+  color: var(--yellow);
 }
 
 .hero {

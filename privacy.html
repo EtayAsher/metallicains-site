@@ -13,305 +13,7 @@
   <meta property="og:url" content="https://etayasher.github.io/metallicains-site/privacy.html" />
   <meta property="og:image" content="https://etayasher.github.io/metallicains-site/assets/img/מטאליקה-2-Nothing-Else-Matter.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <style>
-    :root {
-      --bg: #000;
-      --text: #f2f2f2;
-      --yellow: #FFD000;
-      --card-bg: #111;
-      --border: #333;
-      --muted: #c2c2c2;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: "Inter", "Segoe UI", Arial, sans-serif;
-      color: var(--text);
-      background: radial-gradient(circle at 20% 20%, #0f0f0f 0%, #000 60%);
-      min-height: 100vh;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-      transition: color 0.2s ease, text-decoration-color 0.2s ease;
-      text-decoration-color: transparent;
-    }
-
-    a:hover,
-    a:focus-visible {
-      color: var(--yellow);
-      text-decoration: underline;
-      text-decoration-color: var(--yellow);
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(0, 0, 0, 0.95);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(6px);
-    }
-
-    .nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 16px 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
-
-    .brand {
-      font-weight: 800;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 18px;
-      align-items: center;
-    }
-
-    nav a {
-      position: relative;
-      font-weight: 600;
-      padding: 8px 2px;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -6px;
-      height: 2px;
-      width: 0;
-      background: var(--yellow);
-      transition: width 0.2s ease;
-    }
-
-    nav a:hover::after,
-    nav a:focus-visible::after {
-      width: 100%;
-    }
-
-    .nav-actions {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .btn,
-    .cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 16px;
-      border-radius: 12px;
-      border: 1px solid transparent;
-      background: var(--yellow);
-      color: var(--bg);
-      font-weight: 800;
-      letter-spacing: 0.3px;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(255, 208, 0, 0.25);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-    }
-
-    .btn-accent {
-      border-color: var(--yellow);
-    }
-
-    .btn:hover,
-    .btn:focus-visible,
-    .cta:hover,
-    .cta:focus-visible {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 30px rgba(255, 208, 0, 0.35);
-      filter: brightness(1.05);
-    }
-
-    .hamburger {
-      display: none;
-      cursor: pointer;
-      padding: 10px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: var(--card-bg);
-    }
-
-    .hamburger span {
-      display: block;
-      width: 20px;
-      height: 2px;
-      background: var(--yellow);
-      margin: 4px 0;
-    }
-
-    .mobile-menu {
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-      padding: 0 18px 16px;
-    }
-
-    .mobile-menu a {
-      padding: 10px 12px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: var(--card-bg);
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 24px 18px 80px;
-    }
-
-    h1 {
-      margin: 0 0 12px;
-      font-size: 30px;
-    }
-
-    h2 {
-      margin: 24px 0 10px;
-    }
-
-    p {
-      color: var(--muted);
-      line-height: 1.7;
-      margin: 0 0 12px;
-    }
-
-    ul {
-      color: var(--muted);
-      padding-left: 18px;
-      line-height: 1.7;
-    }
-
-    .card {
-      border: 1px solid var(--border);
-      background: var(--card-bg);
-      border-radius: 18px;
-      padding: 20px;
-      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.6);
-    }
-
-    .intro {
-      color: var(--muted);
-      margin: 0 0 20px;
-      line-height: 1.7;
-    }
-
-    .meta {
-      color: #9b9b9b;
-      font-size: 14px;
-    }
-
-    .feature-img {
-      width: 100%;
-      height: 160px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, rgba(255, 208, 0, 0.22), rgba(0, 0, 0, 0.7));
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--muted);
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 10px;
-      background: #0d0d0d;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      color: var(--yellow);
-      font-size: 13px;
-      letter-spacing: 0.2px;
-    }
-
-    .list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 10px;
-    }
-
-    .list li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--text);
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--yellow);
-      box-shadow: 0 0 0 4px rgba(255, 208, 0, 0.08);
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      background: #050505;
-      margin-top: 60px;
-    }
-
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 18px;
-      display: grid;
-      gap: 10px;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      align-items: center;
-      color: #a5a5a5;
-      font-size: 14px;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links a {
-      color: var(--text);
-    }
-
-    .footer-links a:hover,
-    .footer-links a:focus-visible {
-      color: var(--yellow);
-    }
-
-    @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 680px) {
-      nav ul { display: none; }
-      .hamburger { display: block; }
-      .mobile-menu.show { display: flex; }
-      .hero h1 { font-size: 26px; }
-      .hero { padding: 22px; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -338,71 +40,39 @@
   <main>
     <div class="card">
       <h1>Privacy Policy</h1>
-      <p>Effective date: 30 May 2024</p>
-      <p>MetalliCult ("we", "us", "our") is an independent, fan-made website. We respect your privacy and process personal data in line with the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). This notice explains what we collect, why we collect it, and how you can exercise your rights.</p>
+      <p class="meta">Effective date: 30 May 2024 • Last reviewed: current release</p>
+      <p>MetalliCult (“we”, “our”, “us”) is an independently run fan site for Metallica followers. We respect your privacy and process personal data in line with the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and other applicable laws. This notice explains what we collect, how we use it, and the rights available to you.</p>
 
       <h2>Information we collect</h2>
-      <ul>
-        <li><strong>Device and usage data:</strong> pages visited, approximate location (city/region), browser type, and referring URLs captured through privacy-focused analytics.</li>
-        <li><strong>Contact information:</strong> email address if you contact us directly.</li>
-        <li><strong>Affiliate interaction data:</strong> outbound clicks on affiliate links may be tracked by our partners to attribute commissions.</li>
-        <li><strong>Server logs:</strong> basic technical logs used to keep the site secure and investigate abuse.</li>
-      </ul>
+      <p><strong>Device and usage data:</strong> We collect technical details such as IP address, browser type, operating system, referring URLs, pages viewed, and timestamps to diagnose issues, improve performance, and maintain security. These logs are stored with minimal retention.</p>
+      <p><strong>Cookies and similar technologies:</strong> Analytics and affiliate programs may place cookies or pixels to measure traffic and attribute purchases. We aim to keep non-essential tracking limited and disclose when third-party scripts are present.</p>
+      <p><strong>Contact information:</strong> If you email us or submit a request, we process your name, email address, and message contents to provide support.</p>
+      <p><strong>Affiliate interaction data:</strong> When you click outbound links to Merchbar or other merchants, they may track the click to confirm commissions. Those partners maintain their own privacy policies and consent tools.</p>
 
       <h2>How we use data</h2>
-      <ul>
-        <li>Operate, maintain, and improve site performance and content.</li>
-        <li>Respond to inquiries and support requests.</li>
-        <li>Comply with legal obligations and affiliate program requirements.</li>
-        <li>Protect against fraud, abuse, or security threats.</li>
-      </ul>
+      <p>We use the information above to operate and secure the site, respond to questions, understand which articles or buying guides are helpful, and comply with affiliate program requirements. We never sell personal information. Data is processed based on consent (for optional cookies), legitimate interests (site security, content delivery), and contractual necessity (responding to your inquiries).</p>
 
-      <h2>Legal bases (GDPR)</h2>
-      <ul>
-        <li>Consent for analytics cookies/trackers where required.</li>
-        <li>Legitimate interests to maintain site security and present content.</li>
-        <li>Contractual necessity when processing is required to answer a request you submit.</li>
-      </ul>
+      <h2>Data sharing and partners</h2>
+      <p>We share limited data with trusted providers: hosting and security vendors, privacy-focused analytics services, and affiliate networks that attribute purchases. When you click a link to the <a href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Merchbar Metallica collection</a> or a specific product such as the <a href="https://www.merchbar.com/hard-rock-metal/metallica/metallica-kill-em-all-bolur" target="_blank" rel="noopener">Kill &#39;Em All shirt</a>, Merchbar may set cookies to ensure artists are paid. We encourage you to review their privacy terms and those of FlexOffers or any other affiliate network we use.</p>
 
-      <h2>CCPA notice</h2>
-      <p>We do not sell personal information. California residents may request access to, deletion of, or details about data shared for business purposes. We respond within statutory timelines and will verify identity before fulfilling a request.</p>
+      <h2>Retention and security</h2>
+      <p>We retain personal data only as long as needed for the purposes described. Logs and analytics are typically aggregated or deleted after short retention windows. We use HTTPS, access controls, and least-privilege practices to safeguard data, but no method is 100% secure. Please notify us if you suspect a vulnerability or unauthorized access.</p>
 
-      <h2>Data sharing</h2>
-      <ul>
-        <li>Affiliate networks and merchants: to track referrals and verify commissions.</li>
-        <li>Analytics providers: for aggregated, non-identifying usage reports.</li>
-        <li>Service providers: email or hosting partners who support site functionality under confidentiality obligations.</li>
-        <li>Legal compliance: when required by law, subpoena, or to enforce our Terms of Service.</li>
-      </ul>
-
-      <h2>Cookies & tracking</h2>
-      <p>We aim to keep tracking minimal. If analytics or affiliate programs set cookies, they are used to understand site performance and attribute purchases. You can adjust browser settings to block or delete cookies, and most browsers offer Do Not Track or Global Privacy Control signals which we honor where legally required.</p>
-
-      <h2>Data retention</h2>
-      <p>We retain personal data only as long as necessary for the purposes described or to comply with legal and accounting requirements. When data is no longer needed, we delete or anonymize it.</p>
-
-      <h2>Your rights</h2>
-      <ul>
-        <li>Access, correct, or delete your personal data.</li>
-        <li>Object to or restrict processing in certain circumstances.</li>
-        <li>Opt-out of non-essential cookies and marketing communications.</li>
-        <li>CCPA: request to know categories of data collected and request deletion.</li>
-      </ul>
+      <h2>Your rights and controls</h2>
+      <p>Depending on your region, you may request access to, correction of, or deletion of your personal information. You may also object to certain processing, ask us to restrict use, or request a portable copy of data you provided. California residents can request details on data categories collected and ask for deletion without discrimination. To exercise these rights, contact us using the details below and we will verify your request before acting.</p>
+      <p>You can manage cookies through your browser settings, opt out of non-essential analytics where offered, and enable Global Privacy Control or Do Not Track signals. We will honor applicable signals where required by law.</p>
 
       <h2>International transfers</h2>
-      <p>When data is transferred outside your region, we rely on appropriate safeguards such as Standard Contractual Clauses or equivalent protections to keep your information secure.</p>
-
-      <h2>Security</h2>
-      <p>We use HTTPS and commercially reasonable technical and organizational measures to protect data. No method is 100% secure; please contact us if you identify a vulnerability.</p>
+      <p>Our hosting and service providers may operate in multiple countries. When data moves outside your region, we use appropriate safeguards such as Standard Contractual Clauses, data processing agreements, and technical protections to keep your information safe.</p>
 
       <h2>Children’s privacy</h2>
-      <p>This site is intended for users 16+ (or the age required by your jurisdiction). We do not knowingly collect data from children.</p>
+      <p>MetalliCult is intended for fans aged 16 or older (or the age required in your jurisdiction). We do not knowingly collect personal data from children. If you believe a child provided information, please contact us and we will delete it promptly.</p>
 
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:metallicult.team@gmail.com">metallicult.team@gmail.com</a>. Please include “Privacy Request” in the subject to exercise your rights.</p>
+      <p>If you have questions about this Privacy Policy or wish to exercise your rights, email us at privacy@metallicult.example. We aim to respond within 30 days and faster for urgent security matters.</p>
 
-      <h2>Updates</h2>
-      <p>We may update this policy and will post the revised date at the top. Material changes will be highlighted where feasible.</p>
+      <h2>Changes</h2>
+      <p>We may update this notice to reflect new features or legal requirements. We will revise the “Effective date” above when changes are posted and encourage you to review the policy periodically.</p>
     </div>
   </main>
 
