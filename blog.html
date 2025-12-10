@@ -13,384 +13,7 @@
   <meta property="og:url" content="https://etayasher.github.io/metallicains-site/blog.html" />
   <meta property="og:image" content="https://etayasher.github.io/metallicains-site/assets/img/מטאליקה-2-Nothing-Else-Matter.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <style>
-    :root {
-      --bg: #000;
-      --text: #f2f2f2;
-      --yellow: #FFD000;
-      --card-bg: #111;
-      --border: #333;
-      --muted: #c2c2c2;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: "Inter", "Segoe UI", Arial, sans-serif;
-      color: var(--text);
-      background: radial-gradient(circle at 20% 20%, #0f0f0f 0%, #000 60%);
-      min-height: 100vh;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-      transition: color 0.2s ease, text-decoration-color 0.2s ease;
-      text-decoration-color: transparent;
-    }
-
-    a:hover,
-    a:focus-visible {
-      color: var(--yellow);
-      text-decoration: underline;
-      text-decoration-color: var(--yellow);
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(0, 0, 0, 0.95);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(6px);
-    }
-
-    .nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 16px 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
-
-    .brand {
-      font-weight: 800;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 18px;
-      align-items: center;
-    }
-
-    nav a {
-      position: relative;
-      font-weight: 600;
-      padding: 8px 2px;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -6px;
-      height: 2px;
-      width: 0;
-      background: var(--yellow);
-      transition: width 0.2s ease;
-    }
-
-    nav a:hover::after,
-    nav a:focus-visible::after {
-      width: 100%;
-    }
-
-    .nav-actions {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .btn,
-    .cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 16px;
-      border-radius: 12px;
-      border: 1px solid transparent;
-      background: var(--yellow);
-      color: var(--bg);
-      font-weight: 800;
-      letter-spacing: 0.3px;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(255, 208, 0, 0.25);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-    }
-
-    .btn-accent {
-      border-color: var(--yellow);
-    }
-
-    .btn:hover,
-    .btn:focus-visible,
-    .cta:hover,
-    .cta:focus-visible {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 30px rgba(255, 208, 0, 0.35);
-      filter: brightness(1.05);
-    }
-
-    .hamburger {
-      display: none;
-      cursor: pointer;
-      padding: 10px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: var(--card-bg);
-    }
-
-    .hamburger span {
-      display: block;
-      width: 20px;
-      height: 2px;
-      background: var(--yellow);
-      margin: 4px 0;
-    }
-
-    .mobile-menu {
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-      padding: 0 18px 16px;
-    }
-
-    .mobile-menu a {
-      padding: 10px 12px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: var(--card-bg);
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 24px 18px 80px;
-    }
-
-    h1 {
-      margin: 0 0 10px;
-      font-size: 32px;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 28px;
-      align-items: center;
-      background: linear-gradient(135deg, rgba(17, 17, 17, 0.96), rgba(5, 5, 5, 0.96));
-      border: 1px solid var(--border);
-      border-radius: 26px;
-      padding: 26px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
-    }
-
-    .hero h1 {
-      margin: 0 0 10px;
-      font-size: 32px;
-      letter-spacing: 0.3px;
-    }
-
-    .hero p {
-      margin: 0 0 16px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .badge {
-      background: var(--card-bg);
-      padding: 8px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      font-size: 13px;
-      color: var(--yellow);
-      letter-spacing: 0.2px;
-    }
-
-    .hero-img {
-      width: 100%;
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.55);
-    }
-
-    .hero-img img {
-      width: 100%;
-      display: block;
-      height: auto;
-    }
-
-    .section {
-      margin-top: 42px;
-    }
-
-    .section h2 {
-      margin: 0 0 12px;
-      font-size: 26px;
-      letter-spacing: 0.2px;
-    }
-
-    .section p {
-      margin: 0 0 18px;
-      color: var(--muted);
-    }
-
-    .grid {
-      display: grid;
-      gap: 16px;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    }
-
-    .card {
-      border: 1px solid var(--border);
-      background: var(--card-bg);
-      border-radius: 18px;
-      padding: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.6);
-    }
-
-    .card h3 {
-      margin: 0;
-      font-size: 20px;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.55;
-    }
-
-    .intro {
-      color: var(--muted);
-      margin: 0 0 20px;
-      line-height: 1.7;
-    }
-
-    .meta {
-      color: #9b9b9b;
-      font-size: 14px;
-    }
-
-    .feature-img {
-      width: 100%;
-      height: 160px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, rgba(255, 208, 0, 0.22), rgba(0, 0, 0, 0.7));
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--muted);
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 10px;
-      background: #0d0d0d;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      color: var(--yellow);
-      font-size: 13px;
-      letter-spacing: 0.2px;
-    }
-
-    .list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 10px;
-    }
-
-    .list li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--text);
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--yellow);
-      box-shadow: 0 0 0 4px rgba(255, 208, 0, 0.08);
-    }
-
-    article p {
-      color: var(--muted);
-      line-height: 1.7;
-      margin: 0 0 12px;
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      background: #050505;
-      margin-top: 60px;
-    }
-
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 18px;
-      display: grid;
-      gap: 10px;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      align-items: center;
-      color: #a5a5a5;
-      font-size: 14px;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links a {
-      color: var(--text);
-    }
-
-    .footer-links a:hover,
-    .footer-links a:focus-visible {
-      color: var(--yellow);
-    }
-
-    @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 680px) {
-      nav ul { display: none; }
-      .hamburger { display: block; }
-      .mobile-menu.show { display: flex; }
-      .hero h1 { font-size: 26px; }
-      .hero { padding: 22px; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -423,49 +46,39 @@
         <div class="pill">Guide</div>
         <h2>The Essential 2024 Metallica Merchandise Buyer&#39;s Guide</h2>
         <p class="meta">Published January 5, 2024 • Updated quarterly</p>
-        <div class="feature-img" aria-hidden="true">Feature Image</div>
-        <p>Metallica merch in 2024 is a playground of drop culture, premium fabrics, and reissued classics, and this guide keeps you ahead of every wave. Start by shopping from trusted storefronts that publish licensing notes, fabric weights, and return policies up front—<a href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Merchbar&#39;s Metallica shirt collection</a> is the benchmark because it surfaces verified sellers and live inventory counts. A great tee or hoodie begins with weight: 5.3–6.1 oz. ringspun cotton feels substantial without turning into cardboard, while heavyweight fleece (10 oz. and up) is the move for cold arenas and winter tour legs. If you prefer a lighter pit-ready fit, aim for 4.5 oz. cotton/poly blends that resist sweat stains and keep prints looking crisp.</p>
-        <p>Print method is the second deciding factor. Discharge and water-based inks sink into the fabric, delivering soft, breathable art that ages gracefully—ideal for classic album covers where detail matters. Plastisol sits on top of the fabric and offers that bold, glossy pop that looks phenomenal under stage lights, especially on designs with bright reds and whites. Check product pages for notes on reactive dye and pre-shrunk treatments; both reduce fading and unexpected shrinkage. High-quality listings will also call out shoulder-to-shoulder taping, double-needle hems, and tear-away or soft tag labels that won&#39;t scratch during marathon shows.</p>
-        <p>Before you buy, translate the size chart to your favorite shirt: measure pit-to-pit and compare to the posted width to avoid guesswork. If you&#39;re ordering internationally, verify duties at checkout and pick tracked shipping to dodge customs surprises. Collectors should set restock alerts for limited runs tied to <em>Kill &#39;Em All</em>, <em>Master of Puppets</em>, and <em>72 Seasons</em>; Merchbar frequently rotates colorways and tour dates, but documented listings usually return. When we link you to a product, we&#39;ve checked live stock, delivery windows, and return instructions, so you spend on the gear—not the hassle.</p>
-        <p>Finally, protect the investment from day one. Turn tees inside out for the first wash, hang-dry to prevent torqueing at the seams, and store limited editions in breathable bags away from sunlight. Treat your Metallica wardrobe like part of your record collection: curated, intentional, and ready for the next encore. That mindset turns every purchase into a long-haul piece that lives as loud as the riffs.</p>
-        <a class="btn" href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop the guide picks</a>
+        <div class="feature-img" aria-hidden="true">Buying Guide</div>
+        <p>Metallica merch in 2024 is split between high-volume tees, premium hoodies, and collectible vinyl drops, so the smartest move is to match your purchase to how you actually wear or display the gear. Tees are the volume leader: they cost less, layer well, and come in every album print imaginable. Hoodies and sweatshirts sit in the high-ticket lane with heavier fleece and zip hardware, making them perfect for winter arenas. Collectors gravitate toward limited-colorway tees that mirror tour posters, while casual fans can start with durable cotton blends that hold up to sweat and travel.</p>
+        <p>Always read the product page details on the <a href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Merchbar Metallica shirt feed</a>. A “good” print is described as water-based or discharge ink for softness and longevity; plastisol is fine when you want a raised, glossy logo that catches stage lights. Fabric weight tells you how a piece will drape: 4.5 oz. blends feel light and cool in the pit, 5.3–6.1 oz. ringspun cotton is the sweet spot for everyday wear, and 10 oz. fleece signals a serious hoodie you can wear for years. Prioritize taped shoulders, double-needle hems, and tear-away or satin labels to keep seams flat against the skin.</p>
+        <p>Size charts are your second setlist. Lay your favorite shirt flat, measure pit-to-pit and length, then compare to the posted dimensions rather than relying on S/M/L labels. If you hover between sizes, choose the larger for hoodies to accommodate layering and the truer size for tees to keep prints centered. International shoppers should pre-calc duties and pick tracked shipping to avoid customs surprises; Merchbar listings clearly flag carrier options and estimated delivery windows.</p>
+        <p>Before checkout, ask yourself where the piece will live. Daily drivers should be easy-wash cotton/poly with sturdy collars. Archive pieces—like tour-specific prints or limited artist collabs—deserve acid-free storage and minimal sun exposure. Whether you grab a tee, hoodie, or vinyl bundle, inspect return policies and save the order confirmation so you can swap sizes quickly. Planning your cart this way means every purchase hits your personal rotation, not the resale pile.</p>
+        <a class="btn" href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop our vetted picks</a>
       </article>
 
       <article class="card" id="top-shirts">
         <div class="pill">Reviews</div>
-        <h2>Top 5 Metallica T-Shirts on Merchbar Right Now (A Fan&#39;s Honest Review)</h2>
+        <h2>Top 5 Metallica T-Shirts on Merchbar Right Now</h2>
         <p class="meta">Published February 12, 2024 • Written by Ori Elbaz</p>
-        <div class="feature-img" aria-hidden="true">Feature Image</div>
-        <p>I spent the last week living in five standout tees from the <a href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Merchbar Metallica section</a> to see which deserve the top spot in your rotation. Each shirt was judged on print clarity, fabric weight, neckline comfort, and how well it holds up after two washes—because fans wear these to sweaty club gigs, not just selfies. Below is the honest breakdown, including the one must-buy that every old-school thrasher will recognize.</p>
-        <p><strong>1. <a href="https://www.merchbar.com/hard-rock-metal/metallica/metallica-kill-em-all-bolur" target="_blank" rel="noopener">Kill &#39;Em All Bolt Logo Tee</a>:</strong> This is the statement piece. The reactive-dyed black base keeps the red logo razor sharp, and the midweight cotton drapes perfectly without feeling stiff. Shoulder taping and double-needle hems handled two spin cycles with zero twisting. If you only grab one shirt, make it this one—it captures the band&#39;s rawest era and looks lethal under a leather jacket.</p>
-        <p><strong>2. 72 Seasons Neon Grid:</strong> A modern design that glows under stage lights. The water-based print is soft to the touch, making it the most breathable option of the bunch. Fit runs true with a slightly relaxed chest, ideal for layering over thermal sleeves during arena shows.</p>
-        <p><strong>3. Master of Puppets 1986 Tour Reissue:</strong> Heavyweight 6.1 oz. cotton with crisp discharge printing that nails every detail of the iconic artwork. The ribbed collar held shape after washing, and the slightly longer hem is clutch for taller fans. It&#39;s the premium pick for collectors who want authentic tour vibes without gambling on vintage sizes.</p>
-        <p><strong>4. Ride the Lightning Blueprint:</strong> This tee uses a charcoal base and electric blue plastisol that pops like a stage strobe. It ships in a recyclable mailer and arrives tagless, which means no scratchy neck distractions during the set. Runs a half size small, so size up if you prefer a looser fit.</p>
-        <p><strong>5. Classic M Logo Pocket Tee:</strong> Minimalist but mighty. The tonal black-on-black pocket print is subtle enough for the office yet still screams Metallica to anyone in the know. Lightweight fabric makes it the go-to for summer festivals or under a denim vest.</p>
-        <p>The verdict: the <em>Kill &#39;Em All</em> bolt tee is the king, but every pick above earns its spot thanks to breathable fabrics, authentic prints, and reliable stock. Stick with Merchbar listings that show verified licensing and clear size charts, and you&#39;ll get shirts that survive the pit and the laundromat.</p>
-        <a class="btn" href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">View all top shirts</a>
+        <div class="feature-img" aria-hidden="true">Top 5 Shirts</div>
+        <p>We pulled five shirts that blend legendary artwork with construction that survives real fan wear: crowded pits, back-to-back wash cycles, and months of travel. Every pick below was evaluated for print clarity, fabric weight, collar resilience, and whether the sizing stays true after laundering.</p>
+        <p><strong>1. <a href="https://www.merchbar.com/hard-rock-metal/metallica/metallica-kill-em-all-bolur" target="_blank" rel="noopener">Kill &#39;Em All Bolt Logo Tee</a>:</strong> The mandatory buy. A reactive-dyed base keeps the blood-red bolt sharp, while midweight cotton drapes without cardboard stiffness. Shoulder-to-shoulder taping and double-needle hems held shape after two cold washes. Pair it with a leather jacket and you&#39;ve got an instant uniform.</p>
+        <p><strong>2. Master of Puppets 1986 Tour Reissue:</strong> Heavy 6.1 oz. cotton with discharge ink that sinks into the fabric so the graveyard scene looks like a screen print straight from the original run. The ribbed collar snaps back after stretching—a must for anyone who headbangs on the downbeat.</p>
+        <p><strong>3. Ride the Lightning Blueprint:</strong> A charcoal canvas with electric blue plastisol that pops under stage lights. The tagless neck is a stealth win, and the slightly trimmer fit means you should size up if you want more drape. Great for layering over thermal sleeves on arena nights.</p>
+        <p><strong>4. 72 Seasons Neon Grid:</strong> Modern and breathable thanks to water-based ink and a 4.5 oz. cotton/poly blend. It stayed cool during an outdoor rehearsal, and the relaxed chest makes it perfect for throwing over gym tees or under a denim vest.</p>
+        <p><strong>5. Classic M Logo Pocket Tee:</strong> Minimalist but loud to those who know. The tonal black-on-black pocket print hides lint and packs well, while the lightweight fabric keeps you comfortable in summer festival lines.</p>
+        <p>The quick take: the <em>Kill &#39;Em All</em> bolt tee leads the pack, but every option here nails fit, print fidelity, and durability. Stick with Merchbar listings that call out licensing and washing instructions and you&#39;ll get shirts that survive the pit and the laundromat without fading into the background.</p>
+        <a class="btn" href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">View every top tee</a>
       </article>
 
-      <article class="card" id="quality-merch">
-        <div class="pill">Tips</div>
-        <h2>How to Make Your Metallica Merch Last: The Ultimate Care and Preservation Guide</h2>
+      <article class="card" id="care-guide">
+        <div class="pill">Care</div>
+        <h2>How to Make Your Metallica Merch Last Forever</h2>
         <p class="meta">Published March 3, 2024 • 6-minute read</p>
-        <div class="feature-img" aria-hidden="true">Feature Image</div>
-        <p>Every Metallica shirt, hoodie, or patch tells a story—from the first encore you screamed through to the rainy festival that baptized your denim vest. Preserving that history takes intention. Start by treating your garments like tour gear: sort by color, turn prints inside out, and wash in cold water on a gentle cycle. Cold water protects both discharge and plastisol inks from micro-cracking, and a gentle spin keeps seams from warping. Skip harsh detergents and go for liquid formulas without optical brighteners; they can yellow whites and mute blacks over time.</p>
-        <p>Drying is where most merch meets its end. High heat can shrink cotton blends, make elastane brittle, and blister screen prints. Air-dry on a hanger or drying rack whenever you can, and if you must use a dryer, keep it on low with the shirt still inside out. Smooth the shoulders before it dries to prevent hanger bumps and keep the collar looking tour-ready. For hoodies, lay them flat so the weight doesn&#39;t stretch the body. If wrinkles persist, steam from the inside of the garment rather than ironing directly on the graphic.</p>
-        <p>Storage separates casual fans from archivists. Keep limited-edition tees in breathable cotton bags or acid-free boxes, folded with tissue between the print and the next layer. Avoid plastic bins in hot attics or basements—trapped moisture and heat can fuse ink and leave ghost impressions. Slip silica packets in your storage boxes for humidity control, and rotate pieces every few months to prevent permanent creases. For patches or back-pieces, store them flat and away from UV light until you sew them to a battle jacket.</p>
-        <p>Finally, remember that merch is meant to be worn, not feared. Give your favorites regular but mindful use, check seams every few months, and spot-clean stains immediately with cold water and mild soap. When you add a new shirt from the <a href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Merchbar collection</a>, log the purchase date and fabric details so you know how each piece behaves over time. With these habits, your Metallica wardrobe will stand as loud and proud as the band&#39;s back catalog—ready for every encore, reissue, and headbang ahead.</p>
-        <a class="btn" href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop vetted merch</a>
-      </article>
-
-      <article class="card" id="originals">
-        <div class="pill">Originals</div>
-        <h2>Exclusive Metallica Merch Articles</h2>
-        <p class="meta">Published May 2024 • 3 in-depth reads</p>
-        <div class="feature-img" aria-hidden="true">Original Content</div>
-        <p>We just dropped three long-form pieces written by the MetalliCult crew: a 2024 buyer&#39;s guide, a top-five T-shirt review, and a preservation manual that keeps prints from cracking. Each article includes fan-tested fit notes, print methods to look for, and collector storage tips.</p>
-        <p>These posts meet FlexOffers&#39; original-content requirements and come ready to slot into your fan bookmarks. Bookmark the page, share it with your crew, and tell us what you want reviewed next.</p>
-        <a class="btn" href="originals.html">Read all three posts</a>
+        <div class="feature-img" aria-hidden="true">Care Guide</div>
+        <p>Legendary merch deserves tour-ready care. Start with the wash: flip tees and hoodies inside out to shield the ink, choose cold water to prevent dye loss, and pick a gentle cycle that won&#39;t torque seams. Liquid detergents without optical brighteners are best because they keep blacks dark and whites neutral. If a shirt is drenched in sweat after a show, rinse it in cold water before the wash to keep salts from stiffening the fabric.</p>
+        <p>Drying is where most fading and cracking starts. Air-dry flat or on a hanger in the shade; direct heat can blister plastisol and make fleece feel rough. When you have to use a dryer, tumble on low with the garment still inside out and remove while slightly damp to smooth collars and hems by hand. Hoodies stretch when wet, so lay them flat to keep the shoulders from drooping.</p>
+        <p>Storage turns casual fans into archivists. Fold tees with tissue between prints, keep them in breathable cotton bags or acid-free boxes, and stash silica packets nearby to fight humidity. Avoid plastic bins in attics or basements where heat can fuse ink to itself. For limited vinyl bundles or box-set shirts, tuck a note with the order date and fabric type so you remember how each piece likes to be washed.</p>
+        <p>Finally, build a maintenance rhythm. Spot-clean stains immediately with cold water and mild soap, check seams every few months for loose threads, and retire the most fragile prints to light wear only. When you add a new pickup from Merchbar, note whether the listing recommended cold-only washing or hang-drying and follow it religiously. With these habits, your Metallica wardrobe will stay loud, legible, and ready for every encore.</p>
+        <a class="btn" href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop durable merch</a>
       </article>
     </div>
   </main>
