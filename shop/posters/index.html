@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Posters • MetalliCult Shop</title>
+  <meta name="description" content="Metallica posters and wall art curated for fans." />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script defer src="/assets/main.js"></script>
+  <script defer src="/assets/shop-data.js"></script>
+  <script defer src="/assets/shop.js"></script>
+</head>
+<body data-category="posters">
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="/">Metalli<span>Cult</span></a>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/shop/">Shop</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+    </div>
+    <div class="container nav-drawer" aria-hidden="true">
+      <a href="/">Home</a>
+      <a href="/shop/">Shop</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/about.html">About</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-tight">
+      <div class="container">
+        <div class="disclosure">As an Amazon Associate I earn from qualifying purchases.</div>
+      </div>
+    </section>
+
+    <section class="hero">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="/">Home</a> /
+          <a href="/shop/">Shop</a> /
+          <span>Posters</span>
+        </div>
+        <div class="section-header" style="margin-top: 24px;">
+          <div>
+            <h1>Poster Picks</h1>
+            <p class="muted">Wall upgrades that bring the stage energy home.</p>
+          </div>
+          <p class="muted">Availability changes fast.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight sticky-subnav">
+      <div class="container">
+        <nav class="sub-nav">
+          <a href="/shop/">View All</a>
+          <a href="/shop/apparel/">Apparel</a>
+          <a href="/shop/vinyl/">Vinyl</a>
+          <a class="active" href="/shop/posters/">Posters</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="controls">
+          <input type="search" placeholder="Search posters" aria-label="Search posters" data-search />
+          <select data-sort aria-label="Sort posters">
+            <option value="featured">Featured</option>
+            <option value="newest">Newest added</option>
+            <option value="az">A–Z</option>
+          </select>
+          <div class="filter-chips">
+            <button class="active" type="button" data-chip="All">All</button>
+            <button type="button" data-chip="Wall Upgrade">Wall Upgrade</button>
+            <button type="button" data-chip="Room Decor">Room Decor</button>
+            <button type="button" data-chip="Limited Style">Limited Style</button>
+          </div>
+        </div>
+
+        <div class="product-grid"></div>
+
+        <p class="muted" style="margin-top: 24px;">Products may sell out or change. If a link is unavailable, try another pick.</p>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-to-top" type="button">Back to top</button>
+
+  <footer class="footer">
+    <div class="container">
+      <strong>MetalliCult</strong>
+      <p class="muted">Fan-made hub. Not affiliated with Metallica.</p>
+      <p class="muted">As an Amazon Associate I earn from qualifying purchases.</p>
+      <div class="footer-links">
+        <a href="/accessibility.html">Accessibility</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclosure.html">Affiliate Disclosure</a>
+      </div>
+      <p class="muted" style="margin-top: 12px;">© <span data-year></span> MetalliCult.</p>
+    </div>
+  </footer>
+</body>
+</html>

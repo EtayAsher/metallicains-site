@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop • MetalliCult</title>
+  <meta name="description" content="Handpicked Metallica merch picks across apparel, vinyl, and posters." />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script defer src="/assets/main.js"></script>
+  <script defer src="/assets/shop-data.js"></script>
+  <script defer src="/assets/shop.js"></script>
+</head>
+<body data-page="shop-hub">
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="/">Metalli<span>Cult</span></a>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/shop/">Shop</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+    </div>
+    <div class="container nav-drawer" aria-hidden="true">
+      <a href="/">Home</a>
+      <a href="/shop/">Shop</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/about.html">About</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-tight">
+      <div class="container">
+        <div class="disclosure">As an Amazon Associate I earn from qualifying purchases.</div>
+      </div>
+    </section>
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge">Independent fan hub • Affiliate-supported</span>
+          <h1>Handpicked Picks for Metalheads</h1>
+          <p>Focused categories, fan-friendly curation, and fast access to Amazon listings — no clutter.</p>
+        </div>
+        <div class="hero-card">
+          <h2>Featured Picks</h2>
+          <p class="muted">A quick look at what fans are clicking most right now.</p>
+          <div class="product-grid" data-featured-strip></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight sticky-subnav">
+      <div class="container">
+        <nav class="sub-nav">
+          <a class="active" href="/shop/">View All</a>
+          <a href="/shop/apparel/">Apparel</a>
+          <a href="/shop/vinyl/">Vinyl</a>
+          <a href="/shop/posters/">Posters</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Apparel Essentials</h2>
+          <a class="btn btn-secondary" href="/shop/apparel/">Explore apparel</a>
+        </div>
+        <div class="split" data-category-preview="apparel">
+          <div>
+            <p class="muted">Tees and hoodies with the right balance of comfort and iconography.</p>
+            <p class="muted">Availability changes fast — check back for new picks.</p>
+          </div>
+          <div class="product-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="section-header">
+          <h2>Vinyl Picks</h2>
+          <a class="btn btn-secondary" href="/shop/vinyl/">Explore vinyl</a>
+        </div>
+        <div class="split" data-category-preview="vinyl">
+          <div>
+            <p class="muted">Collector-friendly pressings, essential albums, and giftable favorites.</p>
+            <p class="muted">Availability changes fast — check back for new picks.</p>
+          </div>
+          <div class="product-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="section-header">
+          <h2>Posters & Wall Art</h2>
+          <a class="btn btn-secondary" href="/shop/posters/">Explore posters</a>
+        </div>
+        <div class="split" data-category-preview="posters">
+          <div>
+            <p class="muted">Wall upgrades with bold visuals for studios, offices, and bedrooms.</p>
+            <p class="muted">Availability changes fast — check back for new picks.</p>
+          </div>
+          <div class="product-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="deal-band">
+          <strong>Popular pick — availability may change.</strong>
+          <span class="muted">We update lists based on fan interest and reliable listings.</span>
+          <form class="email-capture">
+            <input type="email" placeholder="Email address" aria-label="Email address" />
+            <button class="btn btn-primary" type="button">Get new picks</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <strong>MetalliCult</strong>
+      <p class="muted">Fan-made hub. Not affiliated with Metallica.</p>
+      <p class="muted">As an Amazon Associate I earn from qualifying purchases.</p>
+      <div class="footer-links">
+        <a href="/accessibility.html">Accessibility</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclosure.html">Affiliate Disclosure</a>
+      </div>
+      <p class="muted" style="margin-top: 12px;">© <span data-year></span> MetalliCult.</p>
+    </div>
+  </footer>
+</body>
+</html>

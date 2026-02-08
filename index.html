@@ -1,170 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Metallica Merch Hub | MetalliCult</title>
-  <meta name="description" content="Premium fan-made Metallica merch hub with curated apparel, collectibles, and news. Mobile-ready and affiliate compliant." />
-  <meta name="keywords" content="Metallica Official Merch, Metallica Fan Hub, Rock Merchandise" />
-  <link rel="canonical" href="https://etayasher.github.io/metallicains-site/" />
-
-  <meta property="og:title" content="Metallica Merch Hub | MetalliCult" />
-  <meta property="og:description" content="Curated Metallica-inspired apparel, collectibles, and fan news in a fast, mobile-friendly hub." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://etayasher.github.io/metallicains-site/" />
-  <meta property="og:image" content="https://etayasher.github.io/metallicains-site/assets/img/מטאליקה-2-Nothing-Else-Matter.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MetalliCult • Independent Metallica Fan Hub</title>
+  <meta name="description" content="MetalliCult is an independent fan hub with curated Metallica merch picks, stories, and shop guides." />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script defer src="/assets/main.js"></script>
 </head>
 <body>
   <header>
-    <div class="nav">
-      <div class="brand">MetalliCult</div>
-      <nav aria-label="Primary">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
+    <div class="container navbar">
+      <a class="brand" href="/">Metalli<span>Cult</span></a>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/shop/">Shop</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/about.html">About</a>
       </nav>
-      <div class="nav-actions">
-        <a class="btn" href="blog.html">News</a>
-        <a class="btn btn-accent" href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop Picks</a>
-        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
     </div>
-    <div class="mobile-menu" id="mobile-menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop</a>
-      <a href="blog.html">Blog</a>
+    <div class="container nav-drawer" aria-hidden="true">
+      <a href="/">Home</a>
+      <a href="/shop/">Shop</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/about.html">About</a>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div>
-        <div class="pill">Independent fan hub • Affiliate-supported</div>
-        <h1>Curated Metallica Merch for True Fans</h1>
-        <p>We hand-pick Metallica-inspired apparel, collectibles, and everyday gear from trusted retailers. Fast, mobile-first, and fully transparent about how we support the site.</p>
-        <div class="badges">
-          <span class="badge">No official affiliation</span>
-          <span class="badge">Affiliate disclosure inside</span>
-          <span class="badge">Secure & mobile friendly</span>
+      <div class="container hero-grid">
+        <div>
+          <span class="badge">Independent fan hub • Affiliate-supported</span>
+          <h1>Curated Metallica Merch for True Fans</h1>
+          <p>Premium picks, clean layouts, and a fast mobile experience. No official affiliation — just honest curation for the community.</p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a class="btn btn-primary" href="/shop/">View top picks</a>
+            <a class="btn btn-secondary" href="#trust">Why trust us</a>
+          </div>
         </div>
-        <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn btn-accent" href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">View top picks</a>
-          <a class="btn" href="about.html">Why trust us</a>
-        </div>
-      </div>
-      <div class="hero-img">
-        <img src="assets/img/מטאליקה-2-Nothing-Else-Matter.jpg" alt="Metallica performing live on stage with flashing lights">
-      </div>
-    </section>
-
-    <section class="section" id="shop">
-      <h2>Shop the Metallica Essentials</h2>
-      <p>Carefully selected items that match the energy of the band. These are affiliate links — we may earn commissions at no extra cost to you.</p>
-      <div class="grid shop-grid">
-        <article class="card">
-          <h3>Official Band Tees</h3>
-          <p>Iconic album art and tour prints. The uniform of the Metallica family.</p>
-          <a class="btn btn-accent" href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop T-Shirts</a>
-        </article>
-        <article class="card">
-          <h3>Heavy Metal Hoodies</h3>
-          <p>Premium quality fleece and zip-ups. Stay warm, look heavy.</p>
-          <a class="btn btn-accent" href="https://www.merchbar.com/search?q=metallica%20hoodie" target="_blank" rel="noopener">Shop Hoodies</a>
-        </article>
-        <article class="card">
-          <h3>Vinyl & Collectibles</h3>
-          <p>Remastered LPs, box sets, and rare pressings for the true audiophile.</p>
-          <a class="btn btn-accent" href="https://www.merchbar.com/search?q=metallica%20vinyl" target="_blank" rel="noopener">Shop Vinyl</a>
-        </article>
-        <article class="card">
-          <h3>Tour Posters &amp; Art</h3>
-          <p>Limited edition prints and wall flags to turn your room into a shrine.</p>
-          <a class="btn btn-accent" href="https://www.merchbar.com/search?q=metallica%20poster" target="_blank" rel="noopener">Shop Posters</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Why Fans Choose MetalliCult</h2>
-      <div class="grid">
-        <div class="card">
-          <div class="pill">Compliance Ready</div>
-          <h3>Affiliate network standards</h3>
-          <p>Full legal coverage (Privacy, Terms, Disclosure) and transparent messaging tailored for networks like FlexOffers, Impact, and CJ.</p>
-        </div>
-        <div class="card">
-          <div class="pill">Curation</div>
-          <h3>Expert picks</h3>
-          <p>Reviewed for quality, design alignment, shipping reliability, and fan feedback before being featured.</p>
-        </div>
-        <div class="card">
-          <div class="pill">Performance</div>
-          <h3>Mobile-first UX</h3>
-          <p>Lightweight HTML, responsive layout, and clear calls-to-action that keep the experience fast on any device.</p>
+        <div class="hero-card">
+          <h2>Shop with confidence</h2>
+          <p class="muted">We highlight the essentials, keep the vibes clean, and make sure every link is affiliate-compliant.</p>
+          <div class="deal-band" style="margin-top: 24px;">
+            <strong>Popular pick — availability may change.</strong>
+            <span class="muted">We rotate picks based on fan interest and availability.</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Latest from the Blog</h2>
-      <p>News, reviews, and buying guides to keep your collection fresh.</p>
-      <div class="grid">
-        <article class="card">
-          <h3>The Essential 2024 Metallica Merchandise Buyer&#39;s Guide</h3>
-          <p>Tees vs. hoodies, sizing checkpoints, and how to pick prints that last through every encore.</p>
-          <a class="btn" href="blog.html#buying-guide">Read the guide</a>
-        </article>
-        <article class="card">
-          <h3>Top 5 Metallica T-Shirts on Merchbar Right Now</h3>
-          <p>Five must-own prints including the legendary Kill &#39;Em All bolt logo tee.</p>
-          <a class="btn" href="blog.html#top-shirts">See the picks</a>
-        </article>
+    <section class="section section-tight">
+      <div class="container">
+        <div class="section-header">
+          <h2>Shop the Metallica Essentials</h2>
+          <p class="muted">Three focused categories, all internal and easy to explore.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <div class="icon-box">👕</div>
+            <h3>Apparel</h3>
+            <p>Tees and hoodies curated for daily wear and tour energy.</p>
+            <a class="btn btn-primary" href="/shop/apparel/">Shop Apparel</a>
+          </article>
+          <article class="card">
+            <div class="icon-box">💿</div>
+            <h3>Vinyl</h3>
+            <p>Collector-friendly pressings and iconic essentials.</p>
+            <a class="btn btn-primary" href="/shop/vinyl/">Shop Vinyl</a>
+          </article>
+          <article class="card">
+            <div class="icon-box">🖼️</div>
+            <h3>Posters</h3>
+            <p>Wall art and room decor that upgrades any setup.</p>
+            <a class="btn btn-primary" href="/shop/posters/">Shop Posters</a>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <h2>Stay Transparent</h2>
-      <p>MetalliCult is independently run by fans. We earn commissions from qualifying purchases through affiliate links — this supports site upkeep and new content without raising prices for you.</p>
-      <ul class="list">
-        <li><span class="dot"></span>Clear FTC affiliate disclosure on every page.</li>
-        <li><span class="dot"></span>Privacy-first approach with GDPR & CCPA rights explained.</li>
-        <li><span class="dot"></span>No claim of endorsement or partnership with Metallica.</li>
-      </ul>
+    <section class="section" id="trust">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why fans trust MetalliCult</h2>
+          <p class="muted">Compliance-ready, focused, and independent.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <div class="icon-box">✔️</div>
+            <h3>Compliance Ready</h3>
+            <p>Clear disclosures, safe language, and no price claims.</p>
+          </article>
+          <article class="card">
+            <div class="icon-box">🎯</div>
+            <h3>Curation First</h3>
+            <p>Only the picks worth your time — no endless link dumps.</p>
+          </article>
+          <article class="card">
+            <div class="icon-box">⚡</div>
+            <h3>Performance Focused</h3>
+            <p>Fast, mobile-first design built for quick decisions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="section-header">
+          <h2>Latest from the blog</h2>
+          <a class="btn btn-secondary" href="/blog.html">View all posts</a>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Designing the ultimate fan setup</h3>
+            <p>Small upgrades that make your room feel like a backstage pass.</p>
+            <a class="btn btn-secondary" href="/blog.html">Read article</a>
+          </article>
+          <article class="card">
+            <h3>Vinyl collecting 101</h3>
+            <p>Essential pressings and how to care for them long-term.</p>
+            <a class="btn btn-secondary" href="/blog.html">Read article</a>
+          </article>
+          <article class="card">
+            <h3>What makes a great tour tee</h3>
+            <p>Fit, graphic quality, and why you should keep it timeless.</p>
+            <a class="btn btn-secondary" href="/blog.html">Read article</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="deal-band">
+          <strong>Get new picks (no spam).</strong>
+          <span class="muted">A quick monthly update when we refresh the curation.</span>
+          <form class="email-capture">
+            <input type="email" placeholder="Email address" aria-label="Email address" />
+            <button class="btn btn-primary" type="button">Notify me</button>
+          </form>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-links" aria-label="Legal and info links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="accessibility.html">Accessibility Statement</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-        <a href="disclosure.html">Affiliate Disclosure</a>
+  <footer class="footer">
+    <div class="container">
+      <strong>MetalliCult</strong>
+      <p class="muted">Fan-made hub. Not affiliated with Metallica.</p>
+      <p class="muted">As an Amazon Associate I earn from qualifying purchases.</p>
+      <div class="footer-links">
+        <a href="/accessibility.html">Accessibility</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclosure.html">Affiliate Disclosure</a>
       </div>
-      <div>© 2024 MetalliCult. Fan-made hub. Not affiliated with Metallica.</div>
+      <p class="muted" style="margin-top: 12px;">© <span data-year></span> MetalliCult.</p>
     </div>
   </footer>
-
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-    hamburger.addEventListener('click', () => {
-      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-      hamburger.setAttribute('aria-expanded', String(!expanded));
-      mobileMenu.classList.toggle('show');
-    });
-  </script>
 </body>
 </html>
