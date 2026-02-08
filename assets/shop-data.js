@@ -1,0 +1,52 @@
+const SHOP_DATA = {
+  apparel: [
+    { url: "https://amzn.to/3OutFmL", title: "Apparel Pick #01", tags: ["Tees", "Fan Favorite"], blurb: "Bold print, everyday wear." },
+    { url: "https://amzn.to/4qZkb1n", title: "Apparel Pick #02", tags: ["Hoodies", "Fan Favorite"], blurb: "Warm layers with stage-ready style." },
+    { url: "https://amzn.to/4a5nWMJ", title: "Apparel Pick #03", tags: ["Tees"], blurb: "Clean fit with iconic energy." },
+    { url: "https://amzn.to/46ACGko", title: "Apparel Pick #04", tags: ["Hoodies"], blurb: "Relaxed comfort for late-night spins." },
+    { url: "https://amzn.to/4tnycHR", title: "Apparel Pick #05", tags: ["Tees"], blurb: "Sharp graphics, easy layering." },
+    { url: "https://amzn.to/4qrmQjs", title: "Apparel Pick #06", tags: ["Hoodies", "Fan Favorite"], blurb: "Heavyweight feel, tour-ready vibe." },
+    { url: "https://amzn.to/402rObj", title: "Apparel Pick #07", tags: ["Tees"], blurb: "Minimalist look with metal edge." },
+    { url: "https://amzn.to/3Mahye3", title: "Apparel Pick #08", tags: ["Tees"], blurb: "Soft hand feel for daily wear." },
+    { url: "https://amzn.to/4rfcSCP", title: "Apparel Pick #09", tags: ["Hoodies"], blurb: "Street-ready warmth with bold art." },
+    { url: "https://amzn.to/45VymvV", title: "Apparel Pick #10", tags: ["Tees", "Fan Favorite"], blurb: "Iconic pick for quick fits." },
+    { url: "https://amzn.to/46fJ54H", title: "Apparel Pick #11", tags: ["Hoodies"], blurb: "Layer up with a premium touch." },
+    { url: "https://amzn.to/4cdDMpV", title: "Apparel Pick #12", tags: ["Tees"], blurb: "Everyday staple for loud playlists." },
+    { url: "https://amzn.to/4af5ss0", title: "Apparel Pick #13", tags: ["Hoodies"], blurb: "All-season comfort with fan flair." },
+    { url: "https://amzn.to/4kkUrtM", title: "Apparel Pick #14", tags: ["Tees"], blurb: "Lean silhouette, bold attitude." },
+    { url: "https://amzn.to/3Zp0Udy", title: "Apparel Pick #15", tags: ["Tees", "Fan Favorite"], blurb: "Classic graphic, modern fit." }
+  ],
+  vinyl: [
+    { url: "https://amzn.to/4bIM9Ka", title: "Vinyl Pick #01", tags: ["Collector Pick", "Essentials"], blurb: "Collector-friendly press." },
+    { url: "https://amzn.to/4a4yYBR", title: "Vinyl Pick #02", tags: ["Essentials"], blurb: "Signature sound in premium form." },
+    { url: "https://amzn.to/4alUhh6", title: "Vinyl Pick #03", tags: ["Gifts"], blurb: "A standout gift for diehards." },
+    { url: "https://amzn.to/3Zpnkvd", title: "Vinyl Pick #04", tags: ["Collector Pick"], blurb: "Shelf-worthy edition for collectors." },
+    { url: "https://amzn.to/3MjE6J9", title: "Vinyl Pick #05", tags: ["Essentials"], blurb: "Essential spin for the playlist." },
+    { url: "https://amzn.to/4qmCGvu", title: "Vinyl Pick #06", tags: ["Gifts"], blurb: "A polished pick with impact." },
+    { url: "https://amzn.to/4bIOOmX", title: "Vinyl Pick #07", tags: ["Collector Pick"], blurb: "Collector-ready with bold presence." },
+    { url: "https://amzn.to/3LYf96d", title: "Vinyl Pick #08", tags: ["Essentials"], blurb: "Core catalog energy, clean press." },
+    { url: "https://amzn.to/3OvunjC", title: "Vinyl Pick #09", tags: ["Gifts"], blurb: "Giftable pick for true fans." },
+    { url: "https://amzn.to/46xcQ0D", title: "Vinyl Pick #10", tags: ["Collector Pick"], blurb: "Limited vibe for display shelves." },
+    { url: "https://amzn.to/3LYfg1D", title: "Vinyl Pick #11", tags: ["Essentials"], blurb: "Essential rotation for vinyl nights." },
+    { url: "https://amzn.to/4tu63iu", title: "Vinyl Pick #12", tags: ["Gifts"], blurb: "Premium pick that hits hard." },
+    { url: "https://amzn.to/46F3OyL", title: "Vinyl Pick #13", tags: ["Collector Pick"], blurb: "Showpiece-worthy pressing." },
+    { url: "https://amzn.to/4bIP1GL", title: "Vinyl Pick #14", tags: ["Essentials"], blurb: "For the main stack, always." },
+    { url: "https://amzn.to/4qi7iy9", title: "Vinyl Pick #15", tags: ["Gifts"], blurb: "Best for gifting with impact." },
+    { url: "https://amzn.to/4aDCfbu", title: "Vinyl Pick #16", tags: ["Collector Pick"], blurb: "Collector glow with sharp detail." },
+    { url: "https://amzn.to/3O1QgXQ", title: "Vinyl Pick #17", tags: ["Essentials"], blurb: "Essential spin, effortless style." }
+  ],
+  posters: [
+    { url: "https://amzn.to/4bJrFAY", title: "Poster Pick #01", tags: ["Wall Upgrade", "Room Decor"], blurb: "Instant room upgrade." },
+    { url: "https://amzn.to/4qu1QIP", title: "Poster Pick #02", tags: ["Room Decor"], blurb: "Crisp visuals for any wall." },
+    { url: "https://amzn.to/4aE0gPK", title: "Poster Pick #03", tags: ["Limited Style"], blurb: "Limited vibe with premium edge." },
+    { url: "https://amzn.to/3ZXbDfu", title: "Poster Pick #04", tags: ["Wall Upgrade"], blurb: "Statement piece with bold energy." },
+    { url: "https://amzn.to/4rE1aBE", title: "Poster Pick #05", tags: ["Room Decor"], blurb: "Clean lines, high-impact art." },
+    { url: "https://amzn.to/4klChbg", title: "Poster Pick #06", tags: ["Limited Style"], blurb: "Collector style for true fans." },
+    { url: "https://amzn.to/3ZWBDaN", title: "Poster Pick #07", tags: ["Wall Upgrade"], blurb: "Add depth to your setup." },
+    { url: "https://amzn.to/3ZofIt6", title: "Poster Pick #08", tags: ["Room Decor"], blurb: "Room-ready art with edge." },
+    { url: "https://amzn.to/4ruTlxO", title: "Poster Pick #09", tags: ["Limited Style"], blurb: "Limited look, premium feel." },
+    { url: "https://amzn.to/401vREM", title: "Poster Pick #10", tags: ["Wall Upgrade"], blurb: "Instant lift for any wall." },
+    { url: "https://amzn.to/4krng7W", title: "Poster Pick #11", tags: ["Room Decor"], blurb: "Bring the setlist energy home." },
+    { url: "https://amzn.to/4krniN6", title: "Poster Pick #12", tags: ["Limited Style"], blurb: "Limited style, bold presence." }
+  ]
+};

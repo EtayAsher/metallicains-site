@@ -1,484 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About MetalliCult | Fan-Made Metallica Hub</title>
-  <meta name="description" content="Meet Ori Elbaz and MetalliCult — a professional, fan-built hub curating trustworthy Metallica merch picks with transparent affiliate practices." />
-  <meta name="keywords" content="Metallica Official Merch, Metallica Fan Hub, Rock Merchandise" />
-  <link rel="canonical" href="https://etayasher.github.io/metallicains-site/about.html" />
-
-  <meta property="og:title" content="About MetalliCult | Fan-Made Metallica Hub" />
-  <meta property="og:description" content="Learn how our fan team curates Metallica-inspired gear with compliance, transparency, and quality in mind." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://etayasher.github.io/metallicains-site/about.html" />
-  <meta property="og:image" content="https://etayasher.github.io/metallicains-site/assets/img/מטאליקה-2-Nothing-Else-Matter.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <style>
-    :root {
-      --bg: #000;
-      --text: #f2f2f2;
-      --yellow: #FFD000;
-      --card-bg: #111;
-      --border: #333;
-      --muted: #c2c2c2;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: "Inter", "Segoe UI", Arial, sans-serif;
-      color: var(--text);
-      background: radial-gradient(circle at 20% 20%, #0f0f0f 0%, #000 60%);
-      min-height: 100vh;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-      transition: color 0.2s ease, text-decoration-color 0.2s ease;
-      text-decoration-color: transparent;
-    }
-
-    a:hover,
-    a:focus-visible {
-      color: var(--yellow);
-      text-decoration: underline;
-      text-decoration-color: var(--yellow);
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(0, 0, 0, 0.95);
-      border-bottom: 1px solid var(--border);
-      backdrop-filter: blur(6px);
-    }
-
-    .nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 16px 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-    }
-
-    .brand {
-      font-weight: 800;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 18px;
-      align-items: center;
-    }
-
-    nav a {
-      position: relative;
-      font-weight: 600;
-      padding: 8px 2px;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -6px;
-      height: 2px;
-      width: 0;
-      background: var(--yellow);
-      transition: width 0.2s ease;
-    }
-
-    nav a:hover::after,
-    nav a:focus-visible::after {
-      width: 100%;
-    }
-
-    .nav-actions {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .btn,
-    .cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 16px;
-      border-radius: 12px;
-      border: 1px solid transparent;
-      background: var(--yellow);
-      color: var(--bg);
-      font-weight: 800;
-      letter-spacing: 0.3px;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(255, 208, 0, 0.25);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-    }
-
-    .btn-accent {
-      border-color: var(--yellow);
-    }
-
-    .btn:hover,
-    .btn:focus-visible,
-    .cta:hover,
-    .cta:focus-visible {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 30px rgba(255, 208, 0, 0.35);
-      filter: brightness(1.05);
-    }
-
-    .hamburger {
-      display: none;
-      cursor: pointer;
-      padding: 10px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: var(--card-bg);
-    }
-
-    .hamburger span {
-      display: block;
-      width: 20px;
-      height: 2px;
-      background: var(--yellow);
-      margin: 4px 0;
-    }
-
-    .mobile-menu {
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-      padding: 0 18px 16px;
-    }
-
-    .mobile-menu a {
-      padding: 10px 12px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: var(--card-bg);
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 24px 18px 80px;
-    }
-
-    h1 {
-      margin: 0 0 8px;
-      font-size: 32px;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 28px;
-      align-items: center;
-      background: linear-gradient(135deg, rgba(17, 17, 17, 0.96), rgba(5, 5, 5, 0.96));
-      border: 1px solid var(--border);
-      border-radius: 26px;
-      padding: 26px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
-    }
-
-    .hero h1 {
-      margin: 0 0 10px;
-      font-size: 32px;
-      letter-spacing: 0.3px;
-    }
-
-    .hero p {
-      margin: 0 0 16px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .badge {
-      background: var(--card-bg);
-      padding: 8px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      font-size: 13px;
-      color: var(--yellow);
-      letter-spacing: 0.2px;
-    }
-
-    .hero-img {
-      width: 100%;
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.55);
-    }
-
-    .hero-img img {
-      width: 100%;
-      display: block;
-      height: auto;
-    }
-
-    .section {
-      margin-top: 42px;
-    }
-
-    .section h2 {
-      margin: 0 0 12px;
-      font-size: 26px;
-      letter-spacing: 0.2px;
-    }
-
-    .section p {
-      margin: 0 0 18px;
-      color: var(--muted);
-    }
-
-    .grid {
-      display: grid;
-      gap: 16px;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    }
-
-    .card {
-      border: 1px solid var(--border);
-      background: var(--card-bg);
-      border-radius: 18px;
-      padding: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.6);
-    }
-
-    .card h3 {
-      margin: 0;
-      font-size: 20px;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.55;
-    }
-
-    .intro {
-      color: var(--muted);
-      margin: 0 0 20px;
-      line-height: 1.7;
-    }
-
-    .lead {
-      color: var(--muted);
-      line-height: 1.7;
-      margin: 0 0 12px;
-    }
-
-    .meta {
-      color: #9b9b9b;
-      font-size: 14px;
-    }
-
-    .feature-img {
-      width: 100%;
-      height: 160px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, rgba(255, 208, 0, 0.22), rgba(0, 0, 0, 0.7));
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--muted);
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 10px;
-      background: #0d0d0d;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      color: var(--yellow);
-      font-size: 13px;
-      letter-spacing: 0.2px;
-    }
-
-    .list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 10px;
-    }
-
-    .list li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--text);
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--yellow);
-      box-shadow: 0 0 0 4px rgba(255, 208, 0, 0.08);
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      background: #050505;
-      margin-top: 60px;
-    }
-
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 18px;
-      display: grid;
-      gap: 10px;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      align-items: center;
-      color: #a5a5a5;
-      font-size: 14px;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links a {
-      color: var(--text);
-    }
-
-    .footer-links a:hover,
-    .footer-links a:focus-visible {
-      color: var(--yellow);
-    }
-
-    @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 680px) {
-      nav ul { display: none; }
-      .hamburger { display: block; }
-      .mobile-menu.show { display: flex; }
-      .hero h1 { font-size: 26px; }
-      .hero { padding: 22px; }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About • MetalliCult</title>
+  <meta name="description" content="Learn why MetalliCult exists and how we curate Metallica merch picks with care." />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script defer src="/assets/main.js"></script>
 </head>
 <body>
   <header>
-    <div class="nav">
-      <div class="brand">MetalliCult</div>
-      <nav aria-label="Primary">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
+    <div class="container navbar">
+      <a class="brand" href="/">Metalli<span>Cult</span></a>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/shop/">Shop</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/about.html">About</a>
       </nav>
-      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
     </div>
-    <div class="mobile-menu" id="mobile-menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Shop</a>
-      <a href="blog.html">Blog</a>
+    <div class="container nav-drawer" aria-hidden="true">
+      <a href="/">Home</a>
+      <a href="/shop/">Shop</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/about.html">About</a>
     </div>
   </header>
 
   <main>
-    <h1>About MetalliCult</h1>
-    <p class="lead">MetalliCult is a professional, fan-run hub built to help Metallica devotees shop smarter. We publish transparent guides, curate merch that respects the band’s legacy, and make sure every recommendation meets affiliate and compliance standards.</p>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge">Independent fan hub • Affiliate-supported</span>
+          <h1>About MetalliCult</h1>
+          <p>We are a fan-made hub focused on premium curation, minimal noise, and a great mobile experience for Metallica fans.</p>
+        </div>
+        <div class="hero-card">
+          <h2>Why we exist</h2>
+          <p class="muted">Fans deserve a place that feels intentional: a clean hub for merch picks, guides, and stories — without official affiliation.</p>
+        </div>
+      </div>
+    </section>
 
-    <div class="card">
-      <div class="pill">Meet the curator</div>
-      <p class="lead"><strong>The MetalliCult Team</strong> is a professional, research-driven group of lifelong Metallica fans and merch evaluators. We curate recommendations based on product quality, authenticity, and reliable merchant history — without any personal bias.</p>
-      <p class="lead"><strong>Why this hub exists</strong> — Fans deserve merch that respects Metallica’s legacy. The MetalliCult Team highlights products that meet our strict quality, durability, and authenticity standards.</p>
-      <p class="lead"><strong>How we choose products</strong> — Every item is reviewed for print quality, fabric durability, sizing accuracy, shipping reliability, and return policies. Listings that fail our criteria are removed immediately.</p>
-      <p class="lead"><strong>Transparency first</strong> — We use affiliate links to keep the site running. Disclosures are clearly stated so you always understand how MetalliCult operates as an independent fan-run hub.</p>
-    </div>
-
-    <div class="grid">
-      <div class="card">
-        <div class="pill">What we curate</div>
-        <ul class="list">
-          <li><span class="dot"></span>Iconic tees, hoodies, and stage-ready layers that respect album art.</li>
-          <li><span class="dot"></span>Drinkware, patches, posters, and collectibles you can display proudly.</li>
-          <li><span class="dot"></span>Seasonal finds like Hawaiian shirts and outerwear for tour nights.</li>
-          <li><span class="dot"></span>Care tips and sizing notes sourced from actual fan feedback.</li>
-        </ul>
+    <section class="section section-tight">
+      <div class="container">
+        <div class="card-grid">
+          <article class="card">
+            <div class="icon-box">🖤</div>
+            <h3>Independent voice</h3>
+            <p>We curate and write from a fan perspective. No official ties, no corporate agenda.</p>
+          </article>
+          <article class="card">
+            <div class="icon-box">🛡️</div>
+            <h3>Affiliate supported</h3>
+            <p>We may earn from qualifying purchases, and we disclose that clearly across the site.</p>
+          </article>
+          <article class="card">
+            <div class="icon-box">📱</div>
+            <h3>Mobile-first UX</h3>
+            <p>Everything is tuned for speed and clarity on the devices fans use most.</p>
+          </article>
+        </div>
       </div>
-      <div class="card">
-        <div class="pill">Trust & compliance</div>
-        <ul class="list">
-          <li><span class="dot"></span>FTC-ready affiliate disclosures and clear “no affiliation” messaging.</li>
-          <li><span class="dot"></span>GDPR/CCPA rights summarized with straightforward contact options.</li>
-          <li><span class="dot"></span>Merchants vetted for secure checkout, reliable shipping, and fair returns.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="pill">Stay connected</div>
-        <ul class="list">
-          <li><span class="dot"></span>Email: <a href="mailto:metallicult.team@gmail.com">metallicult.team@gmail.com</a></li>
-          <li><span class="dot"></span>Instagram: <a href="https://instagram.com/metallicult" target="_blank" rel="noopener">@metallicult</a></li>
-          <li><span class="dot"></span>Shop the current picks: <a href="https://www.merchbar.com/search?q=metallica%20shirt" target="_blank" rel="noopener">Merchbar search</a></li>
-        </ul>
-      </div>
-    </div>
+    </section>
   </main>
 
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-links" aria-label="Legal and info links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="accessibility.html">Accessibility Statement</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-        <a href="disclosure.html">Affiliate Disclosure</a>
+  <footer class="footer">
+    <div class="container">
+      <strong>MetalliCult</strong>
+      <p class="muted">Fan-made hub. Not affiliated with Metallica.</p>
+      <p class="muted">As an Amazon Associate I earn from qualifying purchases.</p>
+      <div class="footer-links">
+        <a href="/accessibility.html">Accessibility</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclosure.html">Affiliate Disclosure</a>
       </div>
-      <div>© 2024 MetalliCult. Fan-made hub. Not affiliated with Metallica.</div>
+      <p class="muted" style="margin-top: 12px;">© <span data-year></span> MetalliCult.</p>
     </div>
   </footer>
-
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-    hamburger.addEventListener('click', () => {
-      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-      hamburger.setAttribute('aria-expanded', String(!expanded));
-      mobileMenu.classList.toggle('show');
-    });
-  </script>
 </body>
 </html>
