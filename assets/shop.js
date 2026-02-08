@@ -47,8 +47,18 @@ function createCard(item, index, cat, popularSet) {
   card.className = "product-card";
 
   const media = document.createElement("div");
-  media.className = "product-media";
-  media.textContent = categoryIcons[cat] || "★";
+  media.className = "product-card__media";
+  if (item.imageUrl) {
+    const img = document.createElement("img");
+    img.src = item.imageUrl;
+    img.alt = item.title;
+    img.loading = "lazy";
+    img.decoding = "async";
+    media.append(img);
+  } else {
+    media.classList.add("product-card__media--placeholder");
+    media.textContent = categoryIcons[cat] || "★";
+  }
 
   const title = document.createElement("h3");
   title.textContent = item.title;
@@ -88,7 +98,7 @@ function createCard(item, index, cat, popularSet) {
   });
 
   actions.append(primary, copy);
-  card.append(media, tag, title, blurb, actions);
+  card.append(media, title, tag, blurb, actions);
 
   if (popularSet.has(index)) {
     const badge = document.createElement("span");
