@@ -580,3 +580,131 @@ header {
     display: inline-flex;
   }
 }
+
+.shop-hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #0a0a0a, #111);
+}
+
+.shop-hero h1 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  color: #FFD700;
+}
+
+.shop-hero p {
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.shop-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 50px 20px;
+}
+
+.shop-card {
+  background: #111;
+  border-top: 3px solid #FFD700;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+.shop-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(255,215,0,0.25);
+}
+
+.shop-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.shop-card-content {
+  padding: 20px;
+}
+
+.shop-card h3 {
+  color: #FFD700;
+  margin-bottom: 10px;
+}
+
+.shop-card p {
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+.shop-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #FFD700;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.shop-btn:hover,
+.shop-btn:focus-visible {
+  background: #e6c200;
+}
+
+.shop-trust {
+  padding: 48px 20px 64px;
+}
+
+.shop-trust h2 {
+  color: #FFD700;
+  margin-bottom: 16px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.shop-trust ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 12px 24px;
+  margin-bottom: 20px;
+}
+
+.shop-trust li {
+  color: #ddd;
+  background: rgba(255, 212, 0, 0.08);
+  border: 1px solid rgba(255, 212, 0, 0.2);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.affiliate-note {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .shop-categories {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 36px 16px;
+  }
+
+  .shop-card img {
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  .shop-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .shop-trust ul {
+    grid-template-columns: 1fr;
+  }
+}
