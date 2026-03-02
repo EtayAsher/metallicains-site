@@ -4,11 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shop • MetalliCult</title>
-  <meta name="description" content="Handpicked Metallica merch picks across apparel, vinyl, and posters." />
+  <meta name="description" content="Official Metallica fan merchandise featuring premium picks across apparel, household goods, and collectibles." />
   <link rel="stylesheet" href="/assets/styles.css" />
   <script defer src="/assets/main.js"></script>
-  <script defer src="/assets/shop-data.js"></script>
-  <script defer src="/assets/shop.js"></script>
 </head>
 <body data-page="shop-hub">
   <header>
@@ -16,7 +14,7 @@
       <a class="brand" href="/">Metalli<span>Cult</span></a>
       <nav class="nav-links">
         <a href="/">Home</a>
-        <a href="/shop/">Shop</a>
+        <a class="active" href="/shop/">Shop</a>
         <a href="/blog.html">Blog</a>
         <a href="/about.html">About</a>
       </nav>
@@ -31,96 +29,71 @@
   </header>
 
   <main>
-    <section class="section section-tight">
+    <section class="shop-hero">
       <div class="container">
-        <div class="disclosure">As an Amazon Associate I earn from qualifying purchases.</div>
+        <h1>Official Metallica Fan Shop</h1>
+        <p>Premium merchandise curated for true Metallica fans.</p>
       </div>
     </section>
 
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="badge">Independent fan hub • Affiliate-supported</span>
-          <h1>Handpicked Picks for Metalheads</h1>
-          <p>Focused categories, fan-friendly curation, and fast access to Amazon listings — no clutter.</p>
-        </div>
-        <div class="hero-card">
-          <h2>Featured Picks</h2>
-          <p class="muted">A quick look at what fans are clicking most right now.</p>
-          <div class="product-grid" data-featured-strip></div>
+    <section class="shop-categories container" aria-label="Merchandise categories">
+      <div class="shop-card">
+        <img src="https://m.media-amazon.com/images/I/5121db9nhrL._AC_UY1000_.jpg" alt="Metallica T-shirt hanging on display" loading="lazy">
+        <div class="shop-card-content">
+          <h3>T-Shirts</h3>
+          <p>Official Metallica tees built for everyday wear and tour energy.</p>
+          <a href="https://www.anrdoezrs.net/click-101623364-14551663?url=https%3A%2F%2Fwww.metal-shop.eu%2Ft-shirts-and-tops%2Fb%2Fmetallica%2Fpg%2F6%2F" target="_blank" rel="noopener noreferrer" class="shop-btn" aria-label="Shop Metallica T-Shirts">
+            Shop Now ↗
+          </a>
         </div>
       </div>
-    </section>
 
-    <section class="section section-tight sticky-subnav">
-      <div class="container">
-        <nav class="sub-nav">
-          <a class="active" href="/shop/">View All</a>
-          <a href="/shop/apparel/">Apparel</a>
-          <a href="/shop/vinyl/">Vinyl</a>
-          <a href="/shop/posters/">Posters</a>
-        </nav>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2>Apparel Essentials</h2>
-          <a class="btn btn-secondary" href="/shop/apparel/">Explore apparel</a>
-        </div>
-        <div class="split" data-category-preview="apparel">
-          <div>
-            <p class="muted">Tees and hoodies with the right balance of comfort and iconography.</p>
-            <p class="muted">Availability changes fast — check back for new picks.</p>
-          </div>
-          <div class="product-grid"></div>
+      <div class="shop-card">
+        <img src="https://m.media-amazon.com/images/I/41dF8ptk0yL._AC_UY1000_.jpg" alt="Black Metallica hoodie with front graphic" loading="lazy">
+        <div class="shop-card-content">
+          <h3>Hoodies</h3>
+          <p>Heavyweight hoodies and sweatshirts for real fans.</p>
+          <a href="https://www.tkqlhce.com/click-101623364-14551663?url=https%3A%2F%2Fwww.metal-shop.eu%2Fsweatshirts-and-jumpers%2Fsearch%2Fmetallica%2F" target="_blank" rel="noopener noreferrer" class="shop-btn" aria-label="Shop Metallica Hoodies">
+            Shop Now ↗
+          </a>
         </div>
       </div>
-    </section>
 
-    <section class="section section-tight">
-      <div class="container">
-        <div class="section-header">
-          <h2>Vinyl Picks</h2>
-          <a class="btn btn-secondary" href="/shop/vinyl/">Explore vinyl</a>
+      <div class="shop-card">
+        <img src="https://m.media-amazon.com/images/I/61rgSOfDMQL._AC_UF894,1000_QL80_.jpg" alt="Metallica themed mug and home merchandise" loading="lazy">
+        <div class="shop-card-content">
+          <h3>Household &amp; Merch</h3>
+          <p>Mugs, decor and premium Metallica essentials.</p>
+          <a href="https://www.anrdoezrs.net/click-101623364-14551663?url=https%3A%2F%2Fwww.metal-shop.eu%2Fhousehold-and-decoration%2Fsearch%2Fmetallica%2F" target="_blank" rel="noopener noreferrer" class="shop-btn" aria-label="Shop Metallica Household and Merch">
+            Shop Now ↗
+          </a>
         </div>
-        <div class="split" data-category-preview="vinyl">
-          <div>
-            <p class="muted">Collector-friendly pressings, essential albums, and giftable favorites.</p>
-            <p class="muted">Availability changes fast — check back for new picks.</p>
-          </div>
-          <div class="product-grid"></div>
+      </div>
+
+      <div class="shop-card">
+        <img src="https://m.media-amazon.com/images/I/41OYqAOH-BL._AC_UF894,1000_QL80_.jpg" alt="Metallica collectible statue figure on display" loading="lazy">
+        <div class="shop-card-content">
+          <h3>Statues &amp; Figures</h3>
+          <p>Collectible statues and display pieces for dedicated fans.</p>
+          <a href="https://www.tkqlhce.com/click-101623364-14551663?url=https%3A%2F%2Fwww.metal-shop.eu%2Fstatues-figures%2Fsearch%2Fmetallica%2F" target="_blank" rel="noopener noreferrer" class="shop-btn" aria-label="Shop Metallica Statues and Figures">
+            Shop Now ↗
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section section-tight">
+    <section class="shop-trust" aria-labelledby="shop-trust-title">
       <div class="container">
-        <div class="section-header">
-          <h2>Posters & Wall Art</h2>
-          <a class="btn btn-secondary" href="/shop/posters/">Explore posters</a>
-        </div>
-        <div class="split" data-category-preview="posters">
-          <div>
-            <p class="muted">Wall upgrades with bold visuals for studios, offices, and bedrooms.</p>
-            <p class="muted">Availability changes fast — check back for new picks.</p>
-          </div>
-          <div class="product-grid"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-tight">
-      <div class="container">
-        <div class="deal-band">
-          <strong>Popular pick — availability may change.</strong>
-          <span class="muted">We update lists based on fan interest and reliable listings.</span>
-          <form class="email-capture">
-            <input type="email" placeholder="Email address" aria-label="Email address" />
-            <button class="btn btn-primary" type="button">Get new picks</button>
-          </form>
-        </div>
+        <h2 id="shop-trust-title">Why Shop With Us</h2>
+        <ul>
+          <li>✔ Official Retail Partners</li>
+          <li>✔ Worldwide Shipping</li>
+          <li>✔ Secure Checkout</li>
+          <li>✔ Authentic Metallica Merchandise</li>
+        </ul>
+        <p class="affiliate-note">
+          This page contains affiliate links. We may earn a commission at no extra cost to you.
+        </p>
       </div>
     </section>
   </main>
@@ -129,7 +102,7 @@
     <div class="container">
       <strong>MetalliCult</strong>
       <p class="muted">Fan-made hub. Not affiliated with Metallica.</p>
-      <p class="muted">As an Amazon Associate I earn from qualifying purchases.</p>
+      <p class="muted">This page may include affiliate links that support the site.</p>
       <div class="footer-links">
         <a href="/accessibility.html">Accessibility</a>
         <a href="/privacy.html">Privacy Policy</a>
