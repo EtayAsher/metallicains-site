@@ -465,25 +465,6 @@ header {
   gap: 8px;
 }
 
-.email-capture {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 12px;
-  margin-top: 16px;
-}
-
-.email-capture input {
-  padding: 12px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--bg-alt);
-  color: var(--text);
-  min-height: 44px;
-}
-
-.email-capture button {
-  min-height: 44px;
-}
 
 .footer {
   border-top: 1px solid var(--border);
@@ -547,9 +528,6 @@ header {
     padding: 100px 0 60px;
   }
 
-  .email-capture {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (min-width: 861px) {
@@ -566,6 +544,18 @@ header {
 @media (max-width: 640px) {
   .section {
     padding: 60px 0;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .section-header {
+    align-items: stretch;
+  }
+
+  .section-header .btn {
+    width: 100%;
   }
 
   .product-grid {
