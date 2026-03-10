@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/assets/styles.css" />
   <style>
     .essentials-card {
-      border-top: 3px solid #FFD700;
+      border-top: 3px solid var(--accent);
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
       transition: all 0.3s ease;
     }
@@ -33,8 +33,8 @@
 <body class="has-top-announcement has-mobile-shop-cta">
   <div class="top-announcement" role="status" aria-live="polite">
     <div class="container">
-      <strong>EXCLUSIVE FAN DISCOUNT:</strong>
-      <span>Use code <strong>METALLICULT101</strong> for 6% OFF your order!</span>
+      <strong>GET THE GEAR:</strong>
+      <span>Use code <strong>METALLICULT101</strong> for an exclusive <strong>6% discount</strong> on your order!</span>
     </div>
   </div>
   <header>
@@ -57,25 +57,12 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="badge">Independent fan hub • Affiliate-supported</span>
-          <h1>Curated Metallica Merch for True Fans</h1>
-          <p>Premium picks, clean layouts, and a fast mobile experience. No official affiliation — just honest curation for the community.</p>
-          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-            <a class="btn btn-primary" href="/shop/">View top picks</a>
-            <a class="btn btn-secondary" href="#trust">Why trust us</a>
-          </div>
-        </div>
-        <div class="hero-card">
-          <h2>Shop with confidence</h2>
-          <p class="muted">We highlight the essentials, keep the vibes clean, and make sure every link is affiliate-compliant.</p>
-          <div class="deal-band" style="margin-top: 24px;">
-            <strong>Popular pick — availability may change.</strong>
-            <span class="muted">We rotate picks based on fan interest and availability.</span>
-          </div>
-        </div>
+    <section class="discount-hero" aria-labelledby="discount-headline">
+      <div class="container discount-hero__inner">
+        <p class="discount-hero__eyebrow">Limited-time fan perk</p>
+        <h1 id="discount-headline">GET THE GEAR: Use code METALLICULT101 for an exclusive 6% discount on your order!</h1>
+        <p class="muted">Shop now while the code is active and secure your next Metallica essential before stock rotates.</p>
+        <a class="btn btn-primary" href="#essentials">Unlock the discount</a>
       </div>
     </section>
 
@@ -83,43 +70,56 @@
       <div class="container">
         <div class="section-header">
           <h2>Shop the Metallica Essentials</h2>
-          <p class="muted">Four focused categories, handpicked and easy to explore.</p>
+          <p class="muted">Top categories first: Apparel, Vinyl, and Posters.</p>
         </div>
-        <div class="card-grid">
+        <div class="card-grid essentials-grid">
           <article class="card essentials-card">
-            <div class="icon-box" data-category="apparel" data-category-label="T-Shirts">
-              <img src="https://m.media-amazon.com/images/I/5121db9nhrL._AC_UY1000_.jpg" alt="Metallica T-Shirts" loading="lazy" decoding="async" />
+            <div class="icon-box" data-category="apparel" data-category-label="Apparel">
+              <img src="https://m.media-amazon.com/images/I/5121db9nhrL._AC_UY1000_.jpg" alt="Metallica apparel" loading="lazy" decoding="async" />
             </div>
-            <h3>T-Shirts</h3>
-            <p>Official Metallica tees for everyday wear and tour energy.</p>
-            <a class="btn btn-primary" href="https://www.metal-shop.eu/t-shirts-and-tops/b/metallica/?cjdata=MXxOfDB8WXww&utm_source=CJ&utm_medium=affiliate&utm_campaign=101623364&utm_content=14551663&utm_term=c9b35fd2162911f180ba00380a18b8f7&cjevent=c9b35fd2162911f180ba00380a18b8f7" target="_blank" rel="noopener noreferrer">Shop T-Shirts</a>
+            <h3>Apparel</h3>
+            <p>Tour-ready tees, hoodies, and fanwear that keep the look classic.</p>
+            <a class="btn btn-primary" href="/shop/apparel/">Shop Apparel</a>
           </article>
           <article class="card essentials-card">
-            <div class="icon-box" data-category="apparel" data-category-label="Hoodies">
-              <img src="https://m.media-amazon.com/images/I/41dF8ptk0yL._AC_UY1000_.jpg" alt="Metallica Hoodies" loading="lazy" decoding="async" />
+            <div class="icon-box" data-category="vinyl" data-category-label="Vinyl">
+              <img src="https://m.media-amazon.com/images/I/81h4M7xY2+L._UF1000,1000_QL80_.jpg" alt="Metallica vinyl records" loading="lazy" decoding="async" />
             </div>
-            <h3>Hoodies</h3>
-            <p>Heavyweight hoodies and sweatshirts built for true fans.</p>
-            <a class="btn btn-primary" href="https://www.tkqlhce.com/click-101623364-14551663?url=https%3A%2F%2Fwww.metal-shop.eu%2Fsweatshirts-and-jumpers%2Fsearch%2Fmetallica%2F" target="_blank" rel="noopener noreferrer">Shop Hoodies</a>
+            <h3>Vinyl</h3>
+            <p>Studio albums and collectible pressings for full-volume listening sessions.</p>
+            <a class="btn btn-primary" href="/shop/vinyl/">Shop Vinyl</a>
           </article>
           <article class="card essentials-card">
-            <div class="icon-box" data-category="posters" data-category-label="Household &amp; Merch">
-              <img src="https://m.media-amazon.com/images/I/61rgSOfDMQL._AC_UF894,1000_QL80_.jpg" alt="Metallica Mugs and Merchandise" loading="lazy" decoding="async" />
+            <div class="icon-box" data-category="posters" data-category-label="Posters">
+              <img src="https://m.media-amazon.com/images/I/61pa+v6NuoL._AC_UF894,1000_QL80_.jpg" alt="Metallica posters" loading="lazy" decoding="async" />
             </div>
-            <h3>Household &amp; Merch</h3>
-            <p>Mugs, decor and premium Metallica essentials.</p>
-            <a class="btn btn-primary" href="https://www.anrdoezrs.net/click-101623364-14551663?url=https%3A%2F%2Fwww.metal-shop.eu%2Fhousehold-and-decoration%2Fsearch%2Fmetallica%2F" target="_blank" rel="noopener noreferrer">Shop Merch</a>
-          </article>
-          <article class="card essentials-card">
-            <div class="icon-box" data-category="posters" data-category-label="Statues &amp; Figures">
-              <img src="https://m.media-amazon.com/images/I/41OYqAOH-BL._AC_UF894,1000_QL80_.jpg" alt="Metallica Statues and Collectibles" loading="lazy" decoding="async" />
-            </div>
-            <h3>Statues &amp; Figures</h3>
-            <p>Collectible statues and display pieces for dedicated fans.</p>
-            <a class="btn btn-primary" href="https://www.tkqlhce.com/click-101623364-14551663?url=https%3A%2F%2Fwww.metal-shop.eu%2Fstatues-figures%2Fsearch%2Fmetallica%2F" target="_blank" rel="noopener noreferrer">Shop Figures</a>
+            <h3>Posters</h3>
+            <p>Frame-worthy wall art and tour visuals built for your fan cave.</p>
+            <a class="btn btn-primary" href="/shop/posters/">Shop Posters</a>
           </article>
         </div>
         <p class="affiliate-disclosure">This page contains affiliate links. We may earn a commission at no extra cost to you.</p>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container">
+        <div class="section-header">
+          <h2>Latest from the blog</h2>
+          <a class="btn btn-secondary" href="/blog.html">View all posts</a>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Designing the ultimate fan setup</h3>
+            <p>Small upgrades that make your room feel like a backstage pass.</p>
+            <a class="btn btn-secondary" href="/blog.html">Read article</a>
+          </article>
+          <article class="card">
+            <h3>What makes a great tour tee</h3>
+            <p>Fit, graphic quality, and why you should keep it timeless.</p>
+            <a class="btn btn-secondary" href="/blog.html">Read article</a>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -148,27 +148,6 @@
         </div>
       </div>
     </section>
-
-    <section class="section section-tight">
-      <div class="container">
-        <div class="section-header">
-          <h2>Latest from the blog</h2>
-          <a class="btn btn-secondary" href="/blog.html">View all posts</a>
-        </div>
-        <div class="card-grid">
-          <article class="card">
-            <h3>Designing the ultimate fan setup</h3>
-            <p>Small upgrades that make your room feel like a backstage pass.</p>
-            <a class="btn btn-secondary" href="/blog.html">Read article</a>
-          </article>
-          <article class="card">
-            <h3>What makes a great tour tee</h3>
-            <p>Fit, graphic quality, and why you should keep it timeless.</p>
-            <a class="btn btn-secondary" href="/blog.html">Read article</a>
-          </article>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="footer">
@@ -186,6 +165,6 @@
     </div>
   </footer>
 
-  <a class="mobile-shop-cta" href="https://www.metal-shop.eu/t-shirts-and-tops/b/metallica/?cjdata=MXxOfDB8WXww&utm_source=CJ&utm_medium=affiliate&utm_campaign=101623364&utm_content=14551663&utm_term=c9b35fd2162911f180ba00380a18b8f7&cjevent=c9b35fd2162911f180ba00380a18b8f7" target="_blank" rel="noopener noreferrer">⚡ Shop Now</a>
+  <a class="mobile-shop-cta" href="/shop/">⚡ Shop Now</a>
 </body>
 </html>
