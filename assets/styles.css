@@ -13,6 +13,7 @@
   --radius-lg: 24px;
   --max-width: 1200px;
   --transition: 0.2s ease;
+  --announcement-height: 48px;
 }
 
 * {
@@ -27,6 +28,38 @@ body {
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
+}
+
+body.has-top-announcement {
+  padding-top: var(--announcement-height);
+}
+
+.top-announcement {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: var(--announcement-height);
+  z-index: 1200;
+  background: linear-gradient(90deg, #181818, #232323, #181818);
+  border-bottom: 1px solid rgba(255, 212, 0, 0.35);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.top-announcement .container {
+  min-height: var(--announcement-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #f7f7f7;
+}
+
+.top-announcement strong {
+  color: var(--accent);
 }
 
 a {
@@ -121,11 +154,15 @@ svg {
 
 header {
   position: sticky;
-  top: 0;
+  top: var(--announcement-height);
   z-index: 1000;
   background: rgba(11, 11, 11, 0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
+}
+
+.mobile-shop-cta {
+  display: none;
 }
 
 .navbar {
@@ -542,8 +579,41 @@ header {
 }
 
 @media (max-width: 640px) {
+  :root {
+    --announcement-height: 60px;
+  }
+
   .section {
     padding: 60px 0;
+  }
+
+  body.has-mobile-shop-cta {
+    padding-bottom: 84px;
+  }
+
+  .top-announcement .container {
+    font-size: 0.82rem;
+    line-height: 1.25;
+    padding: 8px 0;
+  }
+
+  .mobile-shop-cta {
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 14px;
+    z-index: 1150;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ffd400, #ffe67a);
+    color: #111;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    border: 1px solid rgba(0, 0, 0, 0.45);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.42);
   }
 
   .btn {
