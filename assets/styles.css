@@ -221,6 +221,45 @@ header {
   border: 1px solid var(--border);
 }
 
+
+.discount-hero {
+  padding: 56px 0 40px;
+}
+
+.discount-hero__inner {
+  background:
+    linear-gradient(145deg, rgba(255, 212, 0, 0.2), rgba(255, 255, 255, 0.02)),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03) 2px, transparent 2px, transparent 6px);
+  border: 1px solid rgba(255, 212, 0, 0.35);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: clamp(24px, 4vw, 48px);
+}
+
+.discount-hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.discount-hero h1 {
+  font-size: clamp(1.9rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.discount-hero .muted {
+  max-width: 70ch;
+  margin-bottom: 20px;
+}
+
+.essentials-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .hero {
   padding: 120px 0 80px;
 }
@@ -565,6 +604,10 @@ header {
     padding: 100px 0 60px;
   }
 
+  .essentials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
 }
 
 @media (min-width: 861px) {
@@ -629,6 +672,10 @@ header {
   }
 
   .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .essentials-grid {
     grid-template-columns: 1fr;
   }
 
